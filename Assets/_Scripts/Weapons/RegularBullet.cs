@@ -12,27 +12,37 @@ public class RegularBullet : Bullet
         set
         {
             base.BulletData = value;
-            rigidbody2d = GetComponent<Rigidbody2D>();   
+            rigidbody2d = GetComponent<Rigidbody2D>();
             rigidbody2d.drag = BulletData.Friction;
         }
     }
 
-    private void FixedUpdate() 
+    private void FixedUpdate()
     {
-        rigidbody2d.MovePosition(transform.position + BulletData.BulletSpeed * transform.right * Time.deltaTime);    
+        rigidbody2d.MovePosition(transform.position + BulletData.BulletSpeed * transform.right * Time.deltaTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) 
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
-        if(collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+        var hittable = collision.GetComponent<IHittable>();
+        hittable?.GetHit(BulletData.Damage, gameObject);
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
         {
             HitObstacle();
+        }
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            HitEnemy();
         }
 
         Destroy(gameObject);
     }
 
+    private void HitEnemy()
+    {
+        Debug.Log("Hit Enemy.");
+    }
     private void HitObstacle()
     {
         Debug.Log("Hitting obstacle."); //TODO: Need to implement proper collision detection
