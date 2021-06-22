@@ -15,11 +15,11 @@ E:/UnityProjects/URP_RPG_Shooter
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52887
+50367
 Successfully changed project path to: E:/UnityProjects/URP_RPG_Shooter
 E:/UnityProjects/URP_RPG_Shooter
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 43.52 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 44.03 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.2f1 (8fd9074bf66c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Resources/UnitySubsystems
@@ -35,204 +35,65 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56652
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56632
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001690 seconds.
+Registered in 0.001718 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 48.00 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 57.64 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.972 seconds
+- Completed reload, in  1.107 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001285 seconds.
+Registered in 0.001289 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 134.88 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 113.62 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.180 seconds
+- Completed reload, in  1.904 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.65 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2669 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 123.4 MB.
-System memory in use after: 120.5 MB.
+Unloading 2672 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 123.5 MB.
+System memory in use after: 120.6 MB.
 
-Unloading 51 unused Assets to reduce memory usage. Loaded Objects now: 3080.
-Total: 4.325300 ms (FindLiveObjects: 0.382600 ms CreateObjectMapping: 0.141900 ms MarkObjects: 2.215800 ms  DeleteObjects: 1.583900 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/_Scripts/Weapons/RegularBullet.cs
-  artifactKey: Guid(a2d209177d91f7b48b9413fab94a431b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scripts/Weapons/RegularBullet.cs using Guid(a2d209177d91f7b48b9413fab94a431b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c98c46abc71aa4df934492d19c3f7d8') in 0.083826 seconds
-  Import took 0.088358 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001040 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.857 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2580 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 118.6 MB.
-System memory in use after: 115.8 MB.
-
-Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3083.
-Total: 4.277100 ms (FindLiveObjects: 0.383400 ms CreateObjectMapping: 0.163300 ms MarkObjects: 2.132400 ms  DeleteObjects: 1.597100 ms)
+Unloading 51 unused Assets to reduce memory usage. Loaded Objects now: 3083.
+Total: 4.592600 ms (FindLiveObjects: 0.419700 ms CreateObjectMapping: 0.151500 ms MarkObjects: 2.392200 ms  DeleteObjects: 1.627300 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 103.785136 seconds.
-  path: Assets/_Scripts/Weapons/RegularBullet.cs
-  artifactKey: Guid(a2d209177d91f7b48b9413fab94a431b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scripts/Weapons/RegularBullet.cs using Guid(a2d209177d91f7b48b9413fab94a431b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49a8ad39afb1c613089a0dad43741354') in 0.537090 seconds
-  Import took 0.541930 seconds .
+  path: Assets/_Scripts/DataSO/EnemyDataSO.cs
+  artifactKey: Guid(8f408b87287ae2e449e21db6c5537da2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/DataSO/EnemyDataSO.cs using Guid(8f408b87287ae2e449e21db6c5537da2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93ba527fbd6faf0cdfa7964cc91fd7d0') in 0.050888 seconds
+  Import took 0.055549 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 129.420727 seconds.
-  path: Assets/_Scripts/Enemies
-  artifactKey: Guid(223687917034f7d4db8d3f9a4cfb9021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scripts/Enemies using Guid(223687917034f7d4db8d3f9a4cfb9021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '019ed7dddc691ba445a73a3ffa037ccb') in 0.009571 seconds
-  Import took 0.015128 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004057 seconds.
-  path: Assets/_Scripts/Enemies
-  artifactKey: Guid(223687917034f7d4db8d3f9a4cfb9021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scripts/Enemies using Guid(223687917034f7d4db8d3f9a4cfb9021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '019ed7dddc691ba445a73a3ffa037ccb') in 0.019563 seconds
-  Import took 0.024129 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.677151 seconds.
-  path: Assets/_Scripts/Interfaces
-  artifactKey: Guid(3d516ad96bbcb1c4abd98a89c1f89075) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scripts/Interfaces using Guid(3d516ad96bbcb1c4abd98a89c1f89075) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ef0f6aa22b5de9f8b51cf7db9726aed') in 0.009984 seconds
-  Import took 0.014734 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004345 seconds.
-  path: Assets/_Scripts/Interfaces
-  artifactKey: Guid(3d516ad96bbcb1c4abd98a89c1f89075) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scripts/Interfaces using Guid(3d516ad96bbcb1c4abd98a89c1f89075) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ef0f6aa22b5de9f8b51cf7db9726aed') in 0.005101 seconds
-  Import took 0.009398 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.843975 seconds.
-  path: Assets/_Scripts/Interfaces/IHittable.cs
-  artifactKey: Guid(c313a31afe87d17428b2fef56f6ab141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scripts/Interfaces/IHittable.cs using Guid(c313a31afe87d17428b2fef56f6ab141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b93dcb035fda93d50f7a723e5e60c29') in 0.018419 seconds
-  Import took 0.023373 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000619 seconds.
-  path: Assets/_Scripts/Interfaces/IHittable.cs
-  artifactKey: Guid(c313a31afe87d17428b2fef56f6ab141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scripts/Interfaces/IHittable.cs using Guid(c313a31afe87d17428b2fef56f6ab141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b93dcb035fda93d50f7a723e5e60c29') in 0.017746 seconds
-  Import took 0.022397 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001077 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.887 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2581 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 118.7 MB.
-System memory in use after: 115.8 MB.
-
-Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3087.
-Total: 4.420600 ms (FindLiveObjects: 0.335800 ms CreateObjectMapping: 0.137100 ms MarkObjects: 2.226100 ms  DeleteObjects: 1.720600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001093 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.841 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2581 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 118.7 MB.
-System memory in use after: 115.8 MB.
-
-Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3090.
-Total: 5.087200 ms (FindLiveObjects: 0.346800 ms CreateObjectMapping: 0.121000 ms MarkObjects: 2.281100 ms  DeleteObjects: 2.336900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 218.784208 seconds.
-  path: Assets/_Scripts/Interfaces/IHittable.cs
-  artifactKey: Guid(c313a31afe87d17428b2fef56f6ab141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scripts/Interfaces/IHittable.cs using Guid(c313a31afe87d17428b2fef56f6ab141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b6a46331bbca7992fb4d8c4961c16e3') in 0.063241 seconds
-  Import took 0.068275 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.015502 seconds.
+  Time since last request: 10.462013 seconds.
   path: Assets/_Scripts/Enemies/Enemy.cs
   artifactKey: Guid(adde6d583efeebc4a90d1b3104a52e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scripts/Enemies/Enemy.cs using Guid(adde6d583efeebc4a90d1b3104a52e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '391d7e8d68f50a6206c9b6e97dd74a83') in 0.010430 seconds
-  Import took 0.015055 seconds .
+Start importing Assets/_Scripts/Enemies/Enemy.cs using Guid(adde6d583efeebc4a90d1b3104a52e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c0191e3970793027ea69adf979d60ef') in 0.095752 seconds
+  Import took 0.100289 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001213 seconds.
+Registered in 0.001336 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
@@ -241,89 +102,121 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.844 seconds
+- Completed reload, in  0.959 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2582 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 118.8 MB.
-System memory in use after: 115.9 MB.
+Unloading 2583 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.6 MB.
+System memory in use after: 115.7 MB.
 
-Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3094.
-Total: 4.583600 ms (FindLiveObjects: 0.356600 ms CreateObjectMapping: 0.136000 ms MarkObjects: 2.250100 ms  DeleteObjects: 1.839700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001071 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.859 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2582 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 118.8 MB.
-System memory in use after: 115.9 MB.
-
-Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3097.
-Total: 5.245200 ms (FindLiveObjects: 0.349500 ms CreateObjectMapping: 0.121400 ms MarkObjects: 2.658500 ms  DeleteObjects: 2.114500 ms)
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3086.
+Total: 5.494100 ms (FindLiveObjects: 0.375300 ms CreateObjectMapping: 0.114900 ms MarkObjects: 2.976100 ms  DeleteObjects: 2.025900 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 369.091144 seconds.
+  Time since last request: 8.693745 seconds.
   path: Assets/_Scripts/Enemies/Enemy.cs
   artifactKey: Guid(adde6d583efeebc4a90d1b3104a52e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scripts/Enemies/Enemy.cs using Guid(adde6d583efeebc4a90d1b3104a52e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '224d220952a6107a4c979ac565154281') in 0.008998 seconds
-  Import took 0.013041 seconds .
+Start importing Assets/_Scripts/Enemies/Enemy.cs using Guid(adde6d583efeebc4a90d1b3104a52e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2791286680b4e3b53a94b8b322565e0') in 0.113212 seconds
+  Import took 0.118122 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.267242 seconds.
+  path: Assets/_Scripts/Enemies/Enemy.cs
+  artifactKey: Guid(adde6d583efeebc4a90d1b3104a52e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Enemies/Enemy.cs using Guid(adde6d583efeebc4a90d1b3104a52e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b7ee72aab4117b881672539b409eb02') in 0.071290 seconds
+  Import took 0.076162 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001035 seconds.
+Registered in 0.001181 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.851 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2582 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 118.8 MB.
-System memory in use after: 115.9 MB.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.927 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2583 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.7 MB.
+System memory in use after: 115.8 MB.
 
-Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3100.
-Total: 5.257800 ms (FindLiveObjects: 0.378900 ms CreateObjectMapping: 0.162400 ms MarkObjects: 2.373600 ms  DeleteObjects: 2.341700 ms)
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3089.
+Total: 4.868200 ms (FindLiveObjects: 0.415400 ms CreateObjectMapping: 0.142200 ms MarkObjects: 2.506600 ms  DeleteObjects: 1.802100 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 13.315027 seconds.
-  path: Assets/_Scripts/Enemies/Enemy.cs
-  artifactKey: Guid(adde6d583efeebc4a90d1b3104a52e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scripts/Enemies/Enemy.cs using Guid(adde6d583efeebc4a90d1b3104a52e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d14f942dafa3b41d46f0020dddeafcd') in 0.009419 seconds
-  Import took 0.013746 seconds .
+  Time since last request: 83.267323 seconds.
+  path: Assets/_Data/EnemyData
+  artifactKey: Guid(fb328a6b2d8213249b0794a0d3fd6d3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Data/EnemyData using Guid(fb328a6b2d8213249b0794a0d3fd6d3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '043166f1687cad6a6dc79dd52f729e78') in 0.024240 seconds
+  Import took 0.028969 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.121778 seconds.
+  path: Assets/_Data/EnemyData/EnemyChortData.asset
+  artifactKey: Guid(5de6ce95f52eb1e43ac4e3c4061e8dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Data/EnemyData/EnemyChortData.asset using Guid(5de6ce95f52eb1e43ac4e3c4061e8dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '767c82dd4275c96afb4816577bc528d5') in 0.025432 seconds
+  Import took 0.029943 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001906 seconds.
+  path: Assets/_Data/EnemyData/EnemyChortData.asset
+  artifactKey: Guid(5de6ce95f52eb1e43ac4e3c4061e8dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Data/EnemyData/EnemyChortData.asset using Guid(5de6ce95f52eb1e43ac4e3c4061e8dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '767c82dd4275c96afb4816577bc528d5') in 0.005614 seconds
+  Import took 0.010072 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5842.705030 seconds.
+  path: Assets/_Scripts/AgentSounds.cs
+  artifactKey: Guid(4a484d0ee2d04764da6275f96b417443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/AgentSounds.cs using Guid(4a484d0ee2d04764da6275f96b417443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9537b2a6184ef94d35616b77acba9072') in 0.012122 seconds
+  Import took 0.018262 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001087 seconds.
+Registered in 0.000991 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.915 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2584 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.8 MB.
+System memory in use after: 115.9 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3093.
+Total: 5.106500 ms (FindLiveObjects: 0.366100 ms CreateObjectMapping: 0.133100 ms MarkObjects: 2.553600 ms  DeleteObjects: 2.052700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001098 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
@@ -332,34 +225,750 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.843 seconds
+- Completed reload, in  0.855 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2584 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.8 MB.
+System memory in use after: 115.9 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3096.
+Total: 5.017300 ms (FindLiveObjects: 0.362400 ms CreateObjectMapping: 0.156500 ms MarkObjects: 2.348000 ms  DeleteObjects: 2.148900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 311.266467 seconds.
+  path: Assets/_Scripts/AgentSounds.cs
+  artifactKey: Guid(4a484d0ee2d04764da6275f96b417443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/AgentSounds.cs using Guid(4a484d0ee2d04764da6275f96b417443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab2fb431854dd615fe13aac991b12f74') in 0.016695 seconds
+  Import took 0.020982 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001092 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.845 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2582 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 118.8 MB.
+Unloading 2584 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
 System memory in use after: 115.9 MB.
 
-Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3103.
-Total: 5.019500 ms (FindLiveObjects: 0.351600 ms CreateObjectMapping: 0.125400 ms MarkObjects: 2.545800 ms  DeleteObjects: 1.995600 ms)
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3099.
+Total: 4.632800 ms (FindLiveObjects: 0.348800 ms CreateObjectMapping: 0.155000 ms MarkObjects: 2.228100 ms  DeleteObjects: 1.899900 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 366.521650 seconds.
-  path: Assets/_Scripts/Weapons/RegularBullet.cs
-  artifactKey: Guid(a2d209177d91f7b48b9413fab94a431b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scripts/Weapons/RegularBullet.cs using Guid(a2d209177d91f7b48b9413fab94a431b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a1fa86771ed055fffb494e87c792829') in 0.336249 seconds
-  Import took 0.341147 seconds .
+  Time since last request: 18.306463 seconds.
+  path: Assets/_Scripts/AgentSounds.cs
+  artifactKey: Guid(4a484d0ee2d04764da6275f96b417443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/AgentSounds.cs using Guid(4a484d0ee2d04764da6275f96b417443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33a699e3d44bf185ef8443755008b38b') in 0.009183 seconds
+  Import took 0.013379 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 99.017702 seconds.
+  path: Assets/_Sounds/_female_death.wav
+  artifactKey: Guid(3ff15984e40701f42a3f4ff616b32633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/_female_death.wav using Guid(3ff15984e40701f42a3f4ff616b32633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecc9d6f95dd56d84582600e57dbfddf3') in 0.211803 seconds
+  Import took 0.216792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000341 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/inventory/beads.wav
+  artifactKey: Guid(381ce093ba649d6409864033c9911f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/inventory/beads.wav using Guid(381ce093ba649d6409864033c9911f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2060cde4b2de4af2f6f2f83abe00695e') in 0.023179 seconds
+  Import took 0.028061 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/_Sounds/sounds/arrow.ogg
+  artifactKey: Guid(1bdc331a3ee55924ba08482ec0725398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/sounds/arrow.ogg using Guid(1bdc331a3ee55924ba08482ec0725398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac19fee460d8ca57fe44f4bf45445198') in 0.067630 seconds
+  Import took 0.072076 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/inventory/coin3.wav
+  artifactKey: Guid(0ea30725e3885334ba37e87d10bdfaa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/inventory/coin3.wav using Guid(0ea30725e3885334ba37e87d10bdfaa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed540e82d85c325d034213a9b548845a') in 0.023618 seconds
+  Import took 0.028302 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/_Sounds/MonsterSounds/dinosaur-1.wav
+  artifactKey: Guid(e60a55e03501c8e479ce77a3a7f477d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/MonsterSounds/dinosaur-1.wav using Guid(e60a55e03501c8e479ce77a3a7f477d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23372ae2580bdf40bf8b7d6df3fa88cd') in 0.043370 seconds
+  Import took 0.048056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/_Sounds/MonsterSounds/dinosaur-2.wav
+  artifactKey: Guid(cb9feb35a46125b4c94fb1f6ce347a8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/MonsterSounds/dinosaur-2.wav using Guid(cb9feb35a46125b4c94fb1f6ce347a8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f45567b48db0682be1e342df74db2d0') in 0.087432 seconds
+  Import took 0.092116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/misc/burp.wav
+  artifactKey: Guid(c143b6504542c76459215f7e796b343a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/misc/burp.wav using Guid(c143b6504542c76459215f7e796b343a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6d6c7065ccce83f50d2c93fdb305245') in 0.048695 seconds
+  Import took 0.052902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/inventory/bubble2.wav
+  artifactKey: Guid(0d3a799931e8d95498fe1eefd32a56c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/inventory/bubble2.wav using Guid(0d3a799931e8d95498fe1eefd32a56c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8a241e76a90ecfbe7303fe5e915ff62') in 0.041543 seconds
+  Import took 0.045886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/inventory/bottle.wav
+  artifactKey: Guid(909a6adbaacd6a44480dcf215036ce85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/inventory/bottle.wav using Guid(909a6adbaacd6a44480dcf215036ce85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b8c79b23e870db837c10e0c6b57d0a9') in 0.041383 seconds
+  Import took 0.046031 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/inventory/cloth-heavy.wav
+  artifactKey: Guid(c3aec2c4128e92f4d971797d9c52621e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/inventory/cloth-heavy.wav using Guid(c3aec2c4128e92f4d971797d9c52621e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd90e7dbe36da94a533f77163a6c42e28') in 0.021184 seconds
+  Import took 0.025751 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/beetle/bite-small2.wav
+  artifactKey: Guid(e168edfbc8d23f74cb1b96a816f5449a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/beetle/bite-small2.wav using Guid(e168edfbc8d23f74cb1b96a816f5449a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecc6dd283ea5134cb7725d968bdd86ea') in 0.020581 seconds
+  Import took 0.025058 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/_Sounds/_female_hit.wav
+  artifactKey: Guid(37979b6fab22f174f8002cbe7d9fb78d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/_female_hit.wav using Guid(37979b6fab22f174f8002cbe7d9fb78d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f86f5c5347623cf69c7d0225c2927196') in 0.020830 seconds
+  Import took 0.025420 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/inventory/chainmail1.wav
+  artifactKey: Guid(e86af768fb457354282f0f8d1d1308cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/inventory/chainmail1.wav using Guid(e86af768fb457354282f0f8d1d1308cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f886ac2c8461510df4db03407be865a7') in 0.051510 seconds
+  Import took 0.056354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/inventory/chainmail2.wav
+  artifactKey: Guid(bbea9b8c4303f5940ace4a2f60fb488c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/inventory/chainmail2.wav using Guid(bbea9b8c4303f5940ace4a2f60fb488c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6064681840fd089c5569830711b87e13') in 0.021625 seconds
+  Import took 0.026552 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/beetle/bite-small3.wav
+  artifactKey: Guid(3748f35270c5d714d93049ce3d807cf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/beetle/bite-small3.wav using Guid(3748f35270c5d714d93049ce3d807cf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14686142131cf15e21483d6dff000d09') in 0.020834 seconds
+  Import took 0.025460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/beetle/bite-small.wav
+  artifactKey: Guid(7c863d4f465df9346a88293b4a749018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/beetle/bite-small.wav using Guid(7c863d4f465df9346a88293b4a749018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb2b4de1fa9fe24c00395b92ef05bcf6') in 0.045748 seconds
+  Import took 0.050488 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/inventory/armor-light.wav
+  artifactKey: Guid(6561845954b5ba14c9ed96ffec42193b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/inventory/armor-light.wav using Guid(6561845954b5ba14c9ed96ffec42193b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4d82b90deadafcc6e9e6e6135ea6475') in 0.051445 seconds
+  Import took 0.055892 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/inventory/bubble.wav
+  artifactKey: Guid(9f1fdb03d54823e49899fd4bae699c9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/inventory/bubble.wav using Guid(9f1fdb03d54823e49899fd4bae699c9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36e4836de62dfd420e9b56f76684ea41') in 0.061630 seconds
+  Import took 0.065945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/inventory/coin2.wav
+  artifactKey: Guid(80575ff534fcd8c4fabacc41338f1795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/inventory/coin2.wav using Guid(80575ff534fcd8c4fabacc41338f1795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c809aee3122db99be51e4a97a79469d') in 0.021146 seconds
+  Import took 0.025629 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/_Sounds/sounds/bulls.ogg
+  artifactKey: Guid(1487a3638dd537c4aa97d78c7cd5a046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/sounds/bulls.ogg using Guid(1487a3638dd537c4aa97d78c7cd5a046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eabba018b34d58d38315d88fafff794') in 0.050707 seconds
+  Import took 0.055330 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/inventory/bubble3.wav
+  artifactKey: Guid(b9cf8d0a636593e4dac71530e01c8ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/inventory/bubble3.wav using Guid(b9cf8d0a636593e4dac71530e01c8ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a42f4c7ea5fe0aa9110adc3d23a2193') in 0.050023 seconds
+  Import took 0.054535 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/inventory/cloth.wav
+  artifactKey: Guid(7ba710f6f0b561c4e903e9268aa89a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/inventory/cloth.wav using Guid(7ba710f6f0b561c4e903e9268aa89a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72f4955b599d034ce3a07ec28b4672e5') in 0.021045 seconds
+  Import took 0.025501 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/_Sounds/sounds/desert-ambience.ogg
+  artifactKey: Guid(dcd9b7c88429edf44b27649cd35bbfdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/sounds/desert-ambience.ogg using Guid(dcd9b7c88429edf44b27649cd35bbfdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dc3807b09eea3615534ce5acef5d76c') in 0.059891 seconds
+  Import took 0.064652 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/inventory/coin.wav
+  artifactKey: Guid(1352f6a91245fb34f88f7c2504969292) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/inventory/coin.wav using Guid(1352f6a91245fb34f88f7c2504969292) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1ea3a97a4d4666ecc3ae7fa87ca1a6d') in 0.027317 seconds
+  Import took 0.031670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/_Sounds/sounds/ammo.ogg
+  artifactKey: Guid(8f97df417111e2e44a1ea332509282c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/sounds/ammo.ogg using Guid(8f97df417111e2e44a1ea332509282c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd94f36d6fa63e292956961903146f366') in 0.075674 seconds
+  Import took 0.080416 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.084091 seconds.
+  path: Assets/_Sounds/MonsterSounds/dinosaur-3.wav
+  artifactKey: Guid(658cbdac46370c14fbc9ba605d8e3043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/MonsterSounds/dinosaur-3.wav using Guid(658cbdac46370c14fbc9ba605d8e3043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97a8ffb0645433f2205e02dda5322fa7') in 0.033272 seconds
+  Import took 0.038193 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/_Sounds/MonsterSounds/dinosaur-4.wav
+  artifactKey: Guid(918d5cae1ca984a47abfda660d6ef771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/MonsterSounds/dinosaur-4.wav using Guid(918d5cae1ca984a47abfda660d6ef771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd81a85e0e5e327f61761b6ea8915e120') in 0.134863 seconds
+  Import took 0.139359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/_Sounds/sounds/explosion-3.ogg
+  artifactKey: Guid(add70bc49f9df3f4eba3c08429b407df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/sounds/explosion-3.ogg using Guid(add70bc49f9df3f4eba3c08429b407df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ad5343dbaaac7f2508cfe6c1d0935f2') in 0.021774 seconds
+  Import took 0.026259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/giant/giant1.wav
+  artifactKey: Guid(25e251f61411a0d48a9a16d76a7272f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/giant/giant1.wav using Guid(25e251f61411a0d48a9a16d76a7272f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f4f7e90d45533d7054e0ba54948b5f9') in 0.060893 seconds
+  Import took 0.065160 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/_Sounds/sounds/explosion-2.ogg
+  artifactKey: Guid(482812647e91b0849828b053cd61a429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/sounds/explosion-2.ogg using Guid(482812647e91b0849828b053cd61a429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1fe283df2c555e9f67dce30231a864f') in 0.025016 seconds
+  Import took 0.029566 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/_Sounds/sounds/explosion-1.ogg
+  artifactKey: Guid(7eac466224bb0fb4dbed74c404cffc76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/sounds/explosion-1.ogg using Guid(7eac466224bb0fb4dbed74c404cffc76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9c4fcdc2eb4c3221b758586fbce841f') in 0.056507 seconds
+  Import took 0.060890 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/_Sounds/MonsterSounds/dinosaur-5.wav
+  artifactKey: Guid(1ba623dc16f392649a252ddd49723c28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/MonsterSounds/dinosaur-5.wav using Guid(1ba623dc16f392649a252ddd49723c28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50b8878f329f8485213165a79a0e7d29') in 0.062552 seconds
+  Import took 0.067226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/world/door.wav
+  artifactKey: Guid(a88da9240d0d1964f87759348b4d42c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/world/door.wav using Guid(a88da9240d0d1964f87759348b4d42c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bbd9e7001962e94d7de4951a908b589') in 0.041204 seconds
+  Import took 0.045590 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.869840 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/giant/giant2.wav
+  artifactKey: Guid(45a9b39b5c3456740bd990b2f1538b5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/giant/giant2.wav using Guid(45a9b39b5c3456740bd990b2f1538b5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbc1d21f770bda11cfe303dba3f8c7f4') in 0.036151 seconds
+  Import took 0.041135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/giant/giant3.wav
+  artifactKey: Guid(6d1168da2b87e6d49815b4e27b42a447) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/giant/giant3.wav using Guid(6d1168da2b87e6d49815b4e27b42a447) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f2e02a66414db405227f158fdd5d9d6') in 0.165887 seconds
+  Import took 0.170242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/giant/giant4.wav
+  artifactKey: Guid(8e6da936ff6eb0645a174fa8bdcee8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/giant/giant4.wav using Guid(8e6da936ff6eb0645a174fa8bdcee8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d7c7eb24d5d44146507abf2e54fd405') in 0.040982 seconds
+  Import took 0.045699 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/giant/giant5.wav
+  artifactKey: Guid(975e94c85bee78c4fa86f29306f26954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/giant/giant5.wav using Guid(975e94c85bee78c4fa86f29306f26954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c858f6e10a9c54f656686e937797a11') in 0.025257 seconds
+  Import took 0.029699 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.576208 seconds.
+  path: Assets/_Sounds/sounds/glass-breaking-1.ogg
+  artifactKey: Guid(6c7f18dde5906ab4d9689c8bfb9aad2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/sounds/glass-breaking-1.ogg using Guid(6c7f18dde5906ab4d9689c8bfb9aad2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '535a0b9762799f3e9ad89904395579f8') in 0.437676 seconds
+  Import took 0.443201 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/battle/magic1.wav
+  artifactKey: Guid(e3d44e75f6fc0b645acf48de6798614f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/battle/magic1.wav using Guid(e3d44e75f6fc0b645acf48de6798614f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2987efa89504cbd87b3b134728c7de3') in 0.051847 seconds
+  Import took 0.056504 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/_Sounds/sounds/glass-breaking-2.ogg
+  artifactKey: Guid(81906cd073dfcf746a462b8405ee2e78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/sounds/glass-breaking-2.ogg using Guid(81906cd073dfcf746a462b8405ee2e78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b42a28665ab62ef17b42faf40b758c4') in 0.050078 seconds
+  Import took 0.054427 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/_Sounds/sounds/machinegun.wav
+  artifactKey: Guid(30aec3b67ced95844a625d802333c825) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/sounds/machinegun.wav using Guid(30aec3b67ced95844a625d802333c825) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5a3e383e4254b083185d2ecd00a5aef') in 0.059027 seconds
+  Import took 0.063174 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/interface/interface4.wav
+  artifactKey: Guid(fffb6bfb06cdf394bb09dd2761261de9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/interface/interface4.wav using Guid(fffb6bfb06cdf394bb09dd2761261de9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9c561e8ae4a7b513af6a491800074ce') in 0.021537 seconds
+  Import took 0.025860 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/interface/interface6.wav
+  artifactKey: Guid(7875b706d64e29a4b92c146bd11edbed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/interface/interface6.wav using Guid(7875b706d64e29a4b92c146bd11edbed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b82c2b861b7ed7225bd29772773adbf0') in 0.022511 seconds
+  Import took 0.027678 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/_Sounds/sounds/impact-1.ogg
+  artifactKey: Guid(88dd01d9683a4f340b93c2b6306e636e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/sounds/impact-1.ogg using Guid(88dd01d9683a4f340b93c2b6306e636e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95ba37ab087cb085d54287e6725b1390') in 0.039720 seconds
+  Import took 0.043993 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/_Sounds/impact-1.wav
+  artifactKey: Guid(7d765f2a7ff77d34b9041393079ed52b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/impact-1.wav using Guid(7d765f2a7ff77d34b9041393079ed52b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58bf8ff64fea08ac9a6ef2cdfd5bfcf5') in 0.054581 seconds
+  Import took 0.058897 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/interface/interface3.wav
+  artifactKey: Guid(9192b7fc48e80dc44b54b58317db93eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/interface/interface3.wav using Guid(9192b7fc48e80dc44b54b58317db93eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9177136b0485ac859cf37a113b34dff8') in 0.054426 seconds
+  Import took 0.058710 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/interface/interface2.wav
+  artifactKey: Guid(56fbc44e183c8284aa5db887e49a1c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/interface/interface2.wav using Guid(56fbc44e183c8284aa5db887e49a1c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f88e3b53278820cb1b0f4653b8471ca') in 0.022557 seconds
+  Import took 0.026940 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/_Sounds/impact_ricochet.wav
+  artifactKey: Guid(87a75afcd79fd8a48ae48699a24c6d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/impact_ricochet.wav using Guid(87a75afcd79fd8a48ae48699a24c6d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '435e83181f7e1a32a32a60f87c86feac') in 0.046363 seconds
+  Import took 0.050726 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/_Sounds/impact_03.wav
+  artifactKey: Guid(739174ccbca42d34c88579866c1e36aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/impact_03.wav using Guid(739174ccbca42d34c88579866c1e36aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50f062da2bd8926c51c63a57dc47fc77') in 0.074690 seconds
+  Import took 0.079301 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/_Sounds/sounds/gun-3.ogg
+  artifactKey: Guid(09f6ce49be03b2c4b80dca7621585457) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/sounds/gun-3.ogg using Guid(09f6ce49be03b2c4b80dca7621585457) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a31d433695f31154e2f2ef5f4fab6723') in 0.063920 seconds
+  Import took 0.068578 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/_Sounds/sounds/gun-4.ogg
+  artifactKey: Guid(3ca079afe40b5c942a8cbca19d388b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/sounds/gun-4.ogg using Guid(3ca079afe40b5c942a8cbca19d388b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a83c5832f5b59770257abf3601b7ec74') in 0.050432 seconds
+  Import took 0.055468 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/_Sounds/impact-2.ogg
+  artifactKey: Guid(43f1cc10bd759b54bbe3a79401d0ceab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/impact-2.ogg using Guid(43f1cc10bd759b54bbe3a79401d0ceab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '147715eeacff89a1ea88f49148f730f6') in 0.050116 seconds
+  Import took 0.054420 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/inventory/metal-ringing.wav
+  artifactKey: Guid(5d658b819f44b4644b25e9268ede2201) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/inventory/metal-ringing.wav using Guid(5d658b819f44b4644b25e9268ede2201) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e06c9817894b82a1a48612fa75380a6') in 0.020695 seconds
+  Import took 0.025038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/_Sounds/sounds/gun-1.ogg
+  artifactKey: Guid(cd7ebabe811ed9b4faaaf8ed32360bb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/sounds/gun-1.ogg using Guid(cd7ebabe811ed9b4faaaf8ed32360bb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e57006e8931a6ef341b8dcecae7d0478') in 0.053178 seconds
+  Import took 0.057569 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/_Sounds/sounds/impact-2.ogg
+  artifactKey: Guid(7cf24ad6137a5284593b116f1ccfe56b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/sounds/impact-2.ogg using Guid(7cf24ad6137a5284593b116f1ccfe56b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '130fc61c6be251aef4cc0cb0ec5dd122') in 0.080232 seconds
+  Import took 0.084672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/_Sounds/MonsterSounds/hit-2.wav
+  artifactKey: Guid(40e98cc5abfd2d74191f527d42761fa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/MonsterSounds/hit-2.wav using Guid(40e98cc5abfd2d74191f527d42761fa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e56511bb05581427038c2c98701db50e') in 0.054528 seconds
+  Import took 0.058862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/_Sounds/sounds/gun-2.ogg
+  artifactKey: Guid(1efd9ac5d48378b41a1e9c36015bd38f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/sounds/gun-2.ogg using Guid(1efd9ac5d48378b41a1e9c36015bd38f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9743c84941f979fbd30168a851018abc') in 0.063921 seconds
+  Import took 0.068748 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/_Sounds/MonsterSounds/hit-1.wav
+  artifactKey: Guid(42cad709b678d294a85ef6233ca0cb69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/MonsterSounds/hit-1.wav using Guid(42cad709b678d294a85ef6233ca0cb69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f7c850f23d44434ad224bcd113a47d7') in 0.049953 seconds
+  Import took 0.054607 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/_Sounds/sounds/gun-5.ogg
+  artifactKey: Guid(657964c512702fa42af39a69243bb2ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/sounds/gun-5.ogg using Guid(657964c512702fa42af39a69243bb2ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e95cfda03dd03b0fbc4df3dc6be76176') in 0.037445 seconds
+  Import took 0.041798 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/interface/interface5.wav
+  artifactKey: Guid(1aa5b07f04a948b4f8d4c6079935459a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/interface/interface5.wav using Guid(1aa5b07f04a948b4f8d4c6079935459a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e1caa82c3eac707dfd882d38c72b99d') in 0.034473 seconds
+  Import took 0.038756 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/interface/interface1.wav
+  artifactKey: Guid(bbfb2c2cd3769984dba963bd32abc9ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/interface/interface1.wav using Guid(bbfb2c2cd3769984dba963bd32abc9ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a4f16a992203410f3624e9f9c688e76') in 0.038955 seconds
+  Import took 0.043595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.909833 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/inventory/metal-small1.wav
+  artifactKey: Guid(61794f254950a164a9abdf867695f3a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/inventory/metal-small1.wav using Guid(61794f254950a164a9abdf867695f3a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ff92a503679a6c0a51beff02261ad11') in 0.031782 seconds
+  Import took 0.036660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/inventory/metal-small2.wav
+  artifactKey: Guid(46605aed6df2f1f4fb5f1abea7f8e1b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/inventory/metal-small2.wav using Guid(46605aed6df2f1f4fb5f1abea7f8e1b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5aead24d1b05de63ea39fd2765c93bf9') in 0.221774 seconds
+  Import took 0.226797 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000302 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/inventory/metal-small3.wav
+  artifactKey: Guid(a4cc80da813690242b678bfbdd4b0593) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/inventory/metal-small3.wav using Guid(a4cc80da813690242b678bfbdd4b0593) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef3f10a6dc87e21aab167281799551d2') in 0.050972 seconds
+  Import took 0.055708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/gutteral beast/mnstr4.wav
+  artifactKey: Guid(ceb9340bc4592ba42bf71f7498ad5182) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/gutteral beast/mnstr4.wav using Guid(ceb9340bc4592ba42bf71f7498ad5182) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3985e1bdd0767fec6a2550f733e66543') in 0.033490 seconds
+  Import took 0.037828 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/gutteral beast/mnstr2.wav
+  artifactKey: Guid(1dfa87317769e9a448765162a921c342) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/gutteral beast/mnstr2.wav using Guid(1dfa87317769e9a448765162a921c342) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd435b317355e5d6a1ec91d97522c37c') in 0.038297 seconds
+  Import took 0.042539 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/gutteral beast/mnstr5.wav
+  artifactKey: Guid(e26e8cf72326e7a4097315ae03b8051f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/gutteral beast/mnstr5.wav using Guid(e26e8cf72326e7a4097315ae03b8051f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fba14cb0a87069fa886a03c857cd56bf') in 0.030505 seconds
+  Import took 0.034821 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/gutteral beast/mnstr3.wav
+  artifactKey: Guid(832445165dc243949b694d88ac3446cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/gutteral beast/mnstr3.wav using Guid(832445165dc243949b694d88ac3446cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c900c5c03138dd72d9c4a2b7af32e32') in 0.040193 seconds
+  Import took 0.044479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/gutteral beast/mnstr1.wav
+  artifactKey: Guid(517446f066e878347bb1917342b4c9a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/gutteral beast/mnstr1.wav using Guid(517446f066e878347bb1917342b4c9a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eb4c4d140e1bd1816256c397ca509d2') in 0.027727 seconds
+  Import took 0.032022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.481612 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/ogre/ogre1.wav
+  artifactKey: Guid(0fec2a9f2b344184bb9c1de83590a287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/ogre/ogre1.wav using Guid(0fec2a9f2b344184bb9c1de83590a287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47b52cfb23a867e50334f1a6cece53d8') in 0.156000 seconds
+  Import took 0.161107 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/ogre/ogre4.wav
+  artifactKey: Guid(0765ccb1c61d6f6449b8f7b215f481ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/ogre/ogre4.wav using Guid(0765ccb1c61d6f6449b8f7b215f481ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37a27eb1bdf521880e1d5fe9c636c2c2') in 0.031041 seconds
+  Import took 0.035429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/ogre/ogre5.wav
+  artifactKey: Guid(c6f57699b51a56a408975d8c0c5f763e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/ogre/ogre5.wav using Guid(c6f57699b51a56a408975d8c0c5f763e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f62b2f4827772bf92dacc97232c900d') in 0.033351 seconds
+  Import took 0.037661 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/ogre/ogre2.wav
+  artifactKey: Guid(7e425c8c1ba7f3a49afb051e87677bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/ogre/ogre2.wav using Guid(7e425c8c1ba7f3a49afb051e87677bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1d70b922faf5d0596e81306a1a0763f') in 0.101431 seconds
+  Import took 0.105965 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/ogre/ogre3.wav
+  artifactKey: Guid(290b02d62a788be4d92e6d83dd068a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/ogre/ogre3.wav using Guid(290b02d62a788be4d92e6d83dd068a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eb49c2fcb3189d082ca66baf99f7cb0') in 0.059291 seconds
+  Import took 0.063639 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/_Sounds/RPG Sound Pack/NPC/ogre/ogre1.wav
+  artifactKey: Guid(0fec2a9f2b344184bb9c1de83590a287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Sounds/RPG Sound Pack/NPC/ogre/ogre1.wav using Guid(0fec2a9f2b344184bb9c1de83590a287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47b52cfb23a867e50334f1a6cece53d8') in 0.013878 seconds
+  Import took 0.017985 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000983 seconds.
+Registered in 0.001136 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.828 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2584 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.0 MB.
+System memory in use after: 119.1 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3111.
+Total: 4.383300 ms (FindLiveObjects: 0.346300 ms CreateObjectMapping: 0.141300 ms MarkObjects: 2.241100 ms  DeleteObjects: 1.653600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001010 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.855 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2584 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.0 MB.
+System memory in use after: 119.1 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3114.
+Total: 5.180300 ms (FindLiveObjects: 0.400700 ms CreateObjectMapping: 0.154000 ms MarkObjects: 2.431300 ms  DeleteObjects: 2.193300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001070 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.876 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2584 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.0 MB.
+System memory in use after: 119.1 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3117.
+Total: 4.407900 ms (FindLiveObjects: 0.388600 ms CreateObjectMapping: 0.172200 ms MarkObjects: 2.093600 ms  DeleteObjects: 1.752300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1487.066937 seconds.
+  path: Assets/_Scripts/AgentInput.cs
+  artifactKey: Guid(a16a8240e47111a40a5df45b9b266cb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/AgentInput.cs using Guid(a16a8240e47111a40a5df45b9b266cb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f81995d13fa0f77c0140cd4b71a4ca8d') in 0.019795 seconds
+  Import took 0.024136 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001048 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
@@ -369,21 +978,368 @@ Mono: successfully reloaded assembly
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2582 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 118.8 MB.
-System memory in use after: 115.9 MB.
+Unloading 2585 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.0 MB.
+System memory in use after: 119.1 MB.
 
-Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3106.
-Total: 4.730300 ms (FindLiveObjects: 0.355300 ms CreateObjectMapping: 0.121300 ms MarkObjects: 2.428500 ms  DeleteObjects: 1.824000 ms)
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3121.
+Total: 4.652900 ms (FindLiveObjects: 0.357400 ms CreateObjectMapping: 0.124400 ms MarkObjects: 2.343800 ms  DeleteObjects: 1.826200 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 121.844251 seconds.
-  path: Assets/_Scripts/Weapons/RegularBullet.cs
-  artifactKey: Guid(a2d209177d91f7b48b9413fab94a431b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scripts/Weapons/RegularBullet.cs using Guid(a2d209177d91f7b48b9413fab94a431b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51ac3f55608b22c457a89dcd4aac46b9') in 0.010217 seconds
-  Import took 0.015010 seconds .
+  Time since last request: 358.366675 seconds.
+  path: Assets/_Scripts/AgentInput.cs
+  artifactKey: Guid(a16a8240e47111a40a5df45b9b266cb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/AgentInput.cs using Guid(a16a8240e47111a40a5df45b9b266cb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42ba9da8ef23fe3d0bed2fd2408b974b') in 0.012698 seconds
+  Import took 0.017080 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.114014 seconds.
+  path: Assets/_Scripts/IAgentInput.cs
+  artifactKey: Guid(5056c8e371a79604b928e6d3c97da502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/IAgentInput.cs using Guid(5056c8e371a79604b928e6d3c97da502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23c419c20b143e26967121e12d0f908f') in 0.040374 seconds
+  Import took 0.045302 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001164 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.866 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2585 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.0 MB.
+System memory in use after: 119.1 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3124.
+Total: 5.280300 ms (FindLiveObjects: 0.526300 ms CreateObjectMapping: 0.214400 ms MarkObjects: 2.499500 ms  DeleteObjects: 2.038500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.172288 seconds.
+  path: Assets/_Scripts/Enemies/EnemyAIBrain.cs
+  artifactKey: Guid(05d48d25977a11c4d9e4ed66275e9f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Enemies/EnemyAIBrain.cs using Guid(05d48d25977a11c4d9e4ed66275e9f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a8f5d31e82c3edc5bc03a78ee5cdd73') in 0.015490 seconds
+  Import took 0.020599 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001060 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.909 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2586 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.0 MB.
+System memory in use after: 119.1 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3128.
+Total: 4.960900 ms (FindLiveObjects: 0.420000 ms CreateObjectMapping: 0.150600 ms MarkObjects: 2.278000 ms  DeleteObjects: 2.110900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001052 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.833 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2586 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.0 MB.
+System memory in use after: 119.1 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3131.
+Total: 4.800800 ms (FindLiveObjects: 0.389000 ms CreateObjectMapping: 0.163700 ms MarkObjects: 2.385100 ms  DeleteObjects: 1.861700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.266213 seconds.
+  path: Assets/_Scripts/Enemies/EnemyAIBrain.cs
+  artifactKey: Guid(05d48d25977a11c4d9e4ed66275e9f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Enemies/EnemyAIBrain.cs using Guid(05d48d25977a11c4d9e4ed66275e9f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '309fed38afb7e108bc951209b1ff7f23') in 0.015937 seconds
+  Import took 0.020281 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001051 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.827 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2586 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.1 MB.
+System memory in use after: 119.1 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3134.
+Total: 4.710800 ms (FindLiveObjects: 0.368300 ms CreateObjectMapping: 0.131500 ms MarkObjects: 2.335400 ms  DeleteObjects: 1.874600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 240.539182 seconds.
+  path: Assets/_Scripts/Enemies/EnemyAIBrain.cs
+  artifactKey: Guid(05d48d25977a11c4d9e4ed66275e9f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Enemies/EnemyAIBrain.cs using Guid(05d48d25977a11c4d9e4ed66275e9f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ca94a4ce4b8ab6e0ea76ac72725f4eb') in 0.009585 seconds
+  Import took 0.014024 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001116 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.825 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2587 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.1 MB.
+System memory in use after: 119.2 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3138.
+Total: 4.667600 ms (FindLiveObjects: 0.360500 ms CreateObjectMapping: 0.131900 ms MarkObjects: 2.314800 ms  DeleteObjects: 1.859300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000967 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.819 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2587 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.1 MB.
+System memory in use after: 119.2 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3141.
+Total: 4.642000 ms (FindLiveObjects: 0.347600 ms CreateObjectMapping: 0.134300 ms MarkObjects: 2.318300 ms  DeleteObjects: 1.840800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 401.523507 seconds.
+  path: Assets/_Scripts/Player/Player.cs
+  artifactKey: Guid(666de37387f5fe34982519343baa96b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Player/Player.cs using Guid(666de37387f5fe34982519343baa96b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52dfe2ad725f85f5017b2c68b8896925') in 0.014190 seconds
+  Import took 0.018944 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000991 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.856 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2588 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.1 MB.
+System memory in use after: 119.2 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3145.
+Total: 4.799500 ms (FindLiveObjects: 0.389800 ms CreateObjectMapping: 0.144700 ms MarkObjects: 2.315900 ms  DeleteObjects: 1.947500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 93.508443 seconds.
+  path: Assets/_Scripts/Player/Player.cs
+  artifactKey: Guid(666de37387f5fe34982519343baa96b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Player/Player.cs using Guid(666de37387f5fe34982519343baa96b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43295e4d6a4172fc7ce8c8947126f928') in 0.010088 seconds
+  Import took 0.014862 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001122 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.075 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2588 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.1 MB.
+System memory in use after: 119.2 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3148.
+Total: 4.863800 ms (FindLiveObjects: 0.367600 ms CreateObjectMapping: 0.117200 ms MarkObjects: 2.466900 ms  DeleteObjects: 1.910900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 68.929045 seconds.
+  path: Assets/_Scripts/Player/Player.cs
+  artifactKey: Guid(666de37387f5fe34982519343baa96b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Player/Player.cs using Guid(666de37387f5fe34982519343baa96b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3a43da576fddde8fe7efa510b2588cf') in 0.009369 seconds
+  Import took 0.013614 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001055 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.828 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2588 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.2 MB.
+System memory in use after: 119.2 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3151.
+Total: 5.403200 ms (FindLiveObjects: 0.358000 ms CreateObjectMapping: 0.136600 ms MarkObjects: 2.727400 ms  DeleteObjects: 2.180100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 49.048245 seconds.
+  path: Assets/_Scripts/Player/Player.cs
+  artifactKey: Guid(666de37387f5fe34982519343baa96b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Player/Player.cs using Guid(666de37387f5fe34982519343baa96b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '612c9cd6753e55c4112e93c3fd6bc9df') in 0.017359 seconds
+  Import took 0.021657 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001026 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.852 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2588 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.2 MB.
+System memory in use after: 119.3 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3154.
+Total: 4.614500 ms (FindLiveObjects: 0.354800 ms CreateObjectMapping: 0.128400 ms MarkObjects: 2.288300 ms  DeleteObjects: 1.842300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 230.884959 seconds.
+  path: Assets/_Scripts/Player/Player.cs
+  artifactKey: Guid(666de37387f5fe34982519343baa96b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Player/Player.cs using Guid(666de37387f5fe34982519343baa96b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d495da4b1943db43cbb9e46d763fbda') in 0.120972 seconds
+  Import took 0.126201 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001051 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.830 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2588 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.2 MB.
+System memory in use after: 119.3 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3157.
+Total: 4.726100 ms (FindLiveObjects: 0.354500 ms CreateObjectMapping: 0.117200 ms MarkObjects: 2.385200 ms  DeleteObjects: 1.868500 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
