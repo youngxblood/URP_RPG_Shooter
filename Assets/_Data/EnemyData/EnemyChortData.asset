@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f408b87287ae2e449e21db6c5537da2, type: 3}
   m_Name: EnemyChortData
   m_EditorClassIdentifier: 
-  <MaxHealth>k__BackingField: 3
+  <MaxHealth>k__BackingField: 5
   <Damage>k__BackingField: 1

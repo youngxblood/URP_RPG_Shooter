@@ -36,8 +36,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\AI\AITransition.cs" />
+     <Compile Include="Assets\_Scripts\AI\AIActionData.cs" />
      <Compile Include="Assets\_Scripts\Enemies\Enemy.cs" />
      <Compile Include="Assets\_Scripts\AgentStepAudioPlayer.cs" />
+     <Compile Include="Assets\_Scripts\Interfaces\IAgent.cs" />
+     <Compile Include="Assets\_Scripts\Interfaces\IAgentInput.cs" />
      <Compile Include="Assets\_Scripts\GameManager.cs" />
      <Compile Include="Assets\_Scripts\DataSO\MovementDataSO.cs" />
      <Compile Include="Assets\_Scripts\Player\PlayerWeapon.cs" />
@@ -47,20 +51,25 @@
      <Compile Include="Assets\_Scripts\Weapons\Bullet.cs" />
      <Compile Include="Assets\_Scripts\AgentWeapon.cs" />
      <Compile Include="Assets\_Scripts\AgentAnimations.cs" />
+     <Compile Include="Assets\_Scripts\AI\AIMovementData.cs" />
      <Compile Include="Assets\_Scripts\Weapons\RegularBullet.cs" />
      <Compile Include="Assets\_Scripts\Interfaces\IHittable.cs" />
      <Compile Include="Assets\_Scripts\AgentMovement.cs" />
      <Compile Include="Assets\_Scripts\Weapons\Weapon.cs" />
      <Compile Include="Assets\_Scripts\Weapons\WeaponRenderer.cs" />
+     <Compile Include="Assets\_Scripts\AgentSounds.cs" />
      <Compile Include="Assets\_Scripts\AudioPlayer.cs" />
+     <Compile Include="Assets\_Scripts\AI\AIState.cs" />
+     <Compile Include="Assets\_Scripts\AI\Decisions\DistanceDecision.cs" />
+     <Compile Include="Assets\_Scripts\AI\AIAction.cs" />
      <Compile Include="Assets\_Scripts\AgentInput.cs" />
      <Compile Include="Assets\_Scripts\DataSO\EnemyDataSO.cs" />
      <Compile Include="Assets\_Scripts\DataSO\WeaponDataSO.cs" />
-     <Compile Include="Assets\_Scripts\AgentSounds.cs" />
-     <Compile Include="Assets\_Scripts\Interfaces\IAgentInput.cs" />
      <Compile Include="Assets\_Scripts\Enemies\EnemyAIBrain.cs" />
-     <Compile Include="Assets\_Scripts\Interfaces\IAgent.cs" />
      <Compile Include="Assets\_Scripts\Player\Player.cs" />
+     <Compile Include="Assets\_Scripts\AI\AIDecision.cs" />
+     <Compile Include="Assets\_Scripts\AI\Actions\ChaseAction.cs" />
+     <Compile Include="Assets\_Scripts\AI\Actions\IdleAction.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
