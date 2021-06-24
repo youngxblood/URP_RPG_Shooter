@@ -41,13 +41,13 @@ public class AIState : MonoBehaviour
                     enemyBrain.ChangeToState(transition.PositiveResult);
                     return;
                 }
-                else
+            }
+            else
+            {
+                if (transition.NegativeResult != null)
                 {
-                    if (transition.NegativeResult != null)
-                    {
-                        enemyBrain.ChangeToState(transition.NegativeResult);
-                        return;
-                    }
+                    enemyBrain.ChangeToState(transition.NegativeResult);
+                    return;
                 }
             }
         }
