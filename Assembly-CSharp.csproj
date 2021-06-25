@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\AI\AITransition.cs" />
+     <Compile Include="Assets\_Scripts\AI\Actions\ChaseAction.cs" />
      <Compile Include="Assets\_Scripts\AI\AIActionData.cs" />
      <Compile Include="Assets\_Scripts\Enemies\Enemy.cs" />
      <Compile Include="Assets\_Scripts\AgentStepAudioPlayer.cs" />
@@ -44,6 +45,7 @@
      <Compile Include="Assets\_Scripts\Interfaces\IAgentInput.cs" />
      <Compile Include="Assets\_Scripts\GameManager.cs" />
      <Compile Include="Assets\_Scripts\DataSO\MovementDataSO.cs" />
+     <Compile Include="Assets\_Scripts\AI\Actions\AttackAction.cs" />
      <Compile Include="Assets\_Scripts\Player\PlayerWeapon.cs" />
      <Compile Include="Assets\_Scripts\Weapons\WeaponAudio.cs" />
      <Compile Include="Assets\_Scripts\DataSO\BulletDataSO.cs" />
@@ -51,6 +53,8 @@
      <Compile Include="Assets\_Scripts\Weapons\Bullet.cs" />
      <Compile Include="Assets\_Scripts\AgentWeapon.cs" />
      <Compile Include="Assets\_Scripts\AgentAnimations.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\EnemyAttack.cs" />
+     <Compile Include="Assets\_Scripts\AI\Actions\IdleAction.cs" />
      <Compile Include="Assets\_Scripts\AI\AIMovementData.cs" />
      <Compile Include="Assets\_Scripts\Weapons\RegularBullet.cs" />
      <Compile Include="Assets\_Scripts\Interfaces\IHittable.cs" />
@@ -68,8 +72,9 @@
      <Compile Include="Assets\_Scripts\Enemies\EnemyAIBrain.cs" />
      <Compile Include="Assets\_Scripts\Player\Player.cs" />
      <Compile Include="Assets\_Scripts\AI\AIDecision.cs" />
-     <Compile Include="Assets\_Scripts\AI\Actions\ChaseAction.cs" />
-     <Compile Include="Assets\_Scripts\AI\Actions\IdleAction.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\EnemyMeleeAttack.cs" />
+     <Compile Include="Assets\_Scripts\Feedback\Feedback.cs" />
+     <Compile Include="Assets\_Scripts\Feedback\FeedbackPlayer.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -313,6 +318,9 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+        <HintPath>E:/UnityProjects/URP_RPG_Shooter/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -736,6 +744,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{082358f7-a11d-0174-f0f3-c246a453601e}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
