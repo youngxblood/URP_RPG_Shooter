@@ -13,7 +13,6 @@ public class AgentInput : MonoBehaviour, IAgentInput
     [field: SerializeField] public UnityEvent<Vector2> OnPointerPositionChanged { get; set; }
 
     [field: SerializeField] public UnityEvent OnFireButtonPressed { get; set; }
-
     [field: SerializeField] public UnityEvent OnFireButtonReleased { get; set; }
 
     private void Awake()

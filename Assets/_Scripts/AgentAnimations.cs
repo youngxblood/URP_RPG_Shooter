@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Object must have a
 [RequireComponent(typeof(Animator))]
 public class AgentAnimations : MonoBehaviour
 {

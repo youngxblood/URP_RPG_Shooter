@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
 
     private void Start()
     {
-        Health = EnemyData.MaxHealth; // Initializes enemy health as the max health set in the scripted object    
+        Health = EnemyData.MaxHealth;
     }
     public void GetHit(int damage, GameObject damageDealer)
     {
