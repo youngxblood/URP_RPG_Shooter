@@ -5,21 +5,66 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637767660081491536
-    m_Hash: 2983636189
+      ticks: 637772330567156169
+    m_Hash: 3819816885
   m_LockFileStatus:
     m_FilePath: D:/Mark/Projects/URP_RPG_Shooter/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637767660081491536
-    m_Hash: 2283811927
+      ticks: 637772330567268074
+    m_Hash: 674267588
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
+    - packageId: com.talecrafter.animationimporter@https://github.com/talecrafter/AnimationImporter.git?path=/Assets
+      testable: 0
+      isDirectDependency: 1
+      version: 1.4.0
+      source: 5
+      resolvedPath: D:\Mark\Projects\URP_RPG_Shooter\Library\PackageCache\com.talecrafter.animationimporter@517f4667d2
+      assetPath: Packages/com.talecrafter.animationimporter
+      name: com.talecrafter.animationimporter
+      displayName: Animation Importer
+      author:
+        name: "Stephan H\xF6velbrinks"
+        email: 
+        url: https://github.com/talecrafter/AnimationImporter
+      category: 
+      type: 
+      description: An Aseprite and PyxelEdit Animation Importer for Unity
+      status: 4
+      errors: []
+      versions:
+        all: []
+        compatible: []
+        verified: 
+      dependencies: []
+      resolvedDependencies: []
+      keywords: []
+      registry:
+        id: 
+        name: 
+        url: 
+        scopes: []
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 0
+      hideInEditor: 0
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.2d.sprite@1.0.0
       testable: 0
       isDirectDependency: 1
