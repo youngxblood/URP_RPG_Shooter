@@ -11,6 +11,18 @@ public class AgentWeapon : MonoBehaviour
     [SerializeField]
     protected Weapon weapon; // Ref to weapon script
 
+    public Weapon Weapon
+    {
+        get { return weapon; }
+        set { weapon = value; }
+    }
+
+    public WeaponRenderer WeaponRenderer
+    {
+        get { return weaponRenderer; }
+        set { weaponRenderer = value; }
+    }
+
     private void Awake()
     {
         AssignWeapon();

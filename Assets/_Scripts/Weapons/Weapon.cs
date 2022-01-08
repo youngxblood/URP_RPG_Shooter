@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] protected GameObject muzzle;
-    [SerializeField] protected int ammo = 10;
+    [SerializeField] protected int ammo;
     [SerializeField] protected WeaponDataSO weaponData;
     public int Ammo
     {
