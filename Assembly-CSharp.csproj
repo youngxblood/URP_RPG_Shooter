@@ -77,6 +77,7 @@
      <Compile Include="Assets\_Scripts\Player\Player.cs" />
      <Compile Include="Assets\_Scripts\AI\AIDecision.cs" />
      <Compile Include="Assets\_Scripts\Enemies\EnemyMeleeAttack.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\OrbProjectile.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
