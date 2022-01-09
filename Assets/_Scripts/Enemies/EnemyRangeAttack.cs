@@ -1,27 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyRangeAttack : EnemyAttack
 {
     [SerializeField] protected GameObject muzzle;
     [SerializeField] protected int ammo;
     [SerializeField] protected WeaponDataSO weaponData;
+    [SerializeField] protected GameObject player;
+    [field: SerializeField] public UnityEvent OnShoot { get; set; }
 
     public override void Attack(int damage)
     {
         if (waitBeforeNextAttack == false)
         {
-            var hittable = GetTarget().GetComponent<IHittable>();
+            // var hittable = GetTarget().GetComponent<IHittable>();
             // hittable?.GetHit(damage, gameObject);
-            ShootBullet();
+            player = GetTarget();
+
+            ShootProjectile();
             StartCoroutine(WaitBeforeAttackCoroutine());
         }
     }
 
-    private void ShootBullet()
+    private void ShootProjectile()
     {
         SpawnBullet(muzzle.transform.position, CalculateAngle(muzzle));
+        OnShoot?.Invoke();
     }
 
     private void SpawnBullet(Vector3 position, Quaternion rotation)
@@ -32,8 +38,9 @@ public class EnemyRangeAttack : EnemyAttack
 
     private Quaternion CalculateAngle(GameObject muzzle)
     {
-        float spread = UnityEngine.Random.Range(-weaponData.SpreadAngle, weaponData.SpreadAngle); // Spread between negative spread value and it's positive form
-        Quaternion bulletSpreadRotation = Quaternion.Euler(new Vector3(0, 0, spread)); // We only want to rotate the bullets on the "Z" angle
-        return muzzle.transform.rotation * bulletSpreadRotation; // Multiplying the muzzle's rotation by bullet spread rotation adds the two values together
+        Vector3 difference = player.transform.position - transform.position;
+
+        float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        return Quaternion.Euler(0.0f, 0.0f, rotationZ);
     }
 }

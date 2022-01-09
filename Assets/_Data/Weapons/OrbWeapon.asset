@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: OrbWeapon
   m_EditorClassIdentifier: 
   <BulletData>k__BackingField: {fileID: 11400000, guid: 6348fbc37ff0c2345b43e650b09bb3dc, type: 2}
-  <ammoCapacity>k__BackingField: 100
+  <ammoCapacity>k__BackingField: 0
   <AutomaticFire>k__BackingField: 0
   <WeaponDelay>k__BackingField: 0.1
   <SpreadAngle>k__BackingField: 5

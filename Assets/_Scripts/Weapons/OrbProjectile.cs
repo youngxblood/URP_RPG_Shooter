@@ -24,8 +24,8 @@ public class OrbProjectile : Bullet
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // if (collision.gameObject.tag == "Player")
-        // {
+        if (collision.gameObject.tag == "Player")
+        {
             Debug.Log(collision.gameObject);
             var hittable = collision.GetComponent<IHittable>();
             hittable?.GetHit(BulletData.Damage, gameObject);
@@ -40,10 +40,10 @@ public class OrbProjectile : Bullet
             }
 
             Destroy(gameObject);
-        // }
+        }
 
 
-        
+
     }
 
     private void HitEnemy()
