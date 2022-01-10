@@ -40,10 +40,11 @@ public class WeaponManager : MonoBehaviour
         if (currentWeapon != equippedWeapons[v])
         {
             ChangeWeapon.Invoke(equippedWeapons[v]); // Changes weapon UI
+            
             currentWeapon.gameObject.SetActive(false);
             equippedWeapons[v].gameObject.SetActive(true);
             currentWeapon = equippedWeapons[v];
-
+            currentWeapon.UpdateAmmoText();
             
 
             playerWeapon.Weapon = currentWeapon;

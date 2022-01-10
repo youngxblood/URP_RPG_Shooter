@@ -10,25 +10,39 @@ public class UIController : MonoBehaviour
     [SerializeField] private Weapon playerWeapon;
     [SerializeField] private WeaponManager weaponManager;
 
-    private void Awake() 
+    private static UIController _instance;
+    public static UIController Instance { get { return _instance; } }
+
+    private void Awake()
     {
-        // scoreText = scoreTextObj.GetComponent<TextMeshPro>();  
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+
         playerWeapon = weaponParent.GetComponentInChildren<Weapon>();
     }
 
-    private void OnEnable() 
+
+
+
+    private void OnEnable()
     {
-        playerWeapon.UpdateAmmo += UpdateScoreText;
+        playerWeapon.UpdateAmmo += UpdateAmmoText;
         weaponManager.ChangeWeapon += ChangeWeaponUI;
     }
 
-    private void OnDisable() 
+    private void OnDisable()
     {
-        playerWeapon.UpdateAmmo -= UpdateScoreText;    
+        playerWeapon.UpdateAmmo -= UpdateAmmoText;
         weaponManager.ChangeWeapon -= ChangeWeaponUI;
     }
 
-    public void UpdateScoreText(int score)
+    public void UpdateAmmoText(int score)
     {
         scoreText.SetText(score.ToString());
     }
