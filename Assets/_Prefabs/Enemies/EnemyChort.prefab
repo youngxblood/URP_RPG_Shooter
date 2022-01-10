@@ -732,6 +732,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  deathVFX: {fileID: 6963116127292947398, guid: ee7ade0550504c840b5b978b3fdbfe85, type: 3}
 --- !u!114 &2431650204183862974
 MonoBehaviour:
   m_ObjectHideFlags: 0

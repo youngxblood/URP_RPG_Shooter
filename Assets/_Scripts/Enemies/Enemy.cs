@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
     private bool dead = false;
     [field: SerializeField] public UnityEvent OnGetHit { get; set; }
     [field: SerializeField] public UnityEvent OnDeath { get; set; }
+    [SerializeField] private GameObject deathVFX;
 
     private void Awake()
     {
@@ -34,6 +35,8 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
             if (Health <= 0)
             {
                 dead = true;
+                PlayDeathVFX();
+
                 OnDeath?.Invoke();
                 StartCoroutine(WaitToDie()); // Delay is needed so OnDeath event/audio clip can fire
             }
@@ -53,5 +56,11 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
         {
             enemyAttack.Attack(EnemyData.Damage);
         }
+    }
+
+    public void PlayDeathVFX()
+    {
+        var explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        Object.Destroy(explosion, 0.2f);
     }
 }

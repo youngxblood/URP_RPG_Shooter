@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class UIController : MonoBehaviour
 
     private static UIController _instance;
     public static UIController Instance { get { return _instance; } }
+
+    [SerializeField] private Slider slider;
 
     private void Awake()
     {
@@ -26,9 +29,6 @@ public class UIController : MonoBehaviour
 
         playerWeapon = weaponParent.GetComponentInChildren<Weapon>();
     }
-
-
-
 
     private void OnEnable()
     {
@@ -50,5 +50,15 @@ public class UIController : MonoBehaviour
     public void ChangeWeaponUI(Weapon newWeapon)
     {
         playerWeapon = newWeapon;
+    }
+
+    public void UpdateHealthBar(int health)
+    {
+        slider.value = health;
+    }
+
+    public void SetMaxHealthValue(int health)
+    {
+        slider.maxValue = health;
     }
 }
