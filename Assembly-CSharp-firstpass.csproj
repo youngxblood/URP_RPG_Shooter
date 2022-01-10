@@ -626,6 +626,9 @@
     <Reference Include="UnityEngine.UI">
         <HintPath>D:/Mark/Projects/URP_RPG_Shooter/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="com.talecrafter.animationimporter.Editor">
+        <HintPath>D:/Mark/Projects/URP_RPG_Shooter/Library/ScriptAssemblies/com.talecrafter.animationimporter.Editor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">

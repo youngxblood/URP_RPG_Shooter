@@ -23,11 +23,12 @@ public class Weapon : MonoBehaviour
     protected bool isShooting = false;
     [SerializeField] protected bool reloadCoroutine = false;
 
+    // Events
     [field: SerializeField] public UnityEvent OnShoot { get; set; }
     [field: SerializeField] public UnityEvent OnShootNoAmmo { get; set; }
 
-    public delegate int UpdateAmmoUI();
-    public static event UpdateAmmoUI UpdateAmmo;
+    public delegate void UpdateAmmoUI(int ammo);
+    public event UpdateAmmoUI UpdateAmmo;
 
     private void Start()
     {
@@ -46,7 +47,9 @@ public class Weapon : MonoBehaviour
     public void Reload(int ammo)
     {
         Ammo += ammo;
+        UpdateAmmo?.Invoke(Ammo); // C# event
     }
+
 
     private void Update()
     {
@@ -60,7 +63,7 @@ public class Weapon : MonoBehaviour
             if (Ammo > 0)
             {
                 Ammo--; // Subtract ammo
-                // UpdateAmmo(Ammo); // C# event to update ammo count UI
+                UpdateAmmo?.Invoke(Ammo); // C# event
 
                 OnShoot?.Invoke();
                 for (int i = 0; i < weaponData.GetBulletCountToSpawn(); i++)
@@ -111,4 +114,5 @@ public class Weapon : MonoBehaviour
         Quaternion bulletSpreadRotation = Quaternion.Euler(new Vector3(0, 0, spread)); // We only want to rotate the bullets on the "Z" angle
         return muzzle.transform.rotation * bulletSpreadRotation; // Multiplying the muzzle's rotation by bullet spread rotation adds the two values together
     }
+
 }

@@ -12,6 +12,10 @@ public class WeaponManager : MonoBehaviour
     // Used in AgentWeapon/PlayerWeapon (see WeaponParent object)
     [SerializeField] private PlayerWeapon playerWeapon;
 
+    // Event to switch weapons for ammo UI
+    public delegate void SwitchWeapon(Weapon newWeapon);
+    public event SwitchWeapon ChangeWeapon;
+
     private void Awake() 
     {
         currentWeapon = player.GetComponentInChildren<Weapon>();
@@ -35,12 +39,17 @@ public class WeaponManager : MonoBehaviour
     {
         if (currentWeapon != equippedWeapons[v])
         {
+            ChangeWeapon.Invoke(equippedWeapons[v]); // Changes weapon UI
             currentWeapon.gameObject.SetActive(false);
             equippedWeapons[v].gameObject.SetActive(true);
             currentWeapon = equippedWeapons[v];
 
+            
+
             playerWeapon.Weapon = currentWeapon;
             playerWeapon.WeaponRenderer = currentWeapon.GetComponent<WeaponRenderer>();
+
+            
         }
     }
 }

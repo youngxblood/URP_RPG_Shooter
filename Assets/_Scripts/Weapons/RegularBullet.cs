@@ -41,10 +41,10 @@ public class RegularBullet : Bullet
 
     private void HitEnemy()
     {
-        Debug.Log("Hit Enemy.");
+        // Debug.Log("Hit Enemy.");
     }
     private void HitObstacle()
     {
-        Debug.Log("Hitting obstacle."); //TODO: Need to implement proper collision detection
+        // Debug.Log("Hitting obstacle."); //TODO: Need to implement proper collision detection
     }
 }

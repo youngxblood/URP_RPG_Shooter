@@ -23,7 +23,8 @@ public class AmmoPickup : MonoBehaviour
 
             if (!playerWeapon.AmmoFull)
             {
-                playerWeapon.Ammo += pickupAmmoCount;
+                // playerWeapon.Ammo += pickupAmmoCount;
+                playerWeapon.Reload(pickupAmmoCount);
                 ammoPickup?.Invoke();
                 sprite.enabled = false;
                 StartCoroutine(DestroyObjectCoroutine());
