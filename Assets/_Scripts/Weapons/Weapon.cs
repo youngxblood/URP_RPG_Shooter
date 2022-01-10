@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] protected GameObject muzzle;
     [SerializeField] protected int ammo;
     [SerializeField] protected WeaponDataSO weaponData;
+
     public int Ammo
     {
         get { return ammo; }
@@ -19,14 +20,14 @@ public class Weapon : MonoBehaviour
     }
 
     public bool AmmoFull { get => Ammo >= weaponData.ammoCapacity; } // Sets AmmoFull prop when ammo is full (based on weaponData SO)
-
     protected bool isShooting = false;
-
     [SerializeField] protected bool reloadCoroutine = false;
 
     [field: SerializeField] public UnityEvent OnShoot { get; set; }
-
     [field: SerializeField] public UnityEvent OnShootNoAmmo { get; set; }
+
+    public delegate int UpdateAmmoUI();
+    public static event UpdateAmmoUI UpdateAmmo;
 
     private void Start()
     {
@@ -59,6 +60,8 @@ public class Weapon : MonoBehaviour
             if (Ammo > 0)
             {
                 Ammo--; // Subtract ammo
+                // UpdateAmmo(Ammo); // C# event to update ammo count UI
+
                 OnShoot?.Invoke();
                 for (int i = 0; i < weaponData.GetBulletCountToSpawn(); i++)
                 {
