@@ -49,6 +49,6 @@ public class AgentMovement : MonoBehaviour
     private void FixedUpdate()
     {
         OnVelocityChange?.Invoke(currentVelocity); //! First checks if event is listening, then invokes (sends?) the variable
-        rigidbody2d.velocity = currentVelocity * movementDirection.normalized; //Where the actual movement happens
+        rigidbody2d.velocity = currentVelocity * movementDirection.normalized; // Where the actual movement happens
     }
 }

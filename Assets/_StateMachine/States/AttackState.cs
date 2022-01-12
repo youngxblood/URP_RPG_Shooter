@@ -4,16 +4,46 @@ using UnityEngine;
 
 public class AttackState : State
 {
+    [field: SerializeField] [field: Range(0.1f, 10f)] public float MaxAttackRange { get; set; } = 5f;
+
+    // States
     public ChaseState chaseState;
-    public bool outOfAttackRange;
+    public bool isWithinRange;
 
     public override State RunCurrentState()
     {
-        if (outOfAttackRange)
+        if (!IsInAttackRange())
         {
             return chaseState;
         }
         else
             return this;
+    }
+
+    public bool IsInAttackRange()
+    {
+        if (Vector3.Distance(enemyAIBrain.Target.transform.position, transform.position) < MaxAttackRange)
+        {
+            if (isWithinRange == false)
+            {
+                isWithinRange = true;
+            }
+        }
+        else
+        {
+            isWithinRange = false;
+        }
+        return isWithinRange;
+    }
+
+    // To Draw view distance in editor
+    public void OnDrawGizmos()
+    {
+        if(UnityEditor.Selection.activeObject == gameObject)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(transform.position, MaxAttackRange);
+            Gizmos.color = Color.white;
+        }
     }
 }

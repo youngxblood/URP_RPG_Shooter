@@ -18,17 +18,17 @@ public class EnemyAIBrain : MonoBehaviour, IAgentInput
         Target = FindObjectOfType<Player>().gameObject; // NOTE: Replace this in the future
     }
 
-    private void Update() 
-    {
-        // If enemy has no target, set movement to zero
-        if(Target == null)
-        {
-            OnMovementKeyPressed?.Invoke(Vector2.zero);
-        } else
-        {
-            CurrentState.UpdateState();
-        }
-    }
+    // private void Update() 
+    // {
+    //     // If enemy has no target, set movement to zero
+    //     if(Target == null)
+    //     {
+    //         OnMovementKeyPressed?.Invoke(Vector2.zero);
+    //     } else
+    //     {
+    //         CurrentState.UpdateState();
+    //     }
+    // }
 
     public void Attack()
     {
