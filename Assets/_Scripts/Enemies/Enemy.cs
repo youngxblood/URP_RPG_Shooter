@@ -14,6 +14,14 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
     [field: SerializeField] public UnityEvent OnDeath { get; set; }
     [SerializeField] private GameObject deathVFX;
 
+    public bool hasTakenDamage = false;
+
+
+//   public delegate void ClickAction();
+//   public static event ClickAction OnClicked;
+    public delegate void OnGetDamaged();
+    public static event OnGetDamaged OnDamaged;
+
     private void Awake()
     {
         if (enemyAttack == null)
@@ -30,6 +38,9 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
     {
         if (!dead)
         {
+            if (OnDamaged != null)
+                OnDamaged();
+
             Health--;
             OnGetHit?.Invoke();
             if (Health <= 0)

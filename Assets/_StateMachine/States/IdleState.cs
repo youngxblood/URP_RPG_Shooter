@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,16 +11,25 @@ public class IdleState : State
     // States
     public ChaseState chaseState;
     public bool canSeePlayer = false;
+    // public bool hasTakenDamage = false;
 
     # endregion
 
     public override State RunCurrentState()
     {
-        if (CanSeePlayer())
+        if (CanSeePlayer() || enemy.hasTakenDamage)
         {
             return chaseState;
         } else
             return this; // Returns Idle state
+    }
+
+    private void Update() 
+    {
+        if (stateManager.currentState == this)
+        {
+            // HasTakenDamage();
+        }    
     }
 
     public bool CanSeePlayer()
@@ -38,6 +48,22 @@ public class IdleState : State
         return canSeePlayer;
     }
 
+    private void HasTakenDamage()
+    {
+        enemy.hasTakenDamage = true;
+    }
+
+    private void OnEnable() 
+    {
+        Enemy.OnDamaged += HasTakenDamage;
+    }
+
+    private void OnDisable() 
+    {
+        Enemy.OnDamaged -= HasTakenDamage;
+    }
+
+    # region Helpers
     // To Draw view distance in editor
     public void OnDrawGizmos()
     {
@@ -48,4 +74,6 @@ public class IdleState : State
             Gizmos.color = Color.white;
         }
     }
+
+    # endregion
 }

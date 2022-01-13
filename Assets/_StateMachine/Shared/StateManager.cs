@@ -19,7 +19,7 @@ public class StateManager : MonoBehaviour
 
     private void RunStateMachine()
     {
-        State nextState = currentState?.RunCurrentState(); // 
+        State nextState = currentState?.RunCurrentState();
 
         if (nextState != null && !player.isDead)
         {
