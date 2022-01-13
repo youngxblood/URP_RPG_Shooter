@@ -10,6 +10,8 @@ public class AttackState : State
     public ChaseState chaseState;
     public bool isWithinRange;
 
+    #region StateManagement
+
     public override State RunCurrentState()
     {
         if (!IsInAttackRange())
@@ -19,6 +21,23 @@ public class AttackState : State
         else
             return this;
     }
+
+    private void Update()
+    {
+        if (stateManager.currentState == this)
+        {
+            AttackTarget();
+        }
+    }
+
+    public void AttackTarget()
+    {
+        enemy.PerformAttack();
+    }
+
+    #endregion
+
+    #region  Methods
 
     public bool IsInAttackRange()
     {
@@ -36,6 +55,7 @@ public class AttackState : State
         return isWithinRange;
     }
 
+
     // To Draw view distance in editor
     public void OnDrawGizmos()
     {
@@ -46,4 +66,6 @@ public class AttackState : State
             Gizmos.color = Color.white;
         }
     }
+
+    #endregion
 }

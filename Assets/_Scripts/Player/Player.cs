@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Player : MonoBehaviour, IAgent, IHittable
 {
     [field: SerializeField] public int Health { get; set; }
-    private bool dead;
+    public bool isDead;
     [field: SerializeField] public UnityEvent OnDeath { get; set; }
     [field: SerializeField] public UnityEvent OnGetHit { get; set; }
 
@@ -19,16 +19,17 @@ public class Player : MonoBehaviour, IAgent, IHittable
 
     public void GetHit(int damage, GameObject damageDealer)
     {
-        if (!dead)
+        if (!isDead)
         {
             Health--;
             UIController.Instance.UpdateHealthBar(Health);
             OnGetHit?.Invoke();
 
-            if (Health <= 0)
+            if (Health <= 0 && !isDead)
             {
                 OnDeath?.Invoke();
                 PlayDeathVFX();
+                isDead = true;
 
                 StartCoroutine(DeathCoroutine());
             }
@@ -37,7 +38,7 @@ public class Player : MonoBehaviour, IAgent, IHittable
         IEnumerator DeathCoroutine()
         {
             yield return new WaitForSeconds(0.21f);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

@@ -5,7 +5,13 @@ using UnityEngine;
 public class StateManager : MonoBehaviour
 {
     public State currentState;
+    private Player player;
     
+    private void Awake() 
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>(); 
+    }
+
     void Update()
     {
         RunStateMachine();
@@ -15,7 +21,7 @@ public class StateManager : MonoBehaviour
     {
         State nextState = currentState?.RunCurrentState(); // 
 
-        if (nextState != null)
+        if (nextState != null && !player.isDead)
         {
             SwitchToTheNextState(nextState);
         }

@@ -4515,7 +4515,7 @@ Transform:
   - {fileID: 2085178642}
   - {fileID: 1498683864}
   m_Father: {fileID: 2431650205344699273}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1072741708
 GameObject:
@@ -4711,9 +4711,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   enemyAIBrain: {fileID: 0}
+  enemy: {fileID: 0}
   enemyStats: {fileID: 0}
   rb: {fileID: 0}
   stateManager: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  agentAnimations: {fileID: 0}
   <IdleViewDistance>k__BackingField: 4
   chaseState: {fileID: 2085178643}
   canSeePlayer: 0
@@ -5403,9 +5406,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   enemyAIBrain: {fileID: 0}
+  enemy: {fileID: 0}
   enemyStats: {fileID: 0}
   rb: {fileID: 0}
   stateManager: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  agentAnimations: {fileID: 0}
   <MaxAttackRange>k__BackingField: 1
   chaseState: {fileID: 2085178643}
   isWithinRange: 0
@@ -6381,7 +6387,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2431650205344699273}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1684411596
 MonoBehaviour:
@@ -7857,6 +7863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Health>k__BackingField: 5
+  isDead: 0
   <OnDeath>k__BackingField:
     m_PersistentCalls:
       m_Calls:
@@ -7993,9 +8000,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   enemyAIBrain: {fileID: 0}
+  enemy: {fileID: 0}
   enemyStats: {fileID: 0}
   rb: {fileID: 0}
   stateManager: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  agentAnimations: {fileID: 0}
   <AggroViewDistance>k__BackingField: 5
   <AttackRange>k__BackingField: 10
   currentVelocity: 3
@@ -8458,11 +8468,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2431650203753227844, guid: 055861a97dd98cb4a9f61735232bc083, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.41
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 2431650203753227844, guid: 055861a97dd98cb4a9f61735232bc083, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.29
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 2431650203753227854, guid: 055861a97dd98cb4a9f61735232bc083, type: 3}
       propertyPath: m_Mesh
@@ -8746,12 +8756,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2431650204635016048}
   - component: {fileID: 2431650204635016049}
+  - component: {fileID: 2431650204635016058}
   - component: {fileID: 2431650204635016054}
   - component: {fileID: 2431650204635016059}
   - component: {fileID: 2431650204635016055}
   - component: {fileID: 2431650204635016052}
   - component: {fileID: 2431650204635016053}
-  - component: {fileID: 2431650204635016058}
   m_Layer: 0
   m_Name: Avatar
   m_TagString: Untagged
@@ -9106,8 +9116,8 @@ Transform:
   - {fileID: 2431650204462558730}
   - {fileID: 2431650204651111750}
   - {fileID: 2431650204884207962}
-  - {fileID: 1072625496}
   - {fileID: 1684411595}
+  - {fileID: 1072625496}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

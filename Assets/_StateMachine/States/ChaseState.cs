@@ -38,6 +38,8 @@ public class ChaseState : State
         {
             Debug.Log(this);
             ChasePlayer();
+            FaceDirection(enemyAIBrain.Target.transform.position);
+            agentAnimations.SetWalkAnimation(true);
         }
     }
 
@@ -82,7 +84,7 @@ public class ChaseState : State
         Vector3 direction = player.transform.position - transform.position;
         MoveAgent(direction);
 
-        // rb.velocity = currentVelocity * movementDirection.normalized; //Where the actual movement happens
+        // rb.velocity = currentVelocity * movementDirection.normalized; //Where the actual movement happens // ANCHOR Do I still need this?
     }
 
 
@@ -108,6 +110,22 @@ public class ChaseState : State
         }
         return Mathf.Clamp(currentVelocity, 0, enemyStats.MovementData.maxSpeed); //Lower limit is 0, upper limit is the max speed in the MovementData scripted object
     }
+
+    public void FaceDirection(Vector2 pointerInput)
+    {
+        var direction = (Vector3)pointerInput - transform.position; //? Need to investigate this (casting?)
+        var result =  Vector3.Cross(Vector2.up, direction); //? Need to investigate this
+
+        if (result.z > 0)
+        {
+            spriteRenderer.flipX = true;
+        } else if (result.z < 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+    }
+
+
 
     // To Draw view distance in editor
     public void OnDrawGizmos()
