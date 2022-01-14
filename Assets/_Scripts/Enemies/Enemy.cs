@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,22 +6,19 @@ using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour, IHittable, IAgent
 {
-
-    [field: SerializeField] public EnemyDataSO EnemyData { get; set; }
-    [field: SerializeField] public int Health { get; private set; } = 2;
-    [field: SerializeField] public EnemyAttack enemyAttack { get; set; }
+    [Header("Enemy Stats")]
     private bool dead = false;
+    [field: SerializeField] public int Health { get; private set; } = 2;
+    [field: SerializeField] public EnemyDataSO EnemyData { get; set; }
+    [field: SerializeField] public EnemyAttack enemyAttack { get; set; }
     [field: SerializeField] public UnityEvent OnGetHit { get; set; }
     [field: SerializeField] public UnityEvent OnDeath { get; set; }
     [SerializeField] private GameObject deathVFX;
+    
 
+    // Aggro on damage
     public bool hasTakenDamage = false;
-
-
-//   public delegate void ClickAction();
-//   public static event ClickAction OnClicked;
-    public delegate void OnGetDamaged();
-    public static event OnGetDamaged OnDamaged;
+    public event Action OnDamaged;
 
     private void Awake()
     {
@@ -34,12 +32,12 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
     {
         Health = EnemyData.MaxHealth;
     }
+
     public void GetHit(int damage, GameObject damageDealer)
     {
         if (!dead)
         {
-            if (OnDamaged != null)
-                OnDamaged();
+            OnDamaged?.Invoke();
 
             Health--;
             OnGetHit?.Invoke();
@@ -61,6 +59,9 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
         }
     }
 
+    # region Helpers
+
+    // Used in AttackState.cs
     public void PerformAttack()
     {
         if (!dead)
@@ -72,6 +73,8 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
     public void PlayDeathVFX()
     {
         var explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
-        Object.Destroy(explosion, 0.2f);
+        UnityEngine.Object.Destroy(explosion, 0.2f);
     }
+
+    # endregion
 }

@@ -7,8 +7,7 @@ public class ChaseState : State
 {
     // Vars
     [field: SerializeField] [field: Range(0.1f, 10f)] public float AggroViewDistance { get; set; } = 7f;
-    [field: SerializeField] [field: Range(0.1f, 10f)] public float AttackRange { get; set; } = 1f;
-        [field: SerializeField] [field: Range(0.1f, 10f)] public float AggroResetRange { get; set; } = 11f;
+    [field: SerializeField] [field: Range(0.1f, 10f)] public float AggroResetRange { get; set; } = 11f;
 
     [SerializeField]
     protected float currentVelocity = 3f;
@@ -86,7 +85,7 @@ public class ChaseState : State
 
     public bool IsInAttackRange()
     {
-        if (Vector3.Distance(enemyAIBrain.Target.transform.position, transform.position) < AttackRange)
+        if (Vector3.Distance(enemyAIBrain.Target.transform.position, transform.position) < enemyStats.EnemyData.AttackRange)
         {
             if (isWithinRange == false)
             {

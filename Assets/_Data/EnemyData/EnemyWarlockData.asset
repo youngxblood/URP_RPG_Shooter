@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: EnemyWarlockData
   m_EditorClassIdentifier: 
   <MaxHealth>k__BackingField: 8
+  <AttackRange>k__BackingField: 3
   <Damage>k__BackingField: 1

@@ -33,7 +33,6 @@ public class Weapon : MonoBehaviour
     private void Start()
     {
         Ammo = weaponData.ammoCapacity; // Sets ammo to max on start    
-        //! Deprecated for now !//  this.UpdateAmmo?.Invoke(Ammo);
         UIController.Instance.UpdateAmmoText(Ammo);
     }
 
@@ -57,7 +56,6 @@ public class Weapon : MonoBehaviour
     {
         Ammo += ammo;
         UpdateAmmoText();
-        //! Deprecated for now !// this.UpdateAmmo?.Invoke(Ammo); // C# event
     }
 
     private void Update()
@@ -72,7 +70,6 @@ public class Weapon : MonoBehaviour
             if (Ammo > 0)
             {
                 Ammo--; // Subtract ammo
-                //! Deprecated for now !//  this.UpdateAmmo?.Invoke(Ammo); // C# event
                 UpdateAmmoText();
 
                 OnShoot?.Invoke();
