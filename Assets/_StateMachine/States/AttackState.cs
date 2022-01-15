@@ -24,7 +24,7 @@ public class AttackState : State
 
     private void Update()
     {
-        if (stateManager.currentState == this)
+        if (stateManager.currentState == this && !player.isDead)
         {
             AttackTarget();
         }

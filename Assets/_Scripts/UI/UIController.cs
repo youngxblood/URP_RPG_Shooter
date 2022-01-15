@@ -10,10 +10,16 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject weaponParent;
     [SerializeField] private Weapon playerWeapon;
     [SerializeField] private WeaponManager weaponManager;
+    [SerializeField] private GameObject[] playerLifeHearts;
+
+    [Header("Life UI")]
+    [SerializeField] private Sprite fullHealthSprite;
+    [SerializeField] private Sprite emptyHealthSprite;
 
     private static UIController _instance;
     public static UIController Instance { get { return _instance; } }
 
+    [Header("Life Slider")]
     [SerializeField] private Slider slider;
 
     private void Awake()
@@ -60,5 +66,15 @@ public class UIController : MonoBehaviour
     public void SetMaxHealthValue(int health)
     {
         slider.maxValue = health;
+    }
+
+    public void FillHeartSprite(int i)
+    {
+        playerLifeHearts[i - 1].GetComponent<Image>().sprite = fullHealthSprite;
+    }
+
+    public void EmptyHeartSprite(int i)
+    {
+        playerLifeHearts[i - 1].GetComponent<Image>().sprite = emptyHealthSprite;
     }
 }

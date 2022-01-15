@@ -7,9 +7,13 @@ public class Player : MonoBehaviour, IAgent, IHittable
 {
     [field: SerializeField] public int Health { get; set; }
     [field: SerializeField] public int MaxHealth { get; set; }
+    [field: SerializeField] public int CurrentLives { get; set; }
     public bool isDead;
     [field: SerializeField] public UnityEvent OnDeath { get; set; }
     [field: SerializeField] public UnityEvent OnGetHit { get; set; }
+    [SerializeField] private PlayerStats playerStats;
+    [SerializeField] private PlayerManager playerManager;
+    public SpriteRenderer spriteRenderer;
 
     [SerializeField] private GameObject deathVFX;
 
@@ -17,6 +21,10 @@ public class Player : MonoBehaviour, IAgent, IHittable
     {
         UIController.Instance.SetMaxHealthValue(Health);
         MaxHealth = Health;
+        playerStats = GetComponentInChildren<PlayerStats>();
+        playerManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerManager>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        CurrentLives = playerStats.playerData.maxLives;
     }
 
     public void GetHit(int damage, GameObject damageDealer)
@@ -33,15 +41,33 @@ public class Player : MonoBehaviour, IAgent, IHittable
                 PlayDeathVFX();
                 isDead = true;
 
-                StartCoroutine(DeathCoroutine());
+                if (CurrentLives > 1) // For Heart UI
+                {
+                    UIController.Instance.EmptyHeartSprite(CurrentLives);
+                    CurrentLives -= 1;
+                    playerManager.RespawnPlayer();
+                    StartCoroutine(DeathCoroutine());
+                }
+                else
+                {
+                    UIController.Instance.EmptyHeartSprite(CurrentLives);
+                    CurrentLives -= 1;
+                    DisablePlayerObj();
+                }
             }
         }
+    }
 
-        IEnumerator DeathCoroutine()
-        {
-            yield return new WaitForSeconds(0.21f);
-            gameObject.SetActive(false);
-        }
+    IEnumerator DeathCoroutine()
+    {
+        yield return new WaitForSeconds(0.21f);
+        spriteRenderer.enabled = false;
+    }
+
+
+    public void DisablePlayerObj()
+    {
+        gameObject.SetActive(false);
     }
 
     public void PlayDeathVFX()
