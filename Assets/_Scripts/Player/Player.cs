@@ -3,28 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Player : MonoBehaviour, IAgent, IHittable
+public class Player : MonoBehaviour, IHittable
 {
-    [field: SerializeField] public int Health { get; set; }
+    [Header("Player Stats")] 
+    public bool isDead;
+    public int Health;
     [field: SerializeField] public int MaxHealth { get; set; }
     [field: SerializeField] public int CurrentLives { get; set; }
-    public bool isDead;
-    [field: SerializeField] public UnityEvent OnDeath { get; set; }
-    [field: SerializeField] public UnityEvent OnGetHit { get; set; }
+
+    [Header("Object Refs")]
     [SerializeField] private PlayerStats playerStats;
     [SerializeField] private PlayerManager playerManager;
     public SpriteRenderer spriteRenderer;
-
+    [SerializeField] private AgentSounds agentSounds;
     [SerializeField] private GameObject deathVFX;
+
+    
 
     private void Awake()
     {
-        UIController.Instance.SetMaxHealthValue(Health);
-        MaxHealth = Health;
         playerStats = GetComponentInChildren<PlayerStats>();
         playerManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerManager>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        agentSounds = GetComponentInChildren<AgentSounds>();
+
+        // Health/lives initialization
+        Health = playerStats.playerData.maxHealth;
+        MaxHealth = Health;
         CurrentLives = playerStats.playerData.maxLives;
+    }
+    // This is used to delay getting the references to wait for the UIController instance to be created
+    private void Start() 
+    {
+        UIController.Instance.SetMaxHealthValue(MaxHealth);
+        UIController.Instance.UpdateHealthBar(MaxHealth);
     }
 
     public void GetHit(int damage, GameObject damageDealer)
@@ -36,37 +48,33 @@ public class Player : MonoBehaviour, IAgent, IHittable
 
             if (Health <= 0 && !isDead)
             {
-                OnDeath?.Invoke();
-                PlayDeathVFX();
                 isDead = true;
 
-                if (CurrentLives > 1) // For Heart UI
+                if (CurrentLives > 1)
                 {
                     UIController.Instance.EmptyHeartSprite(CurrentLives);
                     CurrentLives -= 1;
                     playerManager.RespawnPlayer();
-                    StartCoroutine(DeathCoroutine());
+                    PerformDeathActions();
+                    DisablePlayer();
                 }
                 else
                 {
                     UIController.Instance.EmptyHeartSprite(CurrentLives);
                     CurrentLives -= 1;
+                    PerformDeathActions();
                     DisablePlayerObj();
                 }
             }
         }
     }
 
-    IEnumerator DeathCoroutine()
-    {
-        yield return new WaitForSeconds(0.21f);
-        spriteRenderer.enabled = false;
-    }
+    #region Helpers
 
-
-    public void DisablePlayerObj()
+    public void PerformDeathActions()
     {
-        gameObject.SetActive(false);
+        PlayDeathVFX();
+        PlayDeathSFX();
     }
 
     public void PlayDeathVFX()
@@ -75,9 +83,31 @@ public class Player : MonoBehaviour, IAgent, IHittable
         Object.Destroy(explosion, 0.2f);
     }
 
+    private void PlayDeathSFX()
+    {
+        agentSounds.PlayDeathSound();
+    }
+
+    private void DisablePlayer()
+    {
+        StartCoroutine(DeathCoroutine());
+    }
+
+    public void DisablePlayerObj()
+    {
+        gameObject.SetActive(false);
+    }
+
+    IEnumerator DeathCoroutine()
+    {
+        yield return new WaitForSeconds(0.21f);
+        spriteRenderer.enabled = false;
+    }
+
     public void DamagePlayer(int newHealth)
     {
         Health = Health - newHealth;
+        agentSounds.PlayHitSound();
         UIController.Instance.UpdateHealthBar(Health);
     }
 
@@ -87,5 +117,5 @@ public class Player : MonoBehaviour, IAgent, IHittable
         Health = Mathf.Clamp(Health, 0, MaxHealth);
         UIController.Instance.UpdateHealthBar(Health);
     }
-
+    # endregion
 }

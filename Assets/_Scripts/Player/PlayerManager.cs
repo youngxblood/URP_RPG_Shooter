@@ -23,7 +23,7 @@ public class PlayerManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         player.Health = player.MaxHealth;
-        UIController.Instance.UpdateHealthBar(player.Health);
+        UIController.Instance.UpdateHealthBar(player.MaxHealth);
         player.isDead = false;
         player.spriteRenderer.enabled = true;
     }
