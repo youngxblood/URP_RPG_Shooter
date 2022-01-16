@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: EnemyChortData
   m_EditorClassIdentifier: 
   <MaxHealth>k__BackingField: 5
+  <AttackRange>k__BackingField: 1
   <Damage>k__BackingField: 1
+  <DeathVFX>k__BackingField: {fileID: 6963116127292947398, guid: ee7ade0550504c840b5b978b3fdbfe85, type: 3}

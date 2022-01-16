@@ -33,7 +33,6 @@ public class Player : MonoBehaviour, IAgent, IHittable
         {
             DamagePlayer(1);
             UIController.Instance.UpdateHealthBar(Health);
-            OnGetHit?.Invoke();
 
             if (Health <= 0 && !isDead)
             {
