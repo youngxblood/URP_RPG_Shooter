@@ -19,12 +19,15 @@ public class LevelManager : MonoBehaviour
         {
             string sceneName = System.IO.Path.GetFileNameWithoutExtension(UnityEngine.SceneManagement.SceneUtility.GetScenePathByBuildIndex(i));
             scenes.Add(sceneName);
-            Debug.Log("Scene: " + sceneName);
         }
     }
 
     public void LoadNextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        int nextSceneID = SceneManager.GetActiveScene().buildIndex;
+        if (scenes.Count > nextSceneID + 1)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }

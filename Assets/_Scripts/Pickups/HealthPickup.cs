@@ -15,7 +15,7 @@ public class HealthPickup : Collectible
                 player.HealPlayer(healthIncrease);
                 collectibleSounds.PlayPickupSound();
                 spriteRenderer.enabled = false;
-                StartCoroutine(DestroyObjectCoroutine());
+                StartCoroutine(DestroyObjectCoroutine(0.3f));
             }
         }
     }

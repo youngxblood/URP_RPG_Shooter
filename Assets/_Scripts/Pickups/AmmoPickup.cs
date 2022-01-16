@@ -21,7 +21,7 @@ public class AmmoPickup : Collectible
 
                 collectibleSounds.PlayPickupSound();
                 spriteRenderer.enabled = false;
-                StartCoroutine(DestroyObjectCoroutine());
+                StartCoroutine(DestroyObjectCoroutine(0.3f));
             }
         }
     }

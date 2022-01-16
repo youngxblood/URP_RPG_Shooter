@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 893cc3686714c9148b31046ad71933ed, type: 3}
   m_Name: PlayerMovementData
   m_EditorClassIdentifier: 
-  maxSpeed: 7.08
-  acceleration: 92
-  deacceleration: 83.5
+  maxSpeed: 7
+  acceleration: 203
+  deacceleration: 205

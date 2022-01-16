@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\Weapons\OrbProjectile.cs" />
+     <Compile Include="Assets\_Scripts\LevelFlow\LevelTransitionPad.cs" />
      <Compile Include="Assets\_Scripts\Enemies\Enemy.cs" />
      <Compile Include="Assets\_Scripts\AgentStepAudioPlayer.cs" />
      <Compile Include="Assets\_Scripts\Interfaces\IAgent.cs" />
@@ -80,10 +81,11 @@
      <Compile Include="Assets\_Scripts\Enemies\EnemyAIBrain.cs" />
      <Compile Include="Assets\_Scripts\_StateMachine\Shared\State.cs" />
      <Compile Include="Assets\_Scripts\Player\Player.cs" />
+     <Compile Include="Assets\_Scripts\LevelFlow\LevelManager.cs" />
      <Compile Include="Assets\_Scripts\DataSO\PlayerDataSO.cs" />
      <Compile Include="Assets\_Scripts\Enemies\EnemyMeleeAttack.cs" />
-     <Compile Include="Assets\_Scripts\LevelFlow\LevelTransitionPad.cs" />
-     <Compile Include="Assets\_Scripts\LevelFlow\LevelManager.cs" />
+     <Compile Include="Assets\_Scripts\Pickups\PowerupBase.cs" />
+     <Compile Include="Assets\_Scripts\Pickups\Powerups\MoveSpeedPowerup.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

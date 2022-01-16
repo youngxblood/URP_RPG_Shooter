@@ -13,15 +13,23 @@ public class AgentMovement : MonoBehaviour
     public MovementDataSO MovementData { get; set; }
 
     [SerializeField]
-    protected float currentVelocity = 3f;
+    public float currentVelocity = 3f;
     protected Vector2 movementDirection;
 
     [field: SerializeField]
     public UnityEvent<float> OnVelocityChange { get; set; } //! Unity event with the 'float' datatype
 
+    [Header("Movement Variables")]
+    public float acceleration;
+    public float deacceleration;
+    public float maxSpeed;
+
     private void Awake()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        acceleration = MovementData.acceleration;
+        deacceleration = MovementData.deacceleration;
+        maxSpeed = MovementData.maxSpeed;
     }
 
     public void MoveAgent(Vector2 movementInput)
@@ -37,13 +45,13 @@ public class AgentMovement : MonoBehaviour
     {
         if (movementInput.magnitude > 0) // Check if the object is moving
         {
-            currentVelocity += MovementData.acceleration * Time.deltaTime;
+            currentVelocity += acceleration * Time.deltaTime;
         }
         else
         {
-            currentVelocity -= MovementData.deacceleration * Time.deltaTime;
+            currentVelocity -= deacceleration * Time.deltaTime;
         }
-        return Mathf.Clamp(currentVelocity, 0, MovementData.maxSpeed); //Lower limit is 0, upper limit is the max speed in the MovementData scripted object
+        return Mathf.Clamp(currentVelocity, 0, maxSpeed); //Lower limit is 0, upper limit is the max speed in the MovementData scripted object
     }
 
     private void FixedUpdate()
