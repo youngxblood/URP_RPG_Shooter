@@ -6,6 +6,7 @@ public class StateManager : MonoBehaviour
 {
     public State currentState;
     private Player player;
+    public bool patrolEnabled = false;
     
     private void Awake() 
     {

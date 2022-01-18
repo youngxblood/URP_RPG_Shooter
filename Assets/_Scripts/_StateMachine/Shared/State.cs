@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public abstract class State : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public abstract class State : MonoBehaviour
     [SerializeField] protected StateManager stateManager;
     [SerializeField] protected SpriteRenderer spriteRenderer;
     [SerializeField] protected AgentAnimations agentAnimations;
+    [SerializeField] protected Patrol patrol;
 
     public void Awake()
     {
@@ -23,6 +25,7 @@ public abstract class State : MonoBehaviour
         stateManager = transform.root.GetComponent<StateManager>();
         spriteRenderer = transform.root.GetComponentInChildren<SpriteRenderer>();
         agentAnimations = transform.root.GetComponentInChildren<AgentAnimations>();
+        patrol = GetComponent<Patrol>();
     }
 
     public abstract State RunCurrentState();

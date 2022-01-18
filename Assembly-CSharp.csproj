@@ -36,56 +36,57 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\Interfaces\IAgent.cs" />
+     <Compile Include="Assets\_Scripts\DataSO\MovementDataSO.cs" />
+     <Compile Include="Assets\_Scripts\Pickups\Powerups\MoveSpeedPowerup.cs" />
+     <Compile Include="Assets\_Scripts\UI\UIController.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\WeaponAudio.cs" />
+     <Compile Include="Assets\_Scripts\DataSO\BulletDataSO.cs" />
+     <Compile Include="Assets\_Scripts\Player\PlayerStats.cs" />
+     <Compile Include="Assets\_Scripts\_StateMachine\States\AttackState.cs" />
+     <Compile Include="Assets\_Scripts\AgentRenderer.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Bullet.cs" />
+     <Compile Include="Assets\_Scripts\_StateMachine\Shared\StateManager.cs" />
+     <Compile Include="Assets\_Scripts\_StateMachine\States\IdleState.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\EnemyAttack.cs" />
+     <Compile Include="Assets\_Scripts\Interfaces\IHittable.cs" />
+     <Compile Include="Assets\_Scripts\AgentSounds.cs" />
+     <Compile Include="Assets\_Scripts\AudioPlayer.cs" />
+     <Compile Include="Assets\_Scripts\Pickups\PowerupBase.cs" />
+     <Compile Include="Assets\_Scripts\Pickups\AmmoPickup.cs" />
+     <Compile Include="Assets\_Scripts\Pickups\Collectible.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\EnemyAIBrain.cs" />
+     <Compile Include="Assets\_Scripts\Player\Player.cs" />
+     <Compile Include="Assets\_Scripts\Enemies\EnemyMeleeAttack.cs" />
      <Compile Include="Assets\_Scripts\Weapons\OrbProjectile.cs" />
      <Compile Include="Assets\_Scripts\LevelFlow\LevelTransitionPad.cs" />
      <Compile Include="Assets\_Scripts\Enemies\Enemy.cs" />
      <Compile Include="Assets\_Scripts\AgentStepAudioPlayer.cs" />
-     <Compile Include="Assets\_Scripts\Interfaces\IAgent.cs" />
      <Compile Include="Assets\_Scripts\Interfaces\IAgentInput.cs" />
      <Compile Include="Assets\_Scripts\GameManager.cs" />
-     <Compile Include="Assets\_Scripts\DataSO\MovementDataSO.cs" />
-     <Compile Include="Assets\_Scripts\UI\UIController.cs" />
      <Compile Include="Assets\_Scripts\Player\PlayerManager.cs" />
      <Compile Include="Assets\_Scripts\Player\PlayerWeapon.cs" />
-     <Compile Include="Assets\_Scripts\Weapons\WeaponAudio.cs" />
      <Compile Include="Assets\_Scripts\Enemies\EnemyRangeAttack.cs" />
      <Compile Include="Assets\_Scripts\Enemies\EnemyStats.cs" />
-     <Compile Include="Assets\_Scripts\DataSO\BulletDataSO.cs" />
-     <Compile Include="Assets\_Scripts\Player\PlayerStats.cs" />
-     <Compile Include="Assets\_Scripts\_StateMachine\States\AttackState.cs" />
      <Compile Include="Assets\_Scripts\Feedback\FeedbackPlayer.cs" />
-     <Compile Include="Assets\_Scripts\AgentRenderer.cs" />
-     <Compile Include="Assets\_Scripts\Weapons\Bullet.cs" />
-     <Compile Include="Assets\_Scripts\_StateMachine\Shared\StateManager.cs" />
      <Compile Include="Assets\_Scripts\AgentWeapon.cs" />
      <Compile Include="Assets\_Scripts\Pickups\HealthPickup.cs" />
      <Compile Include="Assets\_Scripts\AgentAnimations.cs" />
-     <Compile Include="Assets\_Scripts\_StateMachine\States\IdleState.cs" />
-     <Compile Include="Assets\_Scripts\Enemies\EnemyAttack.cs" />
      <Compile Include="Assets\_Scripts\Weapons\RegularBullet.cs" />
-     <Compile Include="Assets\_Scripts\Interfaces\IHittable.cs" />
      <Compile Include="Assets\_Scripts\AgentMovement.cs" />
      <Compile Include="Assets\_Scripts\Weapons\Weapon.cs" />
      <Compile Include="Assets\_Scripts\Weapons\WeaponRenderer.cs" />
-     <Compile Include="Assets\_Scripts\AgentSounds.cs" />
-     <Compile Include="Assets\_Scripts\AudioPlayer.cs" />
      <Compile Include="Assets\_Scripts\WeaponManager.cs" />
      <Compile Include="Assets\_Scripts\_StateMachine\States\ChaseState.cs" />
      <Compile Include="Assets\_Scripts\Feedback\Feedback.cs" />
-     <Compile Include="Assets\_Scripts\Pickups\AmmoPickup.cs" />
-     <Compile Include="Assets\_Scripts\Pickups\Collectible.cs" />
      <Compile Include="Assets\_Scripts\Pickups\CollectibleSounds.cs" />
      <Compile Include="Assets\_Scripts\AgentInput.cs" />
      <Compile Include="Assets\_Scripts\DataSO\EnemyDataSO.cs" />
      <Compile Include="Assets\_Scripts\DataSO\WeaponDataSO.cs" />
-     <Compile Include="Assets\_Scripts\Enemies\EnemyAIBrain.cs" />
      <Compile Include="Assets\_Scripts\_StateMachine\Shared\State.cs" />
-     <Compile Include="Assets\_Scripts\Player\Player.cs" />
      <Compile Include="Assets\_Scripts\LevelFlow\LevelManager.cs" />
      <Compile Include="Assets\_Scripts\DataSO\PlayerDataSO.cs" />
-     <Compile Include="Assets\_Scripts\Enemies\EnemyMeleeAttack.cs" />
-     <Compile Include="Assets\_Scripts\Pickups\PowerupBase.cs" />
-     <Compile Include="Assets\_Scripts\Pickups\Powerups\MoveSpeedPowerup.cs" />
+     <Compile Include="Assets\_Scripts\_StateMachine\States\PatrolState.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -329,6 +330,9 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.2f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
         <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
@@ -723,6 +727,10 @@
       <Project>{86eb930c-f79c-9b9a-f4da-585f12ca74a4}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{1219cd2c-5286-56ad-963f-37b5884d7b17}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{b80b1872-7781-84bb-f6e0-fa3af00ec568}</Project>
       <Name>Unity.TextMeshPro</Name>
@@ -759,6 +767,10 @@
       <Project>{ca6a002d-c424-eb3c-6c23-f98ca64d8036}</Project>
       <Name>com.unity.cinemachine.editor</Name>
     </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{a84f8d06-e694-e582-4998-011d769c448b}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
       <Project>{dbb620cc-b006-7060-1b26-867c46dea0fe}</Project>
       <Name>Unity.RenderPipelines.Universal.Editor</Name>
@@ -778,6 +790,10 @@
     <ProjectReference Include="Unity.Mathematics.Editor.csproj">
       <Project>{ac2e41f0-5345-ba60-5463-108381b645bd}</Project>
       <Name>Unity.Mathematics.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{5147bc83-f0aa-6b70-c444-b650348ac068}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
       <Project>{bb94a73f-f183-cacc-e592-f68bab108c4a}</Project>

@@ -10,6 +10,7 @@ public class IdleState : State
 
     // States
     public ChaseState chaseState;
+    public State patrolState;
     public bool canSeePlayer = false;
 
     # endregion
@@ -19,11 +20,14 @@ public class IdleState : State
         if (CanSeePlayer() || enemy.hasTakenDamage)
         {
             return chaseState;
-        } else
+        } 
+        if (stateManager.patrolEnabled)
+        {
+            return patrolState;
+        }
+        else
             return this; // Returns Idle state
     }
-
-
 
     private void HasTakenDamage()
     {
