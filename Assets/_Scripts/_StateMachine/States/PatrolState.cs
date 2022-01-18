@@ -11,8 +11,7 @@ public class PatrolState : State
     // States
     public ChaseState chaseState;
     public bool canSeePlayer = false;
-
-
+    private bool isMoving = false;
 
     # endregion
 
@@ -31,7 +30,23 @@ public class PatrolState : State
         if (stateManager.currentState == this)
         {
             patrol.StartPatrol();
+            FaceDirection(patrol.currentTarget);
+            StartCoroutine(CheckIfMoving());
+
+            if(isMoving)
+                agentAnimations.SetWalkAnimation(true);
+            else
+                agentAnimations.SetWalkAnimation(false);
         }
+    }
+
+    public IEnumerator CheckIfMoving() //ANCHOR: This kinda sucks, would be good to make it cleaner/more performant
+    {
+        var pos1 = transform.root.transform.position;
+        yield return new WaitForSeconds(0.1f);
+        var pos2 = transform.root.transform.position;
+
+        isMoving = (pos1 != pos2);
     }
 
     private void HasTakenDamage()

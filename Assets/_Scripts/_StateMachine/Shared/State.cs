@@ -5,15 +5,15 @@ using Pathfinding;
 
 public abstract class State : MonoBehaviour
 {
-    [SerializeField] protected Player player;
-    [SerializeField] protected EnemyAIBrain enemyAIBrain;
-    [SerializeField] protected Enemy enemy;
-    [SerializeField] protected EnemyStats enemyStats;
-    [SerializeField] protected Rigidbody2D rb;
-    [SerializeField] protected StateManager stateManager;
-    [SerializeField] protected SpriteRenderer spriteRenderer;
-    [SerializeField] protected AgentAnimations agentAnimations;
-    [SerializeField] protected Patrol patrol;
+    protected Player player;
+    protected EnemyAIBrain enemyAIBrain;
+    protected Enemy enemy;
+    protected EnemyStats enemyStats;
+    protected Rigidbody2D rb;
+    protected StateManager stateManager;
+    protected SpriteRenderer spriteRenderer;
+    protected AgentAnimations agentAnimations;
+    protected Patrol patrol;
 
     public void Awake()
     {
@@ -25,7 +25,7 @@ public abstract class State : MonoBehaviour
         stateManager = transform.root.GetComponent<StateManager>();
         spriteRenderer = transform.root.GetComponentInChildren<SpriteRenderer>();
         agentAnimations = transform.root.GetComponentInChildren<AgentAnimations>();
-        patrol = GetComponent<Patrol>();
+        patrol = transform.root.GetComponentInChildren<Patrol>();
     }
 
     public abstract State RunCurrentState();

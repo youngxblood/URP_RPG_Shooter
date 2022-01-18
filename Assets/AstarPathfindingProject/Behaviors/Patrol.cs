@@ -20,6 +20,7 @@ namespace Pathfinding
         /// <summary>Target points to move to in order</summary>
         public Transform[] targets;
         public Vector3[] randomTargets;
+        public Vector3 currentTarget;
         public int numberOfTargets = 3;
         public float radiusOfPatrol = 1f;
         private Vector3 spawnLocation;
@@ -99,6 +100,7 @@ namespace Pathfinding
 
             index = index % randomTargets.Length;
             agent.destination = randomTargets[index];
+            currentTarget = randomTargets[index];
 
             if (search) agent.SearchPath();
         }
