@@ -32,18 +32,30 @@ public abstract class State : MonoBehaviour
 
     #region Helpers
 
-    public void FaceDirection(Vector2 pointerInput)
-    {
-        var direction = (Vector3)pointerInput - transform.position; //? Need to investigate this (casting?)
-        var result = Vector3.Cross(Vector2.up, direction); //? Need to investigate this
+    // public void FaceDirection(Vector2 enemyTarget)
+    // {
+    //     var direction = (Vector3)enemyTarget - transform.position; //? Need to investigate this (casting?)
+    //     var result = Vector3.Cross(Vector2.up, direction); //? Need to investigate this
 
-        if (result.z > 0)
-        {
-            spriteRenderer.flipX = true;
-        }
-        else if (result.z < 0)
+    //     if (result.z > 0)
+    //     {
+    //         spriteRenderer.flipX = true;
+    //     }
+    //     else if (result.z < 0)
+    //     {
+    //         spriteRenderer.flipX = false;
+    //     }
+    // }
+
+    public void FaceDirection()
+    {
+        if (enemy.ObjVelocity.x >= 0.1f)
         {
             spriteRenderer.flipX = false;
+        } 
+        else if (enemy.ObjVelocity.x <= -0.1f)
+        {
+            spriteRenderer.flipX = true;
         }
     }
 

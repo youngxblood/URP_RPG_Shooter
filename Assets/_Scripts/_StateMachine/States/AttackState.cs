@@ -26,7 +26,7 @@ public class AttackState : State
     {
         if (stateManager.currentState == this && !player.isDead)
         {
-            FaceDirection(enemyAIBrain.Target.transform.position);
+            FaceDirection();
             AttackTarget();
         }
     }

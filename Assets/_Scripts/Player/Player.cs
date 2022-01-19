@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour, IHittable
 {
-    [Header("Player Stats")] 
+    [Header("Player Stats")]
     public bool isDead;
     public int Health;
     [field: SerializeField] public int MaxHealth { get; set; }
@@ -18,7 +18,6 @@ public class Player : MonoBehaviour, IHittable
     [SerializeField] private AgentSounds agentSounds;
     [SerializeField] private GameObject deathVFX;
 
-    
 
     private void Awake()
     {
@@ -33,7 +32,7 @@ public class Player : MonoBehaviour, IHittable
         CurrentLives = playerStats.playerData.maxLives;
     }
     // This is used to delay getting the references to wait for the UIController instance to be created
-    private void Start() 
+    private void Start()
     {
         UIController.Instance.SetMaxHealthValue(MaxHealth);
         UIController.Instance.UpdateHealthBar(MaxHealth);

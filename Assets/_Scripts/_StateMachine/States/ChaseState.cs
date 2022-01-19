@@ -37,7 +37,7 @@ public class ChaseState : State
         if (stateManager.currentState == this)
         {
             ChasePlayer();
-            FaceDirection(enemyAIBrain.Target.transform.position);
+            FaceDirection();
             agentAnimations.SetWalkAnimation(true); // TASK - Need to make this only fire once in the future
             IsOutsideOfAggroResetRange();
         }

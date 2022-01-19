@@ -25,6 +25,11 @@ public class Enemy : MonoBehaviour, IHittable
     public bool hasTakenDamage = false;
     public event Action OnDamaged;
 
+    // Enemy Velocity
+    Vector3 PrevPos;
+    Vector3 NewPos;
+    public Vector3 ObjVelocity;
+
     private void Awake()
     {
         if (enemyAttack == null)
@@ -41,6 +46,17 @@ public class Enemy : MonoBehaviour, IHittable
     private void Start()
     {
         Health = EnemyData.MaxHealth;
+
+        // For velocity
+        PrevPos = transform.position;
+        NewPos = transform.position;
+    }
+
+    void FixedUpdate()
+    {
+        NewPos = transform.position;  // each frame track the new position
+        ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  // velocity = dist/time
+        PrevPos = NewPos;  // update position for next frame calculation
     }
 
     public void GetHit(int damage, GameObject damageDealer)
@@ -51,7 +67,7 @@ public class Enemy : MonoBehaviour, IHittable
 
             Health--;
             PlayHitSFX();
-            
+
             if (Health <= 0)
             {
                 dead = true;

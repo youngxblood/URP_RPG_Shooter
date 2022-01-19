@@ -13,6 +13,8 @@ public class PatrolState : State
     public bool canSeePlayer = false;
     private bool isMoving = false;
 
+    public AIPath aiPath;
+
     # endregion
 
     public override State RunCurrentState()
@@ -30,13 +32,17 @@ public class PatrolState : State
         if (stateManager.currentState == this)
         {
             patrol.StartPatrol();
-            FaceDirection(patrol.currentTarget);
+            FaceDirection();
+
             StartCoroutine(CheckIfMoving());
 
             if(isMoving)
                 agentAnimations.SetWalkAnimation(true);
             else
                 agentAnimations.SetWalkAnimation(false);
+
+
+
         }
     }
 
@@ -68,6 +74,7 @@ public class PatrolState : State
     # endregion
 
     # region Helpers
+
     public bool CanSeePlayer()
     {
         if (Vector3.Distance(enemyAIBrain.Target.transform.position, transform.position) < IdleViewDistance)
