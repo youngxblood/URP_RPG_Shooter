@@ -46,8 +46,10 @@ public class ChaseState : State
     // State logic
     public void ChasePlayer()
     {
-        Vector3 direction = player.transform.position - transform.position;
-        MoveAgent(direction);
+        // Vector3 direction = player.transform.position - transform.position;
+        // MoveAgent(direction);
+        if (aiDestinationSetter != null)
+            aiDestinationSetter.target = player.transform;
     }
 
     # region Helpers

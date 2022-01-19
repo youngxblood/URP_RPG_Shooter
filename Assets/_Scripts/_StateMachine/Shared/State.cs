@@ -14,6 +14,8 @@ public abstract class State : MonoBehaviour
     protected SpriteRenderer spriteRenderer;
     protected AgentAnimations agentAnimations;
     protected Patrol patrol;
+    protected AIPath aiPath;
+    protected AIDestinationSetter aiDestinationSetter;
 
     public void Awake()
     {
@@ -26,26 +28,13 @@ public abstract class State : MonoBehaviour
         spriteRenderer = transform.root.GetComponentInChildren<SpriteRenderer>();
         agentAnimations = transform.root.GetComponentInChildren<AgentAnimations>();
         patrol = transform.root.GetComponentInChildren<Patrol>();
+        aiPath = transform.root.GetComponentInChildren<AIPath>();
+        aiDestinationSetter = transform.root.GetComponentInChildren<AIDestinationSetter>();
     }
 
     public abstract State RunCurrentState();
 
     #region Helpers
-
-    // public void FaceDirection(Vector2 enemyTarget)
-    // {
-    //     var direction = (Vector3)enemyTarget - transform.position; //? Need to investigate this (casting?)
-    //     var result = Vector3.Cross(Vector2.up, direction); //? Need to investigate this
-
-    //     if (result.z > 0)
-    //     {
-    //         spriteRenderer.flipX = true;
-    //     }
-    //     else if (result.z < 0)
-    //     {
-    //         spriteRenderer.flipX = false;
-    //     }
-    // }
 
     public void FaceDirection()
     {
@@ -57,6 +46,11 @@ public abstract class State : MonoBehaviour
         {
             spriteRenderer.flipX = true;
         }
+    }
+
+    public void ClearAITarget()
+    {
+        aiDestinationSetter.target = null;
     }
 
     #endregion

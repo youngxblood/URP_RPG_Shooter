@@ -10,7 +10,7 @@ public class IdleState : State
 
     // States
     public ChaseState chaseState;
-    public State patrolState;
+    public PatrolState patrolState;
     public bool canSeePlayer = false;
 
     # endregion
@@ -23,10 +23,16 @@ public class IdleState : State
         } 
         if (stateManager.patrolEnabled)
         {
+            ClearAITarget();
+            aiPath.maxSpeed = 1;
             return patrolState;
         }
         else
+        {
+            ClearAITarget();
             return this; // Returns Idle state
+        }
+            
     }
 
     private void HasTakenDamage()

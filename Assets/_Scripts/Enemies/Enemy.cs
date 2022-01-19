@@ -20,7 +20,6 @@ public class Enemy : MonoBehaviour, IHittable
     private CapsuleCollider2D capsuleCollider;
     private ShadowCaster2D shadowCaster2D;
 
-
     // Aggro on damage
     public bool hasTakenDamage = false;
     public event Action OnDamaged;
@@ -29,6 +28,7 @@ public class Enemy : MonoBehaviour, IHittable
     Vector3 PrevPos;
     Vector3 NewPos;
     public Vector3 ObjVelocity;
+    public bool isMoving = false;
 
     private void Awake()
     {
@@ -47,16 +47,14 @@ public class Enemy : MonoBehaviour, IHittable
     {
         Health = EnemyData.MaxHealth;
 
-        // For velocity
+        // For getting velocity
         PrevPos = transform.position;
         NewPos = transform.position;
     }
 
     void FixedUpdate()
     {
-        NewPos = transform.position;  // each frame track the new position
-        ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  // velocity = dist/time
-        PrevPos = NewPos;  // update position for next frame calculation
+        isMoving = CheckIfMoving();
     }
 
     public void GetHit(int damage, GameObject damageDealer)
@@ -85,6 +83,14 @@ public class Enemy : MonoBehaviour, IHittable
     }
 
     # region Helpers
+
+    public bool CheckIfMoving()
+    {
+        NewPos = transform.position;  // each frame track the new position
+        ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  // velocity = dist/time
+        PrevPos = NewPos;  // update position for next frame calculation
+        return ObjVelocity.magnitude > 0;
+    }
 
     // Used in AttackState.cs
     public void PerformAttack()

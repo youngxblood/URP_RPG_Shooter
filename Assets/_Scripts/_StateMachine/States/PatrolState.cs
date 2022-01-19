@@ -13,51 +13,31 @@ public class PatrolState : State
     public bool canSeePlayer = false;
     private bool isMoving = false;
 
-    public AIPath aiPath;
-
     # endregion
 
     public override State RunCurrentState()
     {
         if (CanSeePlayer() || enemy.hasTakenDamage)
         {
+            aiPath.maxSpeed = 3;
             return chaseState;
         }
         else
             return this; // Returns Idle state
     }
 
-    private void Update() 
+    private void Update()
     {
         if (stateManager.currentState == this)
         {
             patrol.StartPatrol();
             FaceDirection();
 
-            StartCoroutine(CheckIfMoving());
-
-            if(isMoving)
+            if (enemy.isMoving)
                 agentAnimations.SetWalkAnimation(true);
             else
                 agentAnimations.SetWalkAnimation(false);
-
-
-
         }
-    }
-
-    public IEnumerator CheckIfMoving() //ANCHOR: This kinda sucks, would be good to make it cleaner/more performant
-    {
-        var pos1 = transform.root.transform.position;
-        yield return new WaitForSeconds(0.1f);
-        var pos2 = transform.root.transform.position;
-
-        isMoving = (pos1 != pos2);
-    }
-
-    private void HasTakenDamage()
-    {
-        enemy.hasTakenDamage = true;
     }
 
     # region Enable/Disable
@@ -74,6 +54,11 @@ public class PatrolState : State
     # endregion
 
     # region Helpers
+
+    private void HasTakenDamage()
+    {
+        enemy.hasTakenDamage = true;
+    }
 
     public bool CanSeePlayer()
     {
