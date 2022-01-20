@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20129bd7abec3a1499c92ab8406485cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MaxAttackRange>k__BackingField: 5
+  maxAttackRange: 5
   chaseState: {fileID: 289579417}
   isWithinRange: 0
 --- !u!1 &865241460
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 260a1f3834410f14fb827ab4281a3226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <IdleViewDistance>k__BackingField: 5
+  idleViewDistance: 5
   chaseState: {fileID: 289579417}
   patrolState: {fileID: 1871065496}
   canSeePlayer: 0
@@ -363,8 +363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4619ea88a4fbb274d914a2781299ee47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <IdleViewDistance>k__BackingField: 4
-  chaseState: {fileID: 0}
+  idleViewDistance: 5
+  chaseState: {fileID: 289579417}
   canSeePlayer: 0
 --- !u!114 &1871065495
 MonoBehaviour:
@@ -706,7 +706,7 @@ MonoBehaviour:
   - {x: -0.31199002, y: 0.29249573, z: 0}
   m_ShapePathHash: -992186397
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1480
+  m_InstanceId: 28466
 --- !u!1 &2431650203804977267
 GameObject:
   m_ObjectHideFlags: 0
