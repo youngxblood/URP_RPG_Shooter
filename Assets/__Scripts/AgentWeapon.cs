@@ -6,11 +6,10 @@ using UnityEngine;
 public class AgentWeapon : MonoBehaviour
 {
     protected float desiredAngle;
-    [SerializeField]
-    protected WeaponRenderer weaponRenderer;
-    [SerializeField]
-    protected Weapon weapon; // Ref to weapon script
+    [SerializeField] protected WeaponRenderer weaponRenderer;
+    [SerializeField] protected Weapon weapon; // Ref to weapon script
 
+    // Props
     public Weapon Weapon
     {
         get { return weapon; }
@@ -28,6 +27,7 @@ public class AgentWeapon : MonoBehaviour
         AssignWeapon();
     }
 
+    #region  Helpers
     private void AssignWeapon()
     {
         weaponRenderer = GetComponentInChildren<WeaponRenderer>();
@@ -62,4 +62,6 @@ public class AgentWeapon : MonoBehaviour
         if(weapon != null)
             weapon.StopShooting();
     }
+    
+    #endregion
 }

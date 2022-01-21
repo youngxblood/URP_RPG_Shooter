@@ -10,6 +10,18 @@ public class Weapon : MonoBehaviour
     [SerializeField] protected int ammo;
     [SerializeField] protected WeaponDataSO weaponData;
 
+    public bool AmmoFull { get => Ammo >= weaponData.ammoCapacity; } // Sets AmmoFull prop when ammo is full (based on weaponData SO)
+    protected bool isShooting = false;
+    protected bool reloadCoroutine = false;
+
+    // Events
+    [field: SerializeField] public UnityEvent OnShoot { get; set; }
+    [field: SerializeField] public UnityEvent OnShootNoAmmo { get; set; }
+
+    public delegate void UpdateAmmoUI(int ammo);
+    public event UpdateAmmoUI UpdateAmmo;
+
+    // Props
     public int Ammo
     {
         get { return ammo; }
@@ -19,22 +31,17 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    public bool AmmoFull { get => Ammo >= weaponData.ammoCapacity; } // Sets AmmoFull prop when ammo is full (based on weaponData SO)
-    protected bool isShooting = false;
-    [SerializeField] protected bool reloadCoroutine = false;
-
-    // Events
-    [field: SerializeField] public UnityEvent OnShoot { get; set; }
-    [field: SerializeField] public UnityEvent OnShootNoAmmo { get; set; }
-
-    public delegate void UpdateAmmoUI(int ammo);
-    public event UpdateAmmoUI UpdateAmmo;
-
     private void Start()
     {
         Ammo = weaponData.ammoCapacity; // Sets ammo to max on start    
         UIController.Instance.UpdateAmmoText(Ammo);
     }
+
+    private void Update()
+    {
+        UseWeapon();
+    }
+
 
     private void OnDisable()
     {
@@ -42,15 +49,7 @@ public class Weapon : MonoBehaviour
         reloadCoroutine = false;
     }
 
-    public void TryShooting()
-    {
-        isShooting = true;
-    }
 
-    public void StopShooting()
-    {
-        isShooting = false;
-    }
 
     public void Reload(int ammo)
     {
@@ -58,10 +57,6 @@ public class Weapon : MonoBehaviour
         UpdateAmmoText();
     }
 
-    private void Update()
-    {
-        UseWeapon();
-    }
 
     private void UseWeapon()
     {
@@ -86,6 +81,23 @@ public class Weapon : MonoBehaviour
             }
             FinishShooting();
         }
+    }
+
+    #region Helpers
+
+    public void TryShooting()
+    {
+        isShooting = true;
+    }
+
+    public void StopShooting()
+    {
+        isShooting = false;
+    }
+
+    public void UpdateAmmoText()
+    {
+        UIController.Instance.UpdateAmmoText(Ammo);
     }
 
     private void FinishShooting()
@@ -122,9 +134,5 @@ public class Weapon : MonoBehaviour
         return muzzle.transform.rotation * bulletSpreadRotation; // Multiplying the muzzle's rotation by bullet spread rotation adds the two values together
     }
 
-    public void UpdateAmmoText()
-    {
-        UIController.Instance.UpdateAmmoText(Ammo);
-    }
-
+    #endregion
 }
