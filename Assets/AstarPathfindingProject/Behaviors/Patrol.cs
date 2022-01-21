@@ -43,40 +43,21 @@ namespace Pathfinding
             randomTargets = new Vector3[numberOfTargets];
             for (int i = 0; i < randomTargets.Length; i++)
             {
-                Vector3 test = Random.insideUnitCircle * radiusOfPatrol;
-                test += spawnLocation;
-                randomTargets[i] = test;
+                // Vector3 test = Random.insideUnitCircle * radiusOfPatrol;
+                // test += spawnLocation;
+                randomTargets[i] = PickRandomPoint();
             }
 
         }
 
-        /// <summary>Update is called once per frame</summary>
-        // void Update()
-        // {
-        //     // if (targets.Length == 0) return;
-        //     if (randomTargets.Length == 0) return;
+        Vector3 PickRandomPoint()
+        {
+            var point = Random.insideUnitSphere * radiusOfPatrol;
 
-        //     bool search = false;
-
-        //     // Note: using reachedEndOfPath and pathPending instead of reachedDestination here because
-        //     // if the destination cannot be reached by the agent, we don't want it to get stuck, we just want it to get as close as possible and then move on.
-        //     if (agent.reachedEndOfPath && !agent.pathPending && float.IsPositiveInfinity(switchTime))
-        //     {
-        //         switchTime = Time.time + delay;
-        //     }
-
-        //     if (Time.time >= switchTime)
-        //     {
-        //         index = index + 1;
-        //         search = true;
-        //         switchTime = float.PositiveInfinity;
-        //     }
-
-        //     index = index % randomTargets.Length;
-        //     agent.destination = randomTargets[index];
-
-        //     if (search) agent.SearchPath();
-        // }
+            // point.y = 0;
+            point += transform.position;
+            return point;
+        }
 
         public void StartPatrol()
         {

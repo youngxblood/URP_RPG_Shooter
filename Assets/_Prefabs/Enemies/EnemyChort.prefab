@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4619ea88a4fbb274d914a2781299ee47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <IdleViewDistance>k__BackingField: 4
+  idleViewDistance: 5
   chaseState: {fileID: 2159377546514954971}
   canSeePlayer: 0
 --- !u!114 &1213178907
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20129bd7abec3a1499c92ab8406485cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MaxAttackRange>k__BackingField: 1
+  maxAttackRange: 5
   chaseState: {fileID: 2159377546514954971}
   isWithinRange: 0
 --- !u!1 &2159377547239615233
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 260a1f3834410f14fb827ab4281a3226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <IdleViewDistance>k__BackingField: 4
+  idleViewDistance: 5
   chaseState: {fileID: 2159377546514954971}
   patrolState: {fileID: 1213178906}
   canSeePlayer: 0
@@ -503,15 +503,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  useRaycasting: 1
+  useRaycasting: 0
   mask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 7927
   thickRaycast: 1
   thickRaycastRadius: 1
   use2DPhysics: 1
   raycastOffset: {x: 0, y: 0, z: 0}
-  useGraphRaycasting: 1
+  useGraphRaycasting: 0
   quality: 1
 --- !u!114 &337485471
 MonoBehaviour:
@@ -835,7 +835,7 @@ MonoBehaviour:
   - {x: -0.31199002, y: 0.29249573, z: 0}
   m_ShapePathHash: -992186397
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1560
+  m_InstanceId: 31592
 --- !u!95 &4344094069290802366
 Animator:
   serializedVersion: 3
@@ -1027,7 +1027,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4344094069464242627}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0

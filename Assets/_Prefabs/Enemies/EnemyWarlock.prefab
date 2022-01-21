@@ -706,7 +706,7 @@ MonoBehaviour:
   - {x: -0.31199002, y: 0.29249573, z: 0}
   m_ShapePathHash: -992186397
   m_Mesh: {fileID: 0}
-  m_InstanceId: 28466
+  m_InstanceId: 31780
 --- !u!1 &2431650203804977267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,15 +1213,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  useRaycasting: 1
+  useRaycasting: 0
   mask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 7927
   thickRaycast: 1
   thickRaycastRadius: 1
   use2DPhysics: 1
   raycastOffset: {x: 0, y: 0, z: 0}
-  useGraphRaycasting: 1
+  useGraphRaycasting: 0
   quality: 1
 --- !u!114 &190788629
 MonoBehaviour:
@@ -1303,7 +1303,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2431650205067518783}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
