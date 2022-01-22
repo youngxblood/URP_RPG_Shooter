@@ -6,35 +6,56 @@ public class CombatMonitor : MonoBehaviour
 {
     [SerializeField] private EnemySpawner[] enemySpawners;
     [SerializeField] public CombatWave[] combatWaves;
+    [SerializeField] private Collider2D[] collisionTrigger;
     private int currentWave = 0;
+    private bool readyToStartWave = false;
+
+    public bool ReadyToStartWave
+    {
+        get { return readyToStartWave; }
+        set { readyToStartWave = value; }
+    }
+
+    // Combat Monitor settings
+    public bool useTriggerToStartCombat = false;
+    public bool triggerIsActive = false;
 
     // Get spawners and waves in children
     private void Awake()
     {
         enemySpawners = GetComponentsInChildren<EnemySpawner>();
         combatWaves = GetComponentsInChildren<CombatWave>();
+        collisionTrigger = GetComponentsInChildren<Collider2D>();
     }
 
-    // 
-    private void Start()
+    private void Update()
     {
-        if (enemySpawners != null && combatWaves.Length >= currentWave)
+        if (readyToStartWave)
         {
-            StartNextWave(0);
-            currentWave++;
-            // StartNextWave(1);
+            if (useTriggerToStartCombat && triggerIsActive)
+            {
+                StartNextWave(currentWave);
+                ReadyToStartWave = false;
+            }
+            if (!useTriggerToStartCombat)
+            {
+                StartNextWave(currentWave);
+                ReadyToStartWave = false;
+            }
         }
     }
+
+    # region Helpers
 
     // Handles starting the wave, not spawning
     private void StartNextWave(int waveNumber)
     {
-        SpawnEnemies(waveNumber);
-
+        SpawnEnemiesInWave(waveNumber);
     }
 
-    private void SpawnEnemies(int wave)
+    private void SpawnEnemiesInWave(int wave)
     {
+        // Gets how many entries are in each wave
         int waveSections = combatWaves[wave].enemies.Length;
 
         for (int i = 0; i < waveSections; i++)
@@ -53,6 +74,8 @@ public class CombatMonitor : MonoBehaviour
     // Visualization of where combat monitor is
     void OnDrawGizmos()
     {
-        Gizmos.DrawIcon(transform.position, "Monitor_Icon.png", true);
+        Gizmos.DrawIcon(transform.position, "Monitor_Icon_White.png", true);
     }
+
+    # endregion
 }

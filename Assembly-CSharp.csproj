@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\__Scripts\Combat\CombatWave.cs" />
      <Compile Include="Assets\__Scripts\Interfaces\IAgent.cs" />
      <Compile Include="Assets\__Scripts\DataSO\MovementDataSO.cs" />
      <Compile Include="Assets\__Scripts\Pickups\Powerups\MoveSpeedPowerup.cs" />
@@ -89,7 +90,7 @@
      <Compile Include="Assets\__Scripts\_StateMachine\Shared\State.cs" />
      <Compile Include="Assets\__Scripts\LevelFlow\LevelManager.cs" />
      <Compile Include="Assets\__Scripts\DataSO\PlayerDataSO.cs" />
-     <Compile Include="Assets\__Scripts\Combat\CombatWave.cs" />
+     <Compile Include="Assets\__Scripts\Combat\CombatStartTrigger.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -685,47 +686,14 @@
     <Reference Include="System.Xml.XPath.XDocument">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.2f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
         <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Searcher.Editor">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
         <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
@@ -733,53 +701,107 @@
     <Reference Include="com.talecrafter.animationimporter.Editor">
         <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\com.talecrafter.animationimporter.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Mathematics">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Editor">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Editor">
-        <HintPath>D:\Mark\Projects\URP_RPG_Shooter\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{082358f7-a11d-0174-f0f3-c246a453601e}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.VSCode.Editor.csproj">
+      <Project>{aa551ee6-de21-8cd5-e01b-a5d5f329f482}</Project>
+      <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
+      <Project>{d05e6cd7-3f56-2fd9-ccd8-6c0ee0198c78}</Project>
+      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
+      <Project>{aaeb7925-9c70-0d22-3005-fc1c630010a4}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{c9aa4337-ef60-66ae-5a5e-3564fa41a776}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
+      <Project>{c448526d-c6a0-8de3-9235-24b0e9153c82}</Project>
+      <Name>Unity.VisualStudio.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.csproj">
+      <Project>{86eb930c-f79c-9b9a-f4da-585f12ca74a4}</Project>
+      <Name>Unity.Timeline</Name>
+    </ProjectReference>
     <ProjectReference Include="PackageToolsEditor.csproj">
       <Project>{1219cd2c-5286-56ad-963f-37b5884d7b17}</Project>
       <Name>PackageToolsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{b80b1872-7781-84bb-f6e0-fa3af00ec568}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Searcher.Editor.csproj">
+      <Project>{45c5e410-d393-a087-1190-72a07ff69f96}</Project>
+      <Name>Unity.Searcher.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
+      <Project>{45b32dba-6ad8-069d-bd52-e3895605e738}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{fb7b11b1-0959-7102-41e2-177b5ffdab9f}</Project>
+      <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
+      <Project>{946cb9f2-370b-05d0-1a97-7c86627bc9c5}</Project>
+      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.csproj">
+      <Project>{da783d71-200d-047e-1af2-24c6bc682b14}</Project>
+      <Name>Unity.Mathematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
+      <Project>{8933ec63-d499-8e75-effe-8199fe081a29}</Project>
+      <Name>Unity.ShaderGraph.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Cinemachine.csproj">
+      <Project>{c96c0041-89ba-bf51-1c84-99e37737d330}</Project>
+      <Name>Cinemachine</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
+      <Project>{ca6a002d-c424-eb3c-6c23-f98ca64d8036}</Project>
+      <Name>com.unity.cinemachine.editor</Name>
     </ProjectReference>
     <ProjectReference Include="AstarPathfindingProject.csproj">
       <Project>{a84f8d06-e694-e582-4998-011d769c448b}</Project>
       <Name>AstarPathfindingProject</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
+      <Project>{dbb620cc-b006-7060-1b26-867c46dea0fe}</Project>
+      <Name>Unity.RenderPipelines.Universal.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
+      <Project>{13d58397-c104-ae55-4e5f-777496af02cb}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
+      <Project>{5bb57e4a-b076-1235-bfbf-ff7fab802c6d}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{804bb06d-47f2-7f95-554f-b60ee92d70e1}</Project>
+      <Name>Unity.Timeline.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
+      <Project>{ac2e41f0-5345-ba60-5463-108381b645bd}</Project>
+      <Name>Unity.Mathematics.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
       <Project>{5147bc83-f0aa-6b70-c444-b650348ac068}</Project>
       <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
+      <Project>{bb94a73f-f183-cacc-e592-f68bab108c4a}</Project>
+      <Name>Unity.RenderPipelines.Core.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
