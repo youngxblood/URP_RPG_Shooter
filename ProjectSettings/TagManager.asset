@@ -19,7 +19,7 @@ TagManager:
   - EnemyMovementCollider
   - PlayerMovementCollider
   - Teleporter
-  - 
+  - Throwables
   - 
   - 
   - 

@@ -5,12 +5,21 @@ using UnityEngine;
 
 public class FragGrenade : Throwable
 {
-    protected Rigidbody2D rigidbody2d;
+    protected Rigidbody2D rb;
+
+    public Rigidbody2D RB
+    {
+        get { return rb; }
+        set { rb = value; }
+    }
+    
 
     private void Awake() 
     {
         StartCoroutine(StartGrenadeFuse());  
-          
+        animator = GetComponent<Animator>();    
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private IEnumerator StartGrenadeFuse()

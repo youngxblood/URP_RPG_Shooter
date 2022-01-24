@@ -6,15 +6,12 @@ public class Throwable : MonoBehaviour
 {
     [SerializeField] protected ThrowableDataSO throwableData;
     [SerializeField] protected Animator animator;
-
-    private void Awake() 
-    {
-        animator = GetComponent<Animator>();    
-    }
+    [SerializeField] protected SpriteRenderer spriteRenderer;
 
     protected void PlayExplosionVFX()
     {
         var explosion = Instantiate(throwableData.explosionVFX, transform.position, Quaternion.identity);
+        spriteRenderer.enabled = false;
         Object.Destroy(explosion, 0.2f);
     }
 }

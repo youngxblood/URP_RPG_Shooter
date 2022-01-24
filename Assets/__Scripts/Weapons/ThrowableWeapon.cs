@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class ThrowableWeapon : MonoBehaviour
 {
     [SerializeField] protected AgentInput agentInput;
+    [SerializeField] protected Transform playerTransform;
 
     [SerializeField] protected GameObject muzzle;
     [SerializeField] protected int ammo;
@@ -16,6 +17,7 @@ public class ThrowableWeapon : MonoBehaviour
     protected bool isThrowing = false;
     protected bool reloadCoroutine = false;
     private bool hasThrownThrowable = false;
+    [SerializeField] private float throwStrength = 2f;
 
     // Events
     // ANCHOR Setup grenade throw event
@@ -36,6 +38,7 @@ public class ThrowableWeapon : MonoBehaviour
     private void Awake() 
     {
         agentInput = transform.root.GetComponent<AgentInput>();   
+        playerTransform = transform.root;
     }
 
     private void Start()
@@ -58,14 +61,14 @@ public class ThrowableWeapon : MonoBehaviour
     }
     
 
-
     public void Reload(int ammo)
     {
         Ammo += ammo;
         // UpdateAmmoText();
     }
-
-
+    
+    #region Helpers
+    // Input key down
     private void ThrowThrowable()
     {
         if (!hasThrownThrowable)
@@ -74,10 +77,7 @@ public class ThrowableWeapon : MonoBehaviour
             hasThrownThrowable = true;
         }   
     }
-
-
-    #region Helpers
-
+    // Input key up
     private void StopThrowingThrowable()
     {
         hasThrownThrowable = false;
@@ -91,6 +91,12 @@ public class ThrowableWeapon : MonoBehaviour
     private void SpawnGrenade(Vector3 position, Quaternion rotation)
     {
         var grenadePrefab = Instantiate(throwableData.grenadePrefab, position, rotation);
+        grenadePrefab.GetComponent<Rigidbody2D>().AddForce(GetThrowDirection() * throwStrength, ForceMode2D.Impulse);
+    }
+
+    private Vector2 GetThrowDirection()
+    {
+        return muzzle.transform.position - playerTransform.position;
     }
 
     #endregion

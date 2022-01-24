@@ -18,4 +18,4 @@ MonoBehaviour:
   <explosionDamage>k__BackingField: 2
   <explosionRadius>k__BackingField: 2
   <explodesOnImpact>k__BackingField: 0
-  <fuseTimer>k__BackingField: 3
+  <fuseTimer>k__BackingField: 1.5
