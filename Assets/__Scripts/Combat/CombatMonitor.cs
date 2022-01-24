@@ -10,6 +10,8 @@ public class CombatMonitor : MonoBehaviour
     private int currentWave = 0;
     private bool readyToStartWave = false;
 
+    [SerializeField] private List<GameObject> currentEnemiesAlive = new List<GameObject>();
+
     public bool ReadyToStartWave
     {
         get { return readyToStartWave; }
@@ -30,7 +32,7 @@ public class CombatMonitor : MonoBehaviour
 
     private void Update()
     {
-        if (readyToStartWave)
+        if (ReadyToStartWave)
         {
             if (useTriggerToStartCombat && triggerIsActive)
             {
@@ -46,7 +48,6 @@ public class CombatMonitor : MonoBehaviour
     }
 
     # region Helpers
-
     // Handles starting the wave, not spawning
     private void StartNextWave(int waveNumber)
     {
@@ -56,22 +57,31 @@ public class CombatMonitor : MonoBehaviour
     private void SpawnEnemiesInWave(int wave)
     {
         // Gets how many entries are in each wave
-        int waveSections = combatWaves[wave].enemies.Length;
+        int entriesInWave = combatWaves[wave].enemies.Length;
 
-        for (int i = 0; i < waveSections; i++)
+        for (int i = 0; i < entriesInWave; i++)
         {
             for (int j = 0; j < combatWaves[wave].GetEnemyCountInWave(i); j++)
             {
-                Instantiate(combatWaves[wave].GetEnemyGameObject(i));
+                GameObject spawnedEnemy = Instantiate(combatWaves[wave].GetEnemyGameObject(i)) as GameObject;
+                var enemy = spawnedEnemy.GetComponent<Enemy>();
+                enemy.combatMonitor = this;
+                currentEnemiesAlive.Add(spawnedEnemy); // Adds enemies to list
             }
 
         }
     }
 
+    public void RemoveDeadEnemiesFromList()
+    {
+        for (int i = currentEnemiesAlive.Count - 1; i >= 0; i--)
+        {
+            if(currentEnemiesAlive[i] == null)
+                currentEnemiesAlive.RemoveAt(i);
+        }
+    }
 
-
-
-    // Visualization of where combat monitor is
+    // Icon for visualization of where combat monitor is
     void OnDrawGizmos()
     {
         Gizmos.DrawIcon(transform.position, "Monitor_Icon_White.png", true);

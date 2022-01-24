@@ -38,13 +38,13 @@ public class UIController : MonoBehaviour
 
     private void OnEnable()
     {
-        playerWeapon.UpdateAmmo += UpdateAmmoText;
+        // playerWeapon.UpdateAmmo += UpdateAmmoText;
         weaponManager.ChangeWeapon += ChangeWeaponUI;
     }
 
     private void OnDisable()
     {
-        playerWeapon.UpdateAmmo -= UpdateAmmoText;
+        // playerWeapon.UpdateAmmo -= UpdateAmmoText;
         weaponManager.ChangeWeapon -= ChangeWeaponUI;
     }
 

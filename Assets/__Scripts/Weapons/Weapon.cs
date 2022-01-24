@@ -18,8 +18,8 @@ public class Weapon : MonoBehaviour
     [field: SerializeField] public UnityEvent OnShoot { get; set; }
     [field: SerializeField] public UnityEvent OnShootNoAmmo { get; set; }
 
-    public delegate void UpdateAmmoUI(int ammo);
-    public event UpdateAmmoUI UpdateAmmo;
+    // public delegate void UpdateAmmoUI(int ammo);
+    // public event UpdateAmmoUI UpdateAmmo;
 
     // Props
     public int Ammo

@@ -5,6 +5,7 @@ using UnityEngine;
 public class CombatStartTrigger : MonoBehaviour
 {
     private CombatMonitor combatMonitor;
+    public bool hasBeenTriggered = false;
 
     private void Awake() 
     {
@@ -13,9 +14,9 @@ public class CombatStartTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Triggered");
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player") && !hasBeenTriggered)
             {
+                hasBeenTriggered = true;
                 combatMonitor.triggerIsActive = true;
                 combatMonitor.ReadyToStartWave = true;
             }

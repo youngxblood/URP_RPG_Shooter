@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\__Scripts\Combat\CombatWave.cs" />
+     <Compile Include="Assets\__Scripts\Combat\CombatStartTrigger.cs" />
      <Compile Include="Assets\__Scripts\Interfaces\IAgent.cs" />
      <Compile Include="Assets\__Scripts\DataSO\MovementDataSO.cs" />
      <Compile Include="Assets\__Scripts\Pickups\Powerups\MoveSpeedPowerup.cs" />
@@ -51,6 +52,7 @@
      <Compile Include="Assets\__Scripts\_StateMachine\Shared\StateManager.cs" />
      <Compile Include="Assets\__Scripts\_StateMachine\States\IdleState.cs" />
      <Compile Include="Assets\__Scripts\Enemies\EnemyAttack.cs" />
+     <Compile Include="Assets\__Scripts\DataSO\ThrowableDataSO.cs" />
      <Compile Include="Assets\__Scripts\Interfaces\IHittable.cs" />
      <Compile Include="Assets\__Scripts\AgentSounds.cs" />
      <Compile Include="Assets\__Scripts\AudioPlayer.cs" />
@@ -62,6 +64,7 @@
      <Compile Include="Assets\__Scripts\Enemies\EnemyMeleeAttack.cs" />
      <Compile Include="Assets\__Scripts\Weapons\OrbProjectile.cs" />
      <Compile Include="Assets\__Scripts\LevelFlow\LevelTransitionPad.cs" />
+     <Compile Include="Assets\__Scripts\Weapons\ThrowableWeapon.cs" />
      <Compile Include="Assets\__Scripts\Enemies\Enemy.cs" />
      <Compile Include="Assets\__Scripts\AgentStepAudioPlayer.cs" />
      <Compile Include="Assets\__Scripts\Interfaces\IAgentInput.cs" />
@@ -76,7 +79,7 @@
      <Compile Include="Assets\__Scripts\AgentWeapon.cs" />
      <Compile Include="Assets\__Scripts\Pickups\HealthPickup.cs" />
      <Compile Include="Assets\__Scripts\AgentAnimations.cs" />
-     <Compile Include="Assets\__Scripts\Weapons\RegularBullet.cs" />
+     <Compile Include="Assets\__Scripts\Weapons\Bullets\RegularBullet.cs" />
      <Compile Include="Assets\__Scripts\AgentMovement.cs" />
      <Compile Include="Assets\__Scripts\Weapons\Weapon.cs" />
      <Compile Include="Assets\__Scripts\Weapons\WeaponRenderer.cs" />
@@ -90,7 +93,8 @@
      <Compile Include="Assets\__Scripts\_StateMachine\Shared\State.cs" />
      <Compile Include="Assets\__Scripts\LevelFlow\LevelManager.cs" />
      <Compile Include="Assets\__Scripts\DataSO\PlayerDataSO.cs" />
-     <Compile Include="Assets\__Scripts\Combat\CombatStartTrigger.cs" />
+     <Compile Include="Assets\__Scripts\Weapons\Throwable.cs" />
+     <Compile Include="Assets\__Scripts\Weapons\Throwables\FragGrenade.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

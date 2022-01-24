@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour, IHittable
     [field: SerializeField] public EnemyDataSO EnemyData { get; set; }
     [field: SerializeField] public EnemyAttack enemyAttack { get; set; }
     [SerializeField] private GameObject deathVFX;
+    public CombatMonitor combatMonitor;
 
     [Header("Enemy Death")]
     private AgentSounds agentSounds;
@@ -99,6 +100,7 @@ public class Enemy : MonoBehaviour, IHittable
         PlayDeathVFX();
         PlayDeathSFX();
         DisableEnemy();
+        RemoveFromMonitorList();
     }
 
     public void PlayDeathVFX()
@@ -117,6 +119,12 @@ public class Enemy : MonoBehaviour, IHittable
         spriteRenderer.enabled = false;
         capsuleCollider.enabled = false;
         shadowCaster2D.enabled = false;
+    }
+
+    private void RemoveFromMonitorList()
+    {
+        if (combatMonitor != null)
+            combatMonitor.RemoveDeadEnemiesFromList();
     }
 
     // To delay destroying the enemy to allow time for events to fire

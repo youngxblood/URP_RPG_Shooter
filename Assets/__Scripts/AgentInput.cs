@@ -8,6 +8,7 @@ public class AgentInput : MonoBehaviour, IAgentInput
 {
     private Camera mainCamera;
     private bool fireButtonDown = false;
+    private bool secondaryButtonDown = false;
 
     [field: SerializeField] public UnityEvent<Vector2> OnMovementKeyPressed { get; set; }
     [field: SerializeField] public UnityEvent<Vector2> OnPointerPositionChanged { get; set; }
@@ -15,10 +16,16 @@ public class AgentInput : MonoBehaviour, IAgentInput
     [field: SerializeField] public UnityEvent OnFireButtonPressed { get; set; }
     [field: SerializeField] public UnityEvent OnFireButtonReleased { get; set; }
 
+    public delegate void StartThrowGrenadeAction();
+    public event StartThrowGrenadeAction StartThrowWeapon;
+    public delegate void StopThrowGrenadeAction();
+    public event StopThrowGrenadeAction StopThrowWeapon;
+
     private void Awake()
     {
         mainCamera = Camera.main; //Gets camera based on it's tag    
     }
+    
 
     private void Update()
     {
@@ -48,6 +55,12 @@ public class AgentInput : MonoBehaviour, IAgentInput
             }
 
         }
+        
+        // Throwables
+        if (Input.GetButtonDown("Fire2"))
+            StartThrowWeapon.Invoke(); // Throws grenade
+        if (Input.GetButtonUp("Fire2"))
+            StopThrowWeapon.Invoke(); // Release M2
     }
 
     private void GetPointerInput()
