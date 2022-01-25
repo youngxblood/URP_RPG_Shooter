@@ -15,7 +15,7 @@ MonoBehaviour:
   <grenadePrefab>k__BackingField: {fileID: 2655388543187413216, guid: ac7a2cc15153281408c1a9c98e2d0f69, type: 3}
   <explosionVFX>k__BackingField: {fileID: 6963116127292947398, guid: 1ef5ec6178856eb4f83e2726be0e0b15, type: 3}
   <ammoCapacity>k__BackingField: 24
-  <explosionDamage>k__BackingField: 2
-  <explosionRadius>k__BackingField: 2
+  <explosionDamage>k__BackingField: 10
+  <explosionRadius>k__BackingField: 5
   <explodesOnImpact>k__BackingField: 0
-  <fuseTimer>k__BackingField: 1.5
+  <fuseTimer>k__BackingField: 1

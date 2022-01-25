@@ -365,7 +365,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -419,6 +419,7 @@ MonoBehaviour:
   <EnemyData>k__BackingField: {fileID: 11400000, guid: 5de6ce95f52eb1e43ac4e3c4061e8dd5, type: 2}
   <enemyAttack>k__BackingField: {fileID: 0}
   deathVFX: {fileID: 6963116127292947398, guid: ee7ade0550504c840b5b978b3fdbfe85, type: 3}
+  combatMonitor: {fileID: 0}
   hasTakenDamage: 0
   ObjVelocity: {x: 0, y: 0, z: 0}
   isMoving: 0
@@ -835,7 +836,7 @@ MonoBehaviour:
   - {x: -0.31199002, y: 0.29249573, z: 0}
   m_ShapePathHash: -992186397
   m_Mesh: {fileID: 0}
-  m_InstanceId: 31592
+  m_InstanceId: 21022
 --- !u!95 &4344094069290802366
 Animator:
   serializedVersion: 3

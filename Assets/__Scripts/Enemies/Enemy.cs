@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour, IHittable
         {
             OnDamaged?.Invoke(); // Used to change states
 
-            Health--;
+            Health -= damage;
             PlayHitSFX();
 
             if (Health <= 0)

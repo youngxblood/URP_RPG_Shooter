@@ -26,6 +26,8 @@ public class FragGrenade : Throwable
     {
         yield return new WaitForSeconds(throwableData.fuseTimer);
         PlayExplosionVFX();
+        ApplyAreaDamage();
+        DestroyThrowable();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
