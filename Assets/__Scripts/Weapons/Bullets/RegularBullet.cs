@@ -26,25 +26,6 @@ public class RegularBullet : Bullet
     {
         var hittable = collision.GetComponent<IHittable>();
         hittable?.GetHit(BulletData.Damage, gameObject);
-
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
-        {
-            HitObstacle();
-        }
-        else if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
-        {
-            HitEnemy();
-        }
-
         Destroy(gameObject);
-    }
-
-    private void HitEnemy()
-    {
-        // Debug.Log("Hit Enemy.");
-    }
-    private void HitObstacle()
-    {
-        // Debug.Log("Hitting obstacle."); //TODO: Need to implement proper collision detection
     }
 }

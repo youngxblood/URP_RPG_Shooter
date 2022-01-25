@@ -16,6 +16,6 @@ MonoBehaviour:
   <explosionVFX>k__BackingField: {fileID: 6963116127292947398, guid: 1ef5ec6178856eb4f83e2726be0e0b15, type: 3}
   <ammoCapacity>k__BackingField: 24
   <explosionDamage>k__BackingField: 10
-  <explosionRadius>k__BackingField: 5
+  <explosionRadius>k__BackingField: 1
   <explodesOnImpact>k__BackingField: 0
   <fuseTimer>k__BackingField: 1

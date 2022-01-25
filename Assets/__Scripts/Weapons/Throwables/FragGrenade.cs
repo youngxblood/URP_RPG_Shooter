@@ -12,35 +12,18 @@ public class FragGrenade : Throwable
         get { return rb; }
         set { rb = value; }
     }
-    
 
-    private void Awake() 
+    private void Awake()
     {
-        StartCoroutine(StartGrenadeFuse());  
-        animator = GetComponent<Animator>();    
+        animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        
+        StartCoroutine(StartGrenadeFuse());
     }
 
-    private IEnumerator StartGrenadeFuse()
+    public void OnDrawGizmos()
     {
-        yield return new WaitForSeconds(throwableData.fuseTimer);
-        PlayExplosionVFX();
-        ApplyAreaDamage();
-        DestroyThrowable();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // Cancel timer coroutine and explode?
-    }
-
-    private void HitEnemy()
-    {
-        // Debug.Log("Hit Enemy.");
-    }
-    private void HitObstacle()
-    {
-        // Debug.Log("Hitting obstacle."); //TODO: Need to implement proper collision detection
+        DrawRadiusGizmo(throwableData.explosionRadius);
     }
 }

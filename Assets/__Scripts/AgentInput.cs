@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Cinemachine;
 
 public class AgentInput : MonoBehaviour, IAgentInput
 {
     private Camera mainCamera;
+    private CinemachineVirtualCamera cinemachineCamera;
     private bool fireButtonDown = false;
     private bool secondaryButtonDown = false;
 
@@ -23,44 +25,23 @@ public class AgentInput : MonoBehaviour, IAgentInput
 
     private void Awake()
     {
-        mainCamera = Camera.main; //Gets camera based on it's tag    
+        mainCamera = Camera.main; //Gets camera based on it's tag  
+        cinemachineCamera = FindObjectOfType<CinemachineVirtualCamera>();  
     }
-    
 
     private void Update()
     {
         GetMovementInput();
         GetPointerInput();
         GetFireInput();
+        GetThrowableInput();
+        GetCameraZoomInput();
     }
 
-    // Check if fire button is pressed
-    private void GetFireInput()
+    #region Helpers
+    private void GetMovementInput()
     {
-        if (Input.GetAxisRaw("Fire1") > 0)
-        {
-            if (fireButtonDown == false)
-            {
-                fireButtonDown = true;
-                OnFireButtonPressed?.Invoke();
-            }
-
-        }
-        else
-        {
-            if (fireButtonDown)
-            {
-                fireButtonDown = false;
-                OnFireButtonReleased?.Invoke();
-            }
-
-        }
-        
-        // Throwables
-        if (Input.GetButtonDown("Fire2"))
-            StartThrowWeapon.Invoke(); // Throws grenade
-        if (Input.GetButtonUp("Fire2"))
-            StopThrowWeapon.Invoke(); // Release M2
+        OnMovementKeyPressed?.Invoke(new Vector2(Input.GetAxisRaw("Horizontal"), (Input.GetAxisRaw("Vertical"))));
     }
 
     private void GetPointerInput()
@@ -71,8 +52,52 @@ public class AgentInput : MonoBehaviour, IAgentInput
         OnPointerPositionChanged?.Invoke(mouseInWorldSpace);
     }
 
-    private void GetMovementInput()
+    private void GetFireInput()
     {
-        OnMovementKeyPressed?.Invoke(new Vector2(Input.GetAxisRaw("Horizontal"), (Input.GetAxisRaw("Vertical"))));
+        if (Input.GetAxisRaw("Fire1") > 0)
+        {
+            if (fireButtonDown == false)
+            {
+                fireButtonDown = true;
+                OnFireButtonPressed?.Invoke();
+            }
+        }
+        else
+        {
+            if (fireButtonDown)
+            {
+                fireButtonDown = false;
+                OnFireButtonReleased?.Invoke();
+            }
+
+        }
     }
+
+    private void GetThrowableInput()
+    {
+        if (Input.GetButtonDown("Fire2"))
+            StartThrowWeapon.Invoke();
+        if (Input.GetButtonUp("Fire2"))
+            StopThrowWeapon.Invoke();
+    }
+
+    private void GetCameraZoomInput()
+    {
+        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+            ZoomCameraIn();
+        if (Input.GetAxis("Mouse ScrollWheel") < 0)
+            ZoomCameraOut();
+    }
+
+    private void ZoomCameraIn()
+    {
+        cinemachineCamera.m_Lens.OrthographicSize = Mathf.Clamp(cinemachineCamera.m_Lens.OrthographicSize - 1, 3, 10); 
+    }
+
+    private void ZoomCameraOut()
+    {
+        cinemachineCamera.m_Lens.OrthographicSize = Mathf.Clamp(cinemachineCamera.m_Lens.OrthographicSize + 1, 3, 10);
+    }
+
+    #endregion
 }

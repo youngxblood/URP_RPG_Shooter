@@ -31,6 +31,7 @@ public class Player : MonoBehaviour, IHittable
         MaxHealth = Health;
         CurrentLives = playerStats.playerData.maxLives;
     }
+
     // This is used to delay getting the references to wait for the UIController instance to be created
     private void Start()
     {
@@ -42,7 +43,7 @@ public class Player : MonoBehaviour, IHittable
     {
         if (!isDead)
         {
-            DamagePlayer(1);
+            DamagePlayer(damage);
             UIController.Instance.UpdateHealthBar(Health);
 
             if (Health <= 0 && !isDead)
@@ -103,9 +104,9 @@ public class Player : MonoBehaviour, IHittable
         spriteRenderer.enabled = false;
     }
 
-    public void DamagePlayer(int newHealth)
+    public void DamagePlayer(int damage)
     {
-        Health = Health - newHealth;
+        Health = Health - damage;
         agentSounds.PlayHitSound();
         UIController.Instance.UpdateHealthBar(Health);
     }
