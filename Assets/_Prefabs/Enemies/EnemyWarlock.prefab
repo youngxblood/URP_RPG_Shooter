@@ -517,7 +517,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!95 &2431650203753227842
 Animator:
@@ -706,7 +706,7 @@ MonoBehaviour:
   - {x: -0.31199002, y: 0.29249573, z: 0}
   m_ShapePathHash: -992186397
   m_Mesh: {fileID: 0}
-  m_InstanceId: 21430
+  m_InstanceId: 40620
 --- !u!1 &2431650203804977267
 GameObject:
   m_ObjectHideFlags: 0

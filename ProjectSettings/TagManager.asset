@@ -20,7 +20,7 @@ TagManager:
   - PlayerMovementCollider
   - Teleporter
   - Throwables
-  - 
+  - SECONDARY
   - 
   - 
   - 
@@ -65,4 +65,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3008184299
+    locked: 0
+  - name: SECONDARY
+    uniqueID: 1350373153
     locked: 0

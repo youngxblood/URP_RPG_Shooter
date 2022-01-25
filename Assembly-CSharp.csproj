@@ -43,6 +43,7 @@
      <Compile Include="Assets\__Scripts\Pickups\Powerups\MoveSpeedPowerup.cs" />
      <Compile Include="Assets\__Scripts\UI\UIController.cs" />
      <Compile Include="Assets\__Scripts\Weapons\WeaponAudio.cs" />
+     <Compile Include="Assets\__Scripts\Weapons\Throwable.cs" />
      <Compile Include="Assets\__Scripts\DataSO\BulletDataSO.cs" />
      <Compile Include="Assets\__Scripts\Player\PlayerStats.cs" />
      <Compile Include="Assets\__Scripts\_StateMachine\States\PatrolState.cs" />
@@ -75,6 +76,7 @@
      <Compile Include="Assets\__Scripts\Enemies\EnemyStats.cs" />
      <Compile Include="Assets\__Scripts\Combat\EnemySpawner.cs" />
      <Compile Include="Assets\__Scripts\Combat\CombatMonitor.cs" />
+     <Compile Include="Assets\__Scripts\Weapons\Throwables\FragGrenade.cs" />
      <Compile Include="Assets\__Scripts\Feedback\FeedbackPlayer.cs" />
      <Compile Include="Assets\__Scripts\AgentWeapon.cs" />
      <Compile Include="Assets\__Scripts\Pickups\HealthPickup.cs" />
@@ -93,8 +95,8 @@
      <Compile Include="Assets\__Scripts\_StateMachine\Shared\State.cs" />
      <Compile Include="Assets\__Scripts\LevelFlow\LevelManager.cs" />
      <Compile Include="Assets\__Scripts\DataSO\PlayerDataSO.cs" />
-     <Compile Include="Assets\__Scripts\Weapons\Throwable.cs" />
-     <Compile Include="Assets\__Scripts\Weapons\Throwables\FragGrenade.cs" />
+     <Compile Include="Assets\__Scripts\Interactables\Interactable.cs" />
+     <Compile Include="Assets\__Scripts\Interactables\Chest.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

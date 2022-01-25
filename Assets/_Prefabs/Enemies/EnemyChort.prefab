@@ -800,7 +800,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!114 &4344094069290802354
 MonoBehaviour:
@@ -836,7 +836,7 @@ MonoBehaviour:
   - {x: -0.31199002, y: 0.29249573, z: 0}
   m_ShapePathHash: -992186397
   m_Mesh: {fileID: 0}
-  m_InstanceId: 21022
+  m_InstanceId: 40432
 --- !u!95 &4344094069290802366
 Animator:
   serializedVersion: 3
