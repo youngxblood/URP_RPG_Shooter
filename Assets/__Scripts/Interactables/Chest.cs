@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class Chest : Interactable
 {
-    private void Start() 
-    {
-        OpenChest();    
-    }
-
     private void OpenChest()
     {
         PlayChestOpenAnim();
+        interactableSounds.PlayInteractSound();
     }
 
     private void PlayChestOpenAnim()
     {
         animator.SetBool("isOpened", true);
+    }
+
+    public override void Interact()
+    {
+        OpenChest(); 
     }
 }

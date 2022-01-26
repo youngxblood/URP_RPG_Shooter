@@ -23,6 +23,10 @@ public class AgentInput : MonoBehaviour, IAgentInput
     public delegate void StopThrowGrenadeAction();
     public event StopThrowGrenadeAction StopThrowWeapon;
 
+    // Interaction
+    int layerMask = 1 << 14; // Used for getting interactables on interact
+    [SerializeField] private float interactionRange = 1f;
+
     private void Awake()
     {
         mainCamera = Camera.main; //Gets camera based on it's tag  
@@ -36,6 +40,7 @@ public class AgentInput : MonoBehaviour, IAgentInput
         GetFireInput();
         GetThrowableInput();
         GetCameraZoomInput();
+        HandleInteractables();
     }
 
     #region Helpers
@@ -97,6 +102,27 @@ public class AgentInput : MonoBehaviour, IAgentInput
     private void ZoomCameraOut()
     {
         cinemachineCamera.m_Lens.OrthographicSize = Mathf.Clamp(cinemachineCamera.m_Lens.OrthographicSize + 1, 3, 10);
+    }
+
+    private void HandleInteractables()
+    {
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            Collider2D[] interactablesNearby = new Collider2D[CheckForInteractables().Length];
+            interactablesNearby = CheckForInteractables();
+
+            foreach (var interactable in interactablesNearby)
+            {
+                var i = interactable.gameObject.GetComponent<Interactable>();
+                i?.Interact();
+            }
+        }
+    }
+
+    private Collider2D[] CheckForInteractables()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, interactionRange, layerMask);
+        return colliders;
     }
 
     #endregion

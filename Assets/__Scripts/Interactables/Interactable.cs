@@ -7,11 +7,18 @@ public class Interactable : MonoBehaviour
     [SerializeField] protected SpriteRenderer spriteRenderer;
     [SerializeField] protected Animator animator;
     [SerializeField] protected BoxCollider2D boxCollider;
+    protected InteractableSounds interactableSounds;
 
     private void Awake() 
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponentInChildren<Animator>();    
         boxCollider = GetComponent<BoxCollider2D>();
+        interactableSounds = GetComponentInChildren<InteractableSounds>();
+    }
+
+    public virtual void Interact()
+    {
+        
     }
 }
