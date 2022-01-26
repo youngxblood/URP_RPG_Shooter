@@ -44,7 +44,7 @@ public class WeaponManager : MonoBehaviour
             currentWeapon.gameObject.SetActive(false);
             equippedWeapons[v].gameObject.SetActive(true);
             currentWeapon = equippedWeapons[v];
-            currentWeapon.UpdateAmmoText();
+            currentWeapon.UpdateAmmoText(currentWeapon.Ammo);
             
 
             playerWeapon.Weapon = currentWeapon;

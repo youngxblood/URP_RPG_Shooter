@@ -19,11 +19,6 @@ public class ThrowableWeapon : MonoBehaviour
     private bool hasThrownThrowable = false;
     [SerializeField] private float throwStrength = 2f;
 
-    // Events
-    // ANCHOR Setup grenade throw event
-    public delegate void UpdateAmmoUI(int ammo);
-    public event UpdateAmmoUI UpdateAmmo;
-
     // Props
     public int Ammo
     {
@@ -44,7 +39,7 @@ public class ThrowableWeapon : MonoBehaviour
     private void Start()
     {
         Ammo = throwableData.ammoCapacity; // Sets ammo to max on start    
-        UIController.Instance.UpdateAmmoText(Ammo);
+        UpdateThrowableAmmoText(Ammo);
     }
 
     private void OnEnable()
@@ -60,33 +55,29 @@ public class ThrowableWeapon : MonoBehaviour
         hasThrownThrowable = false;
     }
     
-
-    public void Reload(int ammo)
-    {
-        Ammo += ammo;
-        // UpdateAmmoText();
-    }
-    
     #region Helpers
     // Input key down
     private void ThrowThrowable()
     {
-        if (!hasThrownThrowable)
+        if (!hasThrownThrowable && Ammo > 0) // Bool is reset on throw key up
         {
             SpawnGrenade(muzzle.transform.position, Quaternion.identity);
+            Ammo--;
+            UpdateThrowableAmmoText(Ammo);
             hasThrownThrowable = true;
         }   
     }
+
     // Input key up
     private void StopThrowingThrowable()
     {
         hasThrownThrowable = false;
     }
 
-    // public void UpdateAmmoText()
-    // {
-    //     UIController.Instance.UpdateAmmoText(Ammo);
-    // }
+    public void UpdateThrowableAmmoText(int ammo)
+    {
+        UIController.Instance.UpdateThrowableAmmoText(Ammo);
+    }
 
     private void SpawnGrenade(Vector3 position, Quaternion rotation)
     {

@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI ammoText;
+    [SerializeField] private TextMeshProUGUI throwableAmmoText;
     [SerializeField] GameObject weaponParent;
     [SerializeField] private Weapon playerWeapon;
     [SerializeField] private WeaponManager weaponManager;
@@ -21,6 +22,7 @@ public class UIController : MonoBehaviour
 
     [Header("Life Slider")]
     [SerializeField] private Slider slider;
+    
 
     private void Awake()
     {
@@ -48,9 +50,14 @@ public class UIController : MonoBehaviour
         weaponManager.ChangeWeapon -= ChangeWeaponUI;
     }
 
-    public void UpdateAmmoText(int score)
+    public void UpdateAmmoText(int ammo)
     {
-        scoreText.SetText(score.ToString());
+        ammoText.SetText(ammo.ToString());
+    }
+
+    public void UpdateThrowableAmmoText(int ammo)
+    {
+        throwableAmmoText.SetText(ammo.ToString());
     }
 
     public void ChangeWeaponUI(Weapon newWeapon)

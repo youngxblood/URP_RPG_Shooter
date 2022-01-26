@@ -34,7 +34,7 @@ public class Weapon : MonoBehaviour
     private void Start()
     {
         Ammo = weaponData.ammoCapacity; // Sets ammo to max on start    
-        UIController.Instance.UpdateAmmoText(Ammo);
+        UpdateAmmoText(Ammo);
     }
 
     private void Update()
@@ -54,7 +54,7 @@ public class Weapon : MonoBehaviour
     public void Reload(int ammo)
     {
         Ammo += ammo;
-        UpdateAmmoText();
+        UpdateAmmoText(Ammo);
     }
 
 
@@ -65,7 +65,7 @@ public class Weapon : MonoBehaviour
             if (Ammo > 0)
             {
                 Ammo--; // Subtract ammo
-                UpdateAmmoText();
+                UpdateAmmoText(Ammo);
 
                 OnShoot?.Invoke();
                 for (int i = 0; i < weaponData.GetBulletCountToSpawn(); i++)
@@ -95,9 +95,9 @@ public class Weapon : MonoBehaviour
         isShooting = false;
     }
 
-    public void UpdateAmmoText()
+    public void UpdateAmmoText(int ammo)
     {
-        UIController.Instance.UpdateAmmoText(Ammo);
+        UIController.Instance.UpdateAmmoText(ammo);
     }
 
     private void FinishShooting()
