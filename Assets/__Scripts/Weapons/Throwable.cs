@@ -9,7 +9,6 @@ public class Throwable : MonoBehaviour
     [SerializeField] protected SpriteRenderer spriteRenderer;
     int layerMask = 1 << 8;
 
-
     protected IEnumerator StartGrenadeFuse()
     {
         yield return new WaitForSeconds(throwableData.fuseTimer);

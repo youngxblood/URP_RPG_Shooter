@@ -73,7 +73,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.326
   m_Pitch: 1
   Loop: 0
@@ -287,7 +287,6 @@ MonoBehaviour:
   muzzle: {fileID: 1709062421152183385}
   ammo: 10
   weaponData: {fileID: 11400000, guid: 2c6dc39131d106d419ebf8c3d479ae17, type: 2}
-  reloadCoroutine: 0
   <OnShoot>k__BackingField:
     m_PersistentCalls:
       m_Calls:
