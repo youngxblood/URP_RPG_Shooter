@@ -7,19 +7,35 @@ public class Throwable : MonoBehaviour
     [SerializeField] protected ThrowableDataSO throwableData;
     [SerializeField] protected Animator animator;
     [SerializeField] protected SpriteRenderer spriteRenderer;
+    [SerializeField] protected ThrowableAudio throwableAudio;
+
     int layerMask = 1 << 8;
+
+    private void Start() 
+    {
+           
+    }
 
     protected IEnumerator StartGrenadeFuse()
     {
+        throwableAudio.PlayThrowClip();
         yield return new WaitForSeconds(throwableData.fuseTimer);
         ExplodeThrowable();
+    }
+
+    protected IEnumerator DestroyThrowable()
+    {
+        HideThrowable();
+        yield return new WaitForSeconds(0.8f);
+        Object.Destroy(gameObject);
     }
 
     protected void ExplodeThrowable()
     {
         PlayExplosionVFX();
+        throwableAudio.PlayExplosionClip();
         ApplyAreaDamage();
-        DestroyThrowable();
+        StartCoroutine(DestroyThrowable());
         ScreenShakeManager.Instance.ShakeCamera(1f, 0.3f);
     }
 
@@ -43,9 +59,9 @@ public class Throwable : MonoBehaviour
         }
     }
 
-    protected void DestroyThrowable()
+    protected void HideThrowable()
     {
-        Object.Destroy(gameObject);
+        spriteRenderer.enabled = false;
     }
 
     protected Collider2D[] CheckForEnemiesWithinBlast()

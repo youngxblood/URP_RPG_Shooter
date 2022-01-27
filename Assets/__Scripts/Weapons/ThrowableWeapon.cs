@@ -61,9 +61,8 @@ public class ThrowableWeapon : MonoBehaviour
     // Input key down
     private void StartThrowing()
     {
-        if (!hasThrownThrowable && Ammo > 0) // Bool is reset on throw key up
+        if (Ammo > 0) // Bool is reset on throw key up
         {
-            hasThrownThrowable = true;
             holdDownStartTime = Time.time;
         }   
     }
@@ -71,12 +70,14 @@ public class ThrowableWeapon : MonoBehaviour
     // Input key up
     private void FinishThrowing()
     {
-        float holdDownTime = Time.time - holdDownStartTime;
-        
-        SpawnGrenade(muzzle.transform.position, CalculateHoldDownForce(holdDownTime));
-        Ammo--;
-        UpdateThrowableAmmoText(Ammo);
-        hasThrownThrowable = false;
+        if (Ammo > 0)
+        {
+            float holdDownTime = Time.time - holdDownStartTime;
+            SpawnGrenade(muzzle.transform.position, CalculateHoldDownForce(holdDownTime));
+            Ammo--;
+            UpdateThrowableAmmoText(Ammo);
+        }
+
     }
 
     private float CalculateHoldDownForce(float holdTime)
