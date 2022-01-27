@@ -7,6 +7,7 @@ using Cinemachine;
 
 public class AgentInput : MonoBehaviour, IAgentInput
 {
+    private Player player;
     private Camera mainCamera;
     private CinemachineVirtualCamera cinemachineCamera;
     private bool fireButtonDown = false;
@@ -22,25 +23,35 @@ public class AgentInput : MonoBehaviour, IAgentInput
     public event StartThrowGrenadeAction StartThrowWeapon;
     public delegate void StopThrowGrenadeAction();
     public event StopThrowGrenadeAction StopThrowWeapon;
+    public delegate void IsThrowingGrenadeAction();
+    public event IsThrowingGrenadeAction IsThrowingWeapon;
+    
+    private float holdDownStartTime;
 
     // Interaction
     int layerMask = 1 << 14; // Used for getting interactables on interact
     [SerializeField] private float interactionRange = 1f;
+    
 
     private void Awake()
     {
         mainCamera = Camera.main; //Gets camera based on it's tag  
         cinemachineCamera = FindObjectOfType<CinemachineVirtualCamera>();  
+        player = GetComponent<Player>();
     }
 
     private void Update()
     {
-        GetMovementInput();
-        GetPointerInput();
-        GetFireInput();
-        GetThrowableInput();
-        GetCameraZoomInput();
-        HandleInteractables();
+        if(!player.isDead)
+        {
+            GetMovementInput();
+            GetPointerInput();
+            GetFireInput();
+            GetThrowableInput();
+            GetCameraZoomInput();
+            HandleInteractables();
+        }
+
     }
 
     #region Helpers

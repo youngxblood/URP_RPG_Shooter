@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Player : MonoBehaviour, IHittable
 {
     [Header("Player Stats")]
-    public bool isDead;
+    public bool isDead = false;
     public int Health;
     [field: SerializeField] public int MaxHealth { get; set; }
     [field: SerializeField] public int CurrentLives { get; set; }

@@ -17,7 +17,9 @@ public class ThrowableWeapon : MonoBehaviour
     protected bool isThrowing = false;
     protected bool reloadCoroutine = false;
     private bool hasThrownThrowable = false;
-    [SerializeField] private float throwStrength = 2f;
+    [SerializeField] private float throwStrengthMaxForce = 200f;
+    private float holdDownStartTime;
+
 
     // Props
     public int Ammo
@@ -44,34 +46,45 @@ public class ThrowableWeapon : MonoBehaviour
 
     private void OnEnable()
     {
-        agentInput.StartThrowWeapon += ThrowThrowable;
-        agentInput.StopThrowWeapon += StopThrowingThrowable;
+        agentInput.StartThrowWeapon += StartThrowing;
+        agentInput.StopThrowWeapon += FinishThrowing;
     }
 
     private void OnDisable()
     {
-        agentInput.StartThrowWeapon -= ThrowThrowable;
-        agentInput.StopThrowWeapon -= StopThrowingThrowable;
+        agentInput.StartThrowWeapon -= StartThrowing;
+        agentInput.StopThrowWeapon -= FinishThrowing;
         hasThrownThrowable = false;
     }
     
     #region Helpers
     // Input key down
-    private void ThrowThrowable()
+    private void StartThrowing()
     {
         if (!hasThrownThrowable && Ammo > 0) // Bool is reset on throw key up
         {
-            SpawnGrenade(muzzle.transform.position, Quaternion.identity);
-            Ammo--;
-            UpdateThrowableAmmoText(Ammo);
             hasThrownThrowable = true;
+            holdDownStartTime = Time.time;
         }   
     }
 
     // Input key up
-    private void StopThrowingThrowable()
+    private void FinishThrowing()
     {
+        float holdDownTime = Time.time - holdDownStartTime;
+        
+        SpawnGrenade(muzzle.transform.position, CalculateHoldDownForce(holdDownTime));
+        Ammo--;
+        UpdateThrowableAmmoText(Ammo);
         hasThrownThrowable = false;
+    }
+
+    private float CalculateHoldDownForce(float holdTime)
+    {
+        float maxHoldDownTime = 2f;
+        float holdDownTimeNormalized = Mathf.Clamp01(holdTime/maxHoldDownTime);
+        float force = holdDownTimeNormalized * throwStrengthMaxForce;
+        return force;
     }
 
     public void UpdateThrowableAmmoText(int ammo)
@@ -79,10 +92,10 @@ public class ThrowableWeapon : MonoBehaviour
         UIController.Instance.UpdateThrowableAmmoText(Ammo);
     }
 
-    private void SpawnGrenade(Vector3 position, Quaternion rotation)
+    private void SpawnGrenade(Vector3 position, float force)
     {
-        var grenadePrefab = Instantiate(throwableData.grenadePrefab, position, rotation);
-        grenadePrefab.GetComponent<Rigidbody2D>().AddForce(GetThrowDirection() * throwStrength, ForceMode2D.Impulse);
+        var grenadePrefab = Instantiate(throwableData.grenadePrefab, position, Quaternion.identity);
+        grenadePrefab.GetComponent<Rigidbody2D>().AddForce(GetThrowDirection() * force, ForceMode2D.Impulse);
     }
 
     private Vector2 GetThrowDirection()
