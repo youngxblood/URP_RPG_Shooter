@@ -21,6 +21,7 @@ public class Throwable : MonoBehaviour
         PlayExplosionVFX();
         ApplyAreaDamage();
         DestroyThrowable();
+        ScreenShakeManager.Instance.ShakeCamera(1f, 0.3f);
     }
 
     #region  Helpers

@@ -95,9 +95,10 @@
      <Compile Include="Assets\__Scripts\DataSO\WeaponDataSO.cs" />
      <Compile Include="Assets\__Scripts\_StateMachine\Shared\State.cs" />
      <Compile Include="Assets\__Scripts\Interactables\Interactable.cs" />
+     <Compile Include="Assets\__Scripts\Interactables\InteractableSounds.cs" />
      <Compile Include="Assets\__Scripts\LevelFlow\LevelManager.cs" />
      <Compile Include="Assets\__Scripts\DataSO\PlayerDataSO.cs" />
-     <Compile Include="Assets\__Scripts\Interactables\InteractableSounds.cs" />
+     <Compile Include="Assets\__Scripts\Managers\ScreenShakeManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
