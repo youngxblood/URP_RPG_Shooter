@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20129bd7abec3a1499c92ab8406485cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAttackRange: 5
+  maxAttackRange: 1
   chaseState: {fileID: 2159377546514954971}
   isWithinRange: 0
 --- !u!1 &2159377547239615233
@@ -809,7 +809,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4344094069290802352}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
   m_Name: 
@@ -836,7 +836,7 @@ MonoBehaviour:
   - {x: -0.31199002, y: 0.29249573, z: 0}
   m_ShapePathHash: -992186397
   m_Mesh: {fileID: 0}
-  m_InstanceId: 40432
+  m_InstanceId: 25410
 --- !u!95 &4344094069290802366
 Animator:
   serializedVersion: 3

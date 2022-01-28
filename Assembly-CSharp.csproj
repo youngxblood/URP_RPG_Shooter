@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\__Scripts\Combat\CombatWave.cs" />
+     <Compile Include="Assets\__Scripts\Weapons\Throwables\ThrowableAudio.cs" />
      <Compile Include="Assets\__Scripts\Combat\CombatStartTrigger.cs" />
      <Compile Include="Assets\__Scripts\Interfaces\IAgent.cs" />
      <Compile Include="Assets\__Scripts\DataSO\MovementDataSO.cs" />
@@ -99,7 +100,7 @@
      <Compile Include="Assets\__Scripts\Interactables\InteractableSounds.cs" />
      <Compile Include="Assets\__Scripts\LevelFlow\LevelManager.cs" />
      <Compile Include="Assets\__Scripts\DataSO\PlayerDataSO.cs" />
-     <Compile Include="Assets\__Scripts\Weapons\Throwables\ThrowableAudio.cs" />
+     <Compile Include="Assets\__Scripts\Interactables\Door.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

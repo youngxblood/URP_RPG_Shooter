@@ -124,6 +124,7 @@ public class Weapon : MonoBehaviour
     private void SpawnBullet(Vector3 position, Quaternion rotation)
     {
         var bulletPrefab = Instantiate(weaponData.BulletData.bulletPrefab, position, rotation);
+        Destroy(bulletPrefab, 5f);
         bulletPrefab.GetComponent<Bullet>().BulletData = weaponData.BulletData;
     }
 

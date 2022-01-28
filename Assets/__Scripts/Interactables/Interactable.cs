@@ -8,6 +8,7 @@ public class Interactable : MonoBehaviour
     [SerializeField] protected Animator animator;
     [SerializeField] protected BoxCollider2D boxCollider;
     protected InteractableSounds interactableSounds;
+    protected bool hasBeenInteractedWith = false;
 
     private void Awake() 
     {

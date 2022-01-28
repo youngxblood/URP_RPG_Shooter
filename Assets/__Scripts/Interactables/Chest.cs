@@ -17,6 +17,10 @@ public class Chest : Interactable
 
     public override void Interact()
     {
-        OpenChest(); 
+        if (!hasBeenInteractedWith)
+        {
+            OpenChest();
+            hasBeenInteractedWith = true;
+        }
     }
 }
