@@ -8,7 +8,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody2D))]
 public class AgentMovement : MonoBehaviour
 {
-    protected Rigidbody2D rigidbody2d;
+    protected Rigidbody2D rb;
     [field: SerializeField]
     public MovementDataSO MovementData { get; set; }
 
@@ -24,12 +24,26 @@ public class AgentMovement : MonoBehaviour
     public float deacceleration;
     public float maxSpeed;
 
+    protected AgentInput agentInput;
+
     private void Awake()
     {
-        rigidbody2d = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         acceleration = MovementData.acceleration;
         deacceleration = MovementData.deacceleration;
         maxSpeed = MovementData.maxSpeed;
+        agentInput = GetComponent<AgentInput>();
+    }
+
+    private void OnEnable()
+    {
+        agentInput.StartDash += DashPlayer;
+
+    }
+
+    private void OnDisable()
+    {
+        agentInput.StartDash -= DashPlayer;
     }
 
     public void MoveAgent(Vector2 movementInput)
@@ -57,6 +71,13 @@ public class AgentMovement : MonoBehaviour
     private void FixedUpdate()
     {
         OnVelocityChange?.Invoke(currentVelocity); //! First checks if event is listening, then invokes (sends?) the variable
-        rigidbody2d.velocity = currentVelocity * movementDirection.normalized; // Where the actual movement happens
+        rb.velocity = currentVelocity * movementDirection.normalized; // Where the actual movement happens
+    }
+
+    private void DashPlayer()
+    {
+        // if (movementDirection != Vector2.zero)
+            rb.velocity = rb.velocity * 50f;
+            Debug.Log("Test");
     }
 }

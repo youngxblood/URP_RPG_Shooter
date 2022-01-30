@@ -15,11 +15,11 @@ D:/Mark/Projects/URP_RPG_Shooter
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54920
+60491
 Successfully changed project path to: D:/Mark/Projects/URP_RPG_Shooter
 D:/Mark/Projects/URP_RPG_Shooter
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 52.77 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 429.34 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.2f1 (8fd9074bf66c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Resources/UnitySubsystems
@@ -35,123 +35,29 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56556
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56612
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001737 seconds.
+Registered in 0.003120 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 60.02 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 791.87 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.998 seconds
+- Completed reload, in 20.129 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002341 seconds.
+Registered in 0.003847 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 53.06 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 87.35 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.054 seconds
+- Completed reload, in  4.605 seconds
 Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.66 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2887 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 131.2 MB.
-System memory in use after: 128.4 MB.
-
-Unloading 52 unused Assets to reduce memory usage. Loaded Objects now: 3305.
-Total: 4.391600 ms (FindLiveObjects: 0.412800 ms CreateObjectMapping: 0.175700 ms MarkObjects: 2.270100 ms  DeleteObjects: 1.532200 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/__Scripts/_StateMachine/States/AttackState.cs
-  artifactKey: Guid(20129bd7abec3a1499c92ab8406485cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/__Scripts/_StateMachine/States/AttackState.cs using Guid(20129bd7abec3a1499c92ab8406485cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6945be07911a23090140afea79baf388') in 0.043010 seconds
-  Import took 0.056438 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 219.709066 seconds.
-  path: Assets/_Prefabs/Enemies/EnemyChort.prefab
-  artifactKey: Guid(055861a97dd98cb4a9f61735232bc083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Prefabs/Enemies/EnemyChort.prefab using Guid(055861a97dd98cb4a9f61735232bc083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae7891da0d6c7878fa343dd89f62ed89') in 0.221640 seconds
-  Import took 0.229328 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1527.585630 seconds.
-  path: Assets/__Scripts/Interactables/Interactable.cs
-  artifactKey: Guid(31e1f74730f4b38439e3383bdf41fd6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/__Scripts/Interactables/Interactable.cs using Guid(31e1f74730f4b38439e3383bdf41fd6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '090d9c0a1bf991a4351a340c3b185970') in 0.008849 seconds
-  Import took 0.015565 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001873 seconds.
-  path: Assets/__Scripts/Interactables/Interactable.cs
-  artifactKey: Guid(31e1f74730f4b38439e3383bdf41fd6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/__Scripts/Interactables/Interactable.cs using Guid(31e1f74730f4b38439e3383bdf41fd6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '090d9c0a1bf991a4351a340c3b185970') in 0.002881 seconds
-  Import took 0.008046 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002363 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.958 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2792 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 130.9 MB.
-System memory in use after: 128.1 MB.
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 3353.
-Total: 4.469500 ms (FindLiveObjects: 0.410900 ms CreateObjectMapping: 0.147000 ms MarkObjects: 2.353000 ms  DeleteObjects: 1.557300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 198.472826 seconds.
-  path: Assets/__Scripts/Interactables/Interactable.cs
-  artifactKey: Guid(31e1f74730f4b38439e3383bdf41fd6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/__Scripts/Interactables/Interactable.cs using Guid(31e1f74730f4b38439e3383bdf41fd6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '627d2c70d3e073f4c670be40844234f9') in 0.005974 seconds
-  Import took 0.010954 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.063116 seconds.
-  path: Assets/__Scripts/Interactables/Interactable.cs
-  artifactKey: Guid(31e1f74730f4b38439e3383bdf41fd6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/__Scripts/Interactables/Interactable.cs using Guid(31e1f74730f4b38439e3383bdf41fd6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '627d2c70d3e073f4c670be40844234f9') in 0.002110 seconds
-  Import took 0.008113 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23249.148527 seconds.
-  path: Assets/_Scenes/Gyms/GYM_FogOfWar.unity
-  artifactKey: Guid(22fc83f2cc531774bb8b314342c623c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Gyms/GYM_FogOfWar.unity using Guid(22fc83f2cc531774bb8b314342c623c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0d60b175a65c25304f354e908954bc0') in 0.045551 seconds
-  Import took 0.057508 seconds .
-

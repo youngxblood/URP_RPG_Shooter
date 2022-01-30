@@ -25,6 +25,9 @@ public class AgentInput : MonoBehaviour, IAgentInput
     public event StopThrowGrenadeAction StopThrowWeapon;
     public delegate void IsThrowingGrenadeAction();
     public event IsThrowingGrenadeAction IsThrowingWeapon;
+
+    public delegate void StartDashAction();
+    public event StartDashAction StartDash;
     
     private float holdDownStartTime;
 
@@ -50,6 +53,7 @@ public class AgentInput : MonoBehaviour, IAgentInput
             GetThrowableInput();
             GetCameraZoomInput();
             HandleInteractables();
+            HandleDashMovement();
         }
 
     }
@@ -134,6 +138,15 @@ public class AgentInput : MonoBehaviour, IAgentInput
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, interactionRange, layerMask);
         return colliders;
+    }
+
+    private void HandleDashMovement()
+    {
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            StartDash?.Invoke();
+            //DashPlayer(new Vector2 (Input.GetAxisRaw("Horizontal"), (Input.GetAxisRaw("Vertical"))));
+        }
     }
 
     #endregion

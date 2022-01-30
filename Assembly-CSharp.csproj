@@ -58,6 +58,7 @@
      <Compile Include="Assets\__Scripts\Interfaces\IHittable.cs" />
      <Compile Include="Assets\__Scripts\AgentSounds.cs" />
      <Compile Include="Assets\__Scripts\AudioPlayer.cs" />
+     <Compile Include="Assets\__Scripts\Interactables\Door.cs" />
      <Compile Include="Assets\__Scripts\Pickups\PowerupBase.cs" />
      <Compile Include="Assets\__Scripts\Pickups\AmmoPickup.cs" />
      <Compile Include="Assets\__Scripts\Pickups\Collectible.cs" />
@@ -100,7 +101,9 @@
      <Compile Include="Assets\__Scripts\Interactables\InteractableSounds.cs" />
      <Compile Include="Assets\__Scripts\LevelFlow\LevelManager.cs" />
      <Compile Include="Assets\__Scripts\DataSO\PlayerDataSO.cs" />
-     <Compile Include="Assets\__Scripts\Interactables\Door.cs" />
+     <Compile Include="Assets\__Scripts\Traps\Trap.cs" />
+     <Compile Include="Assets\__Scripts\Traps\SpikeTrap.cs" />
+     <Compile Include="Assets\__Scripts\Traps\TrapAudioPlayer.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
