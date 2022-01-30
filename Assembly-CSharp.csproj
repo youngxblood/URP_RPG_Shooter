@@ -57,6 +57,7 @@
      <Compile Include="Assets\__Scripts\DataSO\ThrowableDataSO.cs" />
      <Compile Include="Assets\__Scripts\Interfaces\IHittable.cs" />
      <Compile Include="Assets\__Scripts\AgentSounds.cs" />
+     <Compile Include="Assets\__Scripts\Managers\GameStateManager.cs" />
      <Compile Include="Assets\__Scripts\AudioPlayer.cs" />
      <Compile Include="Assets\__Scripts\Interactables\Door.cs" />
      <Compile Include="Assets\__Scripts\Pickups\PowerupBase.cs" />
@@ -104,7 +105,7 @@
      <Compile Include="Assets\__Scripts\Interactables\InteractableSounds.cs" />
      <Compile Include="Assets\__Scripts\LevelFlow\LevelManager.cs" />
      <Compile Include="Assets\__Scripts\DataSO\PlayerDataSO.cs" />
-     <Compile Include="Assets\__Scripts\Managers\GameStateManager.cs" />
+     <Compile Include="Assets\__Scripts\UI\MainMenuController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

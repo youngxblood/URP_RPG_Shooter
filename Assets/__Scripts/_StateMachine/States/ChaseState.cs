@@ -118,11 +118,13 @@ public class ChaseState : State
         return Mathf.Clamp(currentVelocity, 0, enemyStats.MovementData.maxSpeed); //Lower limit is 0, upper limit is the max speed in the MovementData scripted object
     }
 
+    #if UNITY_EDITOR
     // To Draw view distance in editor
     public void OnDrawGizmos()
     {
         DrawRadiusGizmo(AggroViewDistance);
     }
+    #endif
 
     # endregion
 }

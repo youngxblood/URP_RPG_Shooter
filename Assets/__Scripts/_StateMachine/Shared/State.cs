@@ -53,6 +53,7 @@ public abstract class State : MonoBehaviour
         aiDestinationSetter.target = null;
     }
 
+    #if UNITY_EDITOR
     public void DrawRadiusGizmo(float radius)
     {
         if (UnityEditor.Selection.activeObject == gameObject)
@@ -62,6 +63,7 @@ public abstract class State : MonoBehaviour
             Gizmos.color = Color.white;
         }
     }
+    #endif
 
     #endregion
 }

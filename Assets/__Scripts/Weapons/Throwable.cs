@@ -80,7 +80,8 @@ public class Throwable : MonoBehaviour
             ExplodeThrowable();
         }
     }
-
+    
+    #if UNITY_EDITOR
     // Visualization for blast radius
     public void DrawRadiusGizmo(float radius)
     {
@@ -91,6 +92,8 @@ public class Throwable : MonoBehaviour
             Gizmos.color = Color.white;
         }
     }
+
+    #endif
 
     #endregion
 }

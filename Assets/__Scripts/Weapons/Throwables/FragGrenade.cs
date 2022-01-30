@@ -26,8 +26,10 @@ public class FragGrenade : Throwable
         StartCoroutine(StartGrenadeFuse());
     }
 
+    #if UNITY_EDITOR
     public void OnDrawGizmos()
     {
         DrawRadiusGizmo(throwableData.explosionRadius);
     }
+    #endif
 }

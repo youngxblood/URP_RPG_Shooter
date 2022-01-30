@@ -71,11 +71,13 @@ public class PatrolState : State
         return canSeePlayer;
     }
 
+    #if UNITY_EDITOR
     // To Draw view distance in editor
     public void OnDrawGizmos()
     {
         DrawRadiusGizmo(idleViewDistance);
     }
+    #endif
 
     #endregion
 }

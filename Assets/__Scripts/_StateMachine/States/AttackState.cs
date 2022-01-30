@@ -51,11 +51,13 @@ public class AttackState : State
         enemy.PerformAttack();
     }
 
+    #if UNITY_EDITOR
     // To Draw view distance in editor
     public void OnDrawGizmos()
     {
         DrawRadiusGizmo(maxAttackRange);
     }
+    #endif
 
     #endregion
 }

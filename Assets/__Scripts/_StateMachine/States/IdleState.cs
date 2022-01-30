@@ -67,11 +67,13 @@ public class IdleState : State
         enemy.hasTakenDamage = true;
     }
 
+    #if UNITY_EDITOR
     // To Draw view distance in editor
     public void OnDrawGizmos()
     {
         DrawRadiusGizmo(idleViewDistance);
     }
+    #endif
 
     #endregion
 }

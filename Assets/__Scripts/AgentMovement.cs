@@ -38,7 +38,6 @@ public class AgentMovement : MonoBehaviour
     private void OnEnable()
     {
         agentInput.StartDash += DashPlayer;
-
     }
 
     private void OnDisable()

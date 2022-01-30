@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private Canvas gameplayCanvas;
     [SerializeField] private TextMeshProUGUI ammoText;
     [SerializeField] private TextMeshProUGUI throwableAmmoText;
+    private GameObject player;
     [SerializeField] GameObject weaponParent;
     [SerializeField] private Weapon playerWeapon;
     [SerializeField] private WeaponManager weaponManager;
@@ -31,6 +33,9 @@ public class UIController : MonoBehaviour
     [SerializeField] private Canvas pauseMenuCanvas;
     public bool gameIsPaused { get; private set; } = false;
 
+    public TextMeshProUGUI test;
+
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -42,12 +47,23 @@ public class UIController : MonoBehaviour
             _instance = this;
         }
 
+        // Get obj refs
+        player = GameObject.FindGameObjectWithTag("Player");
+        weaponParent = player.transform.Find("WeaponParent").gameObject;
         playerWeapon = weaponParent.GetComponentInChildren<Weapon>();
+        weaponManager = FindObjectOfType<WeaponManager>();
+        
+        // Get text refs
+        ammoText = gameplayCanvas.transform.Find("Ammo/Background/AmmoCount").gameObject.GetComponent<TextMeshProUGUI>();
+        throwableAmmoText = gameplayCanvas.transform.Find("Throwable/Background/BombCount").gameObject.GetComponent<TextMeshProUGUI>();
     }
 
     private void Start() 
     {
-        ClosePauseMenu();    
+        ClosePauseMenu();   
+
+        
+
     }
 
     private void Update() 
@@ -116,7 +132,7 @@ public class UIController : MonoBehaviour
         }
     }
 
-    private void OpenPauseMenu()
+    public void OpenPauseMenu()
     {
         Time.timeScale = 0f;
         pauseMenuCanvas.enabled = true;
@@ -124,11 +140,16 @@ public class UIController : MonoBehaviour
         gameIsPaused = true;
     }
 
-    private void ClosePauseMenu()
+    public void ClosePauseMenu()
     {
         Time.timeScale = 1f;
         pauseMenuCanvas.enabled = false;
         gameplayCanvas.enabled = true;
         gameIsPaused = false;
+    }
+
+    public void ReturnToMainMenu()
+    {
+        // SceneManager.LoadScene(0);
     }
 }
