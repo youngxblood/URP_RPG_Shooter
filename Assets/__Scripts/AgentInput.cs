@@ -45,7 +45,7 @@ public class AgentInput : MonoBehaviour, IAgentInput
 
     private void Update()
     {
-        if(!player.isDead)
+        if(!player.isDead && !UIController.Instance.gameIsPaused)
         {
             GetMovementInput();
             GetPointerInput();

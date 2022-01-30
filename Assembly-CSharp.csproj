@@ -62,6 +62,7 @@
      <Compile Include="Assets\__Scripts\Pickups\PowerupBase.cs" />
      <Compile Include="Assets\__Scripts\Pickups\AmmoPickup.cs" />
      <Compile Include="Assets\__Scripts\Pickups\Collectible.cs" />
+     <Compile Include="Assets\__Scripts\Traps\TrapAudioPlayer.cs" />
      <Compile Include="Assets\__Scripts\Enemies\EnemyAIBrain.cs" />
      <Compile Include="Assets\__Scripts\Player\Player.cs" />
      <Compile Include="Assets\__Scripts\Managers\ScreenShakeManager.cs" />
@@ -71,6 +72,7 @@
      <Compile Include="Assets\__Scripts\Weapons\ThrowableWeapon.cs" />
      <Compile Include="Assets\__Scripts\Enemies\Enemy.cs" />
      <Compile Include="Assets\__Scripts\AgentStepAudioPlayer.cs" />
+     <Compile Include="Assets\__Scripts\Traps\SpikeTrap.cs" />
      <Compile Include="Assets\__Scripts\Interfaces\IAgentInput.cs" />
      <Compile Include="Assets\__Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\__Scripts\Player\PlayerManager.cs" />
@@ -80,10 +82,11 @@
      <Compile Include="Assets\__Scripts\Combat\EnemySpawner.cs" />
      <Compile Include="Assets\__Scripts\Combat\CombatMonitor.cs" />
      <Compile Include="Assets\__Scripts\Weapons\Throwables\FragGrenade.cs" />
-     <Compile Include="Assets\__Scripts\Feedback\FeedbackPlayer.cs" />
+     <Compile Include="Assets\__Scripts\LevelFlow\Feedback\FeedbackPlayer.cs" />
      <Compile Include="Assets\__Scripts\AgentWeapon.cs" />
      <Compile Include="Assets\__Scripts\Pickups\HealthPickup.cs" />
      <Compile Include="Assets\__Scripts\AgentAnimations.cs" />
+     <Compile Include="Assets\__Scripts\Traps\Trap.cs" />
      <Compile Include="Assets\__Scripts\Weapons\Bullets\RegularBullet.cs" />
      <Compile Include="Assets\__Scripts\AgentMovement.cs" />
      <Compile Include="Assets\__Scripts\Weapons\Weapon.cs" />
@@ -91,7 +94,7 @@
      <Compile Include="Assets\__Scripts\Interactables\Chest.cs" />
      <Compile Include="Assets\__Scripts\Managers\WeaponManager.cs" />
      <Compile Include="Assets\__Scripts\_StateMachine\States\ChaseState.cs" />
-     <Compile Include="Assets\__Scripts\Feedback\Feedback.cs" />
+     <Compile Include="Assets\__Scripts\LevelFlow\Feedback\Feedback.cs" />
      <Compile Include="Assets\__Scripts\Pickups\CollectibleSounds.cs" />
      <Compile Include="Assets\__Scripts\AgentInput.cs" />
      <Compile Include="Assets\__Scripts\DataSO\EnemyDataSO.cs" />
@@ -101,9 +104,7 @@
      <Compile Include="Assets\__Scripts\Interactables\InteractableSounds.cs" />
      <Compile Include="Assets\__Scripts\LevelFlow\LevelManager.cs" />
      <Compile Include="Assets\__Scripts\DataSO\PlayerDataSO.cs" />
-     <Compile Include="Assets\__Scripts\Traps\Trap.cs" />
-     <Compile Include="Assets\__Scripts\Traps\SpikeTrap.cs" />
-     <Compile Include="Assets\__Scripts\Traps\TrapAudioPlayer.cs" />
+     <Compile Include="Assets\__Scripts\Managers\GameStateManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

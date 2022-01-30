@@ -36,10 +36,13 @@ public class AgentWeapon : MonoBehaviour
 
     public virtual void AimWeapon(Vector2 pointerPosition)
     {
-        var aimDirection = (Vector3)pointerPosition - transform.position;
-        desiredAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg; //! Investigate the math
-        AdjustWeaponRendering();
-        transform.rotation = Quaternion.AngleAxis(desiredAngle, Vector3.forward);
+        if (!UIController.Instance.gameIsPaused)
+        {
+            var aimDirection = (Vector3)pointerPosition - transform.position;
+            desiredAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg; //! Investigate the math
+            AdjustWeaponRendering();
+            transform.rotation = Quaternion.AngleAxis(desiredAngle, Vector3.forward);
+        }
     }
 
     protected void AdjustWeaponRendering()
