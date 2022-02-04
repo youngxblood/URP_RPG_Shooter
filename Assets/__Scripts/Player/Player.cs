@@ -12,12 +12,11 @@ public class Player : MonoBehaviour, IHittable
     [field: SerializeField] public int CurrentLives { get; set; }
 
     [Header("Object Refs")]
-    [SerializeField] private PlayerStats playerStats;
+    [SerializeField] public PlayerStats playerStats;
     [SerializeField] private PlayerManager playerManager;
     public SpriteRenderer spriteRenderer;
     [SerializeField] private AgentSounds agentSounds;
     [SerializeField] private GameObject deathVFX;
-
 
     private void Awake()
     {
@@ -30,6 +29,9 @@ public class Player : MonoBehaviour, IHittable
         Health = playerStats.playerData.maxHealth;
         MaxHealth = Health;
         CurrentLives = playerStats.playerData.maxLives;
+
+        // Stats for saving
+        // playerStats.stats.
     }
 
     // This is used to delay getting the references to wait for the UIController instance to be created
@@ -116,6 +118,33 @@ public class Player : MonoBehaviour, IHittable
         Health += newHealth;
         Health = Mathf.Clamp(Health, 0, MaxHealth);
         UIController.Instance.UpdateHealthBar(Health);
+    }
+
+    public void SetPlayerHealth(int newHealth)
+    {
+        if(newHealth <= 0)
+            return;
+        Health = newHealth;
+        Health = Mathf.Clamp(Health, 0, MaxHealth);
+        UIController.Instance.UpdateHealthBar(Health);
+    }
+
+    public void SaveStats()
+    {
+        Vector3 currentPosition = transform.position;
+        playerStats.stats.playerPos.x = currentPosition.x;
+        playerStats.stats.playerPos.y = currentPosition.y;
+        playerStats.stats.playerPos.z = currentPosition.z;
+
+        playerStats.stats.health = Health;
+        playerStats.stats.lives = CurrentLives;
+    }
+
+    public void LoadFromStats()
+    {
+        transform.position = playerStats.stats.playerPos.GetPosition();
+        SetPlayerHealth(playerStats.stats.health);
+
     }
     # endregion
 }

@@ -44,32 +44,4 @@ public class MainMenuController : MonoBehaviour
     {
         Application.Quit();
     }
-
-
-    //     private void HandlePauseMenu()
-    // {
-    //     if(Input.GetKeyDown(KeyCode.Escape))
-    //     {
-    //         if (!gameIsPaused)
-    //             OpenPauseMenu();
-    //         else
-    //             ClosePauseMenu();
-    //     }
-    // }
-
-    // public void OpenPauseMenu()
-    // {
-    //     Time.timeScale = 0f;
-    //     pauseMenuCanvas.enabled = true;
-    //     gameplayCanvas.enabled = false;
-    //     gameIsPaused = true;
-    // }
-
-    // private void ClosePauseMenu()
-    // {
-    //     Time.timeScale = 1f;
-    //     pauseMenuCanvas.enabled = false;
-    //     gameplayCanvas.enabled = true;
-    //     gameIsPaused = false;
-    // }
 }

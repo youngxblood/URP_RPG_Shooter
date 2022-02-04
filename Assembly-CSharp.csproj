@@ -56,6 +56,7 @@
      <Compile Include="Assets\__Scripts\Enemies\EnemyAttack.cs" />
      <Compile Include="Assets\__Scripts\DataSO\ThrowableDataSO.cs" />
      <Compile Include="Assets\__Scripts\Interfaces\IHittable.cs" />
+     <Compile Include="Assets\__Scripts\UI\MainMenuController.cs" />
      <Compile Include="Assets\__Scripts\AgentSounds.cs" />
      <Compile Include="Assets\__Scripts\Managers\GameStateManager.cs" />
      <Compile Include="Assets\__Scripts\AudioPlayer.cs" />
@@ -68,12 +69,14 @@
      <Compile Include="Assets\__Scripts\Player\Player.cs" />
      <Compile Include="Assets\__Scripts\Managers\ScreenShakeManager.cs" />
      <Compile Include="Assets\__Scripts\Enemies\EnemyMeleeAttack.cs" />
+     <Compile Include="Assets\__Scripts\Player\Stats.cs" />
      <Compile Include="Assets\__Scripts\Weapons\OrbProjectile.cs" />
      <Compile Include="Assets\__Scripts\LevelFlow\LevelTransitionPad.cs" />
      <Compile Include="Assets\__Scripts\Weapons\ThrowableWeapon.cs" />
      <Compile Include="Assets\__Scripts\Enemies\Enemy.cs" />
      <Compile Include="Assets\__Scripts\AgentStepAudioPlayer.cs" />
      <Compile Include="Assets\__Scripts\Traps\SpikeTrap.cs" />
+     <Compile Include="Assets\__Scripts\Managers\SaveManager.cs" />
      <Compile Include="Assets\__Scripts\Interfaces\IAgentInput.cs" />
      <Compile Include="Assets\__Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\__Scripts\Player\PlayerManager.cs" />
@@ -105,7 +108,6 @@
      <Compile Include="Assets\__Scripts\Interactables\InteractableSounds.cs" />
      <Compile Include="Assets\__Scripts\LevelFlow\LevelManager.cs" />
      <Compile Include="Assets\__Scripts\DataSO\PlayerDataSO.cs" />
-     <Compile Include="Assets\__Scripts\UI\MainMenuController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

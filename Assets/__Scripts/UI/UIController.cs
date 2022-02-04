@@ -150,6 +150,6 @@ public class UIController : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        // SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);
     }
 }
