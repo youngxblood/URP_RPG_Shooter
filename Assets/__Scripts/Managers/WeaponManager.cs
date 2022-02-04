@@ -8,6 +8,8 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] private GameObject player;
     private Weapon currentWeapon;
     [SerializeField] private Weapon[] equippedWeapons; // Set in the inspector
+    private PlayerStats _playerStats;
+    private ThrowableWeapon _throwableWeapon;
 
     // Used in AgentWeapon/PlayerWeapon (see WeaponParent object)
     [SerializeField] private PlayerWeapon playerWeapon;
@@ -20,6 +22,8 @@ public class WeaponManager : MonoBehaviour
     {
         currentWeapon = player.GetComponentInChildren<Weapon>();
         playerWeapon = player.GetComponentInChildren<PlayerWeapon>();
+        _playerStats = player.GetComponentInChildren<PlayerStats>();
+        _throwableWeapon = player.GetComponentInChildren<ThrowableWeapon>();
     }
 
     private void Update()
@@ -52,5 +56,23 @@ public class WeaponManager : MonoBehaviour
 
             
         }
+    }
+
+    public void SaveStats()
+    {
+        _playerStats.stats.primaryWeaponAmmo = equippedWeapons[0].Ammo;
+        _playerStats.stats.secondaryWeaponAmmo = equippedWeapons[1].Ammo;
+
+        _playerStats.stats.throwableAmmo = _throwableWeapon.Ammo;
+    }
+
+    public void LoadFromStats()
+    {
+        equippedWeapons[0].Ammo = _playerStats.stats.primaryWeaponAmmo;
+        equippedWeapons[1].Ammo = _playerStats.stats.secondaryWeaponAmmo;
+        currentWeapon.UpdateAmmoText(currentWeapon.Ammo);
+
+        _throwableWeapon.Ammo = _playerStats.stats.throwableAmmo;
+        _throwableWeapon.UpdateThrowableAmmoText(_throwableWeapon.Ammo);
     }
 }

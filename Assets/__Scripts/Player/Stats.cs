@@ -18,7 +18,13 @@ public struct SerializableVector3
 [System.Serializable]
 public class Stats
 {
+    // General
     public SerializableVector3 playerPos;
     public int health;
     public int lives;
+
+    // Ammo
+    public int primaryWeaponAmmo;
+    public int secondaryWeaponAmmo;
+    public int throwableAmmo;
 }
