@@ -148,6 +148,11 @@ public class UIController : MonoBehaviour
         gameIsPaused = false;
     }
 
+    public void BackMenu()
+    {
+        
+    }
+
     public void ReturnToMainMenu()
     {
         SceneManager.LoadScene(0);

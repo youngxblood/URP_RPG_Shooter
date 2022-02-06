@@ -30,6 +30,11 @@ public class MainMenuController : MonoBehaviour
         mainMenuCanvas.enabled = true;
     }
 
+    public void BackFromOptionsMenu()
+    {
+        
+    }
+
     public void ResumeCurrentGame()
     {
         // To be implemented
