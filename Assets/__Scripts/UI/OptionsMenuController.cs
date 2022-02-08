@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -14,8 +15,16 @@ public class OptionsMenuController : MonoBehaviour
     private Resolution[] _resolutions;
     public Dropdown resolutionDropdown;
 
+    public UserSettings userSettings;
+
+    // UI refs
+    [SerializeField] private Slider _audioSlider;
+    [SerializeField] private Toggle _fullscreenToggle;
+    [SerializeField] private TMP_Dropdown _graphicsQualityDropdown;
+
     private void Start() 
     {
+        // Need to refactor the way resolution is set
         _resolutions = Screen.resolutions; 
         resolutionDropdown.ClearOptions();
 
@@ -40,21 +49,36 @@ public class OptionsMenuController : MonoBehaviour
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat(_globalAudioParam, volume);
+        userSettings.globalVolume = volume;
     }
 
     public void SetGraphicsQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
+        userSettings.graphicsQualityIndex = qualityIndex;
     }
 
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        userSettings.isFullscreen = isFullscreen;
     }
 
     public void SetResolution(int resolutionIndex)
     {
         Resolution resolution = _resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+
+        userSettings.screenResolution.width = resolution.width;
+        userSettings.screenResolution.height = resolution.height;
+    }
+
+    public void SetOptionUIFromUserSettings()
+    {
+        _audioSlider.value = userSettings.globalVolume;
+        _fullscreenToggle.isOn = userSettings.isFullscreen;
+        _graphicsQualityDropdown.value = userSettings.graphicsQualityIndex;
+
+        // Resolution is currently not implemented
     }
 }

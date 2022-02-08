@@ -71,7 +71,7 @@ AudioSource:
   m_GameObject: {fileID: 1709062421625825928}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 76e9ea62cc1e43245807cdb1c54977cf, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.326
@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 1709062421966173060}
   - component: {fileID: 1709062421966173061}
   m_Layer: 0
-  m_Name: orb_thrower
+  m_Name: orb_weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,7 +287,6 @@ MonoBehaviour:
   muzzle: {fileID: 1709062421152183385}
   ammo: 10
   weaponData: {fileID: 11400000, guid: bdbe251bfb1063543a28fc22457d86a1, type: 2}
-  reloadCoroutine: 0
   <OnShoot>k__BackingField:
     m_PersistentCalls:
       m_Calls:

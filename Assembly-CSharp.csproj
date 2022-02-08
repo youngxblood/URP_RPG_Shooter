@@ -40,6 +40,7 @@
      <Compile Include="Assets\__Scripts\Weapons\Throwables\ThrowableAudio.cs" />
      <Compile Include="Assets\__Scripts\Combat\CombatStartTrigger.cs" />
      <Compile Include="Assets\__Scripts\Interfaces\IAgent.cs" />
+     <Compile Include="Assets\__Scripts\Managers\UserSettings.cs" />
      <Compile Include="Assets\__Scripts\DataSO\MovementDataSO.cs" />
      <Compile Include="Assets\__Scripts\Pickups\Powerups\MoveSpeedPowerup.cs" />
      <Compile Include="Assets\__Scripts\UI\UIController.cs" />
@@ -99,8 +100,10 @@
      <Compile Include="Assets\__Scripts\Managers\WeaponManager.cs" />
      <Compile Include="Assets\__Scripts\_StateMachine\States\ChaseState.cs" />
      <Compile Include="Assets\__Scripts\LevelFlow\Feedback\Feedback.cs" />
+     <Compile Include="Assets\__Scripts\Managers\UserSettingsManager.cs" />
      <Compile Include="Assets\__Scripts\Pickups\CollectibleSounds.cs" />
      <Compile Include="Assets\__Scripts\AgentInput.cs" />
+     <Compile Include="Assets\__Scripts\UI\OptionsMenuController.cs" />
      <Compile Include="Assets\__Scripts\DataSO\EnemyDataSO.cs" />
      <Compile Include="Assets\__Scripts\DataSO\WeaponDataSO.cs" />
      <Compile Include="Assets\__Scripts\_StateMachine\Shared\State.cs" />
@@ -108,7 +111,7 @@
      <Compile Include="Assets\__Scripts\Interactables\InteractableSounds.cs" />
      <Compile Include="Assets\__Scripts\LevelFlow\LevelManager.cs" />
      <Compile Include="Assets\__Scripts\DataSO\PlayerDataSO.cs" />
-     <Compile Include="Assets\__Scripts\UI\OptionsMenuController.cs" />
+     <Compile Include="Assets\__Scripts\UI\PauseMenuController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

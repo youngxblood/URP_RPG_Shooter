@@ -138,6 +138,7 @@ MonoBehaviour:
   throwableData: {fileID: 11400000, guid: 4237f33c1b80ab146809be655f6f00ec, type: 2}
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  throwableAudio: {fileID: 0}
 --- !u!1 &2844627378394329430
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +180,7 @@ AudioSource:
   m_GameObject: {fileID: 2844627378394329430}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 76e9ea62cc1e43245807cdb1c54977cf, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
