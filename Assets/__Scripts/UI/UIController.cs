@@ -30,7 +30,8 @@ public class UIController : MonoBehaviour
     [SerializeField] private Slider slider;
 
     [Header("PauseMenu")]
-    [SerializeField] private Canvas pauseMenuCanvas;
+    [SerializeField] private Canvas _pauseMenuCanvas;
+    [SerializeField] private Canvas _optionsMenuCanvas;
     public bool gameIsPaused { get; private set; } = false;
 
     public TextMeshProUGUI test;
@@ -134,23 +135,24 @@ public class UIController : MonoBehaviour
 
     public void OpenPauseMenu()
     {
+        if (_pauseMenuCanvas.enabled)
+            return;
+            
         Time.timeScale = 0f;
-        pauseMenuCanvas.enabled = true;
+        _pauseMenuCanvas.enabled = true;
         gameplayCanvas.enabled = false;
         gameIsPaused = true;
     }
 
     public void ClosePauseMenu()
     {
+        if (_optionsMenuCanvas.enabled)
+            return;
+
         Time.timeScale = 1f;
-        pauseMenuCanvas.enabled = false;
+        _pauseMenuCanvas.enabled = false;
         gameplayCanvas.enabled = true;
         gameIsPaused = false;
-    }
-
-    public void BackMenu()
-    {
-        
     }
 
     public void ReturnToMainMenu()

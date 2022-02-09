@@ -13,7 +13,7 @@ public class OptionsMenuController : MonoBehaviour
 
     // Graphics
     private Resolution[] _resolutions;
-    public Dropdown resolutionDropdown;
+    [SerializeField] private TMP_Dropdown _resolutionDropdown;
 
     public UserSettings userSettings;
 
@@ -26,7 +26,7 @@ public class OptionsMenuController : MonoBehaviour
     {
         // Need to refactor the way resolution is set
         _resolutions = Screen.resolutions; 
-        resolutionDropdown.ClearOptions();
+        _resolutionDropdown.ClearOptions();
 
         List<string> options = new List<string>();
         int currentResolutionIndex = 0;
@@ -41,14 +41,15 @@ public class OptionsMenuController : MonoBehaviour
                     currentResolutionIndex = i;
         }
 
-        resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = currentResolutionIndex; // Set res to current screen resolution of user
-        resolutionDropdown.RefreshShownValue();
+        _resolutionDropdown.AddOptions(options);
+        _resolutionDropdown.value = currentResolutionIndex; // Set res to current screen resolution of user
+        _resolutionDropdown.RefreshShownValue();
     }
 
+    #region Helpers
     public void SetVolume(float volume)
     {
-        audioMixer.SetFloat(_globalAudioParam, volume);
+        audioMixer.SetFloat(_globalAudioParam, Mathf.Log10(volume) * 20);
         userSettings.globalVolume = volume;
     }
 
@@ -81,4 +82,6 @@ public class OptionsMenuController : MonoBehaviour
 
         // Resolution is currently not implemented
     }
+    
+    #endregion
 }
